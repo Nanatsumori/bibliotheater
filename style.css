@@ -1,0 +1,120 @@
+:root{
+  --ink:#2d241f;
+  --brown:#7f5f2f;
+  --gold:#b18a3f;
+  --paper:#fffaf0;
+  --cream:#f5eddf;
+  --deep:#241b17;
+  --line:#d7c4a3;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  color:var(--ink);
+  background:linear-gradient(180deg,#fffaf0 0%,#f5eddf 42%,#efe2cb 100%);
+  font-family:"Yu Mincho","Hiragino Mincho ProN","Yu Gothic",serif;
+  line-height:1.9;
+}
+
+.site-header{background:var(--paper);}
+.hero{width:100%;margin:0;padding:0;background:#eadcc5;}
+.hero img{width:100%;height:auto;display:block;}
+
+.global-nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:0;
+  background:rgba(255,250,240,.94);
+  backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.global-nav a{
+  display:block;
+  padding:16px 24px;
+  color:var(--ink);
+  text-decoration:none;
+  letter-spacing:.08em;
+  font-size:15px;
+  border-right:1px solid rgba(177,138,63,.26);
+}
+.global-nav a:hover{background:#efe2cb;color:#6d4e1f;}
+
+.section{
+  width:min(100%,980px);
+  margin:0 auto;
+  padding:76px 7%;
+}
+.section-label{
+  margin:0 0 8px;
+  color:var(--gold);
+  letter-spacing:.32em;
+  font-size:13px;
+  font-weight:bold;
+}
+h1,h2{
+  margin:0 0 28px;
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.35;
+}
+h1{font-size:clamp(34px,5vw,54px);}
+h2{font-size:clamp(28px,4vw,42px);}
+h3{margin:0 0 10px;font-size:22px;letter-spacing:.06em;}
+p{font-size:18px;margin:0 0 18px;}
+.catch{
+  display:inline-block;
+  margin:0 0 28px;
+  padding:.2em 0;
+  font-size:clamp(24px,4vw,38px);
+  letter-spacing:.16em;
+  color:#6e4d20;
+  border-bottom:2px solid var(--gold);
+}
+
+.intro-section{
+  text-align:left;
+  border-bottom:1px solid rgba(177,138,63,.35);
+}
+.panel,.work-card,.profile-block{
+  background:rgba(255,253,247,.86);
+  border:1px solid rgba(177,138,63,.25);
+  border-left:7px solid var(--gold);
+  border-radius:18px;
+  padding:28px;
+  margin:22px 0;
+  box-shadow:0 14px 35px rgba(77,54,29,.06);
+}
+.highlight-panel{background:#fff8e8;}
+
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.work-card{margin:0;min-height:190px;}
+.work-card h3 span{font-size:16px;font-weight:normal;}
+
+.profile-section,.contact-section{border-top:1px solid rgba(177,138,63,.28);}
+.site-footer{
+  padding:36px 20px;
+  text-align:center;
+  background:var(--deep);
+  color:var(--paper);
+}
+.site-footer p{margin:0;font-size:14px;letter-spacing:.16em;}
+
+@media (max-width:700px){
+  .global-nav{position:static;}
+  .global-nav a{width:50%;text-align:center;padding:13px 8px;font-size:13px;}
+  .section{padding:54px 6%;}
+  p{font-size:16px;}
+  .work-grid{grid-template-columns:1fr;}
+  .panel,.work-card,.profile-block{padding:22px;border-radius:14px;}
+}
