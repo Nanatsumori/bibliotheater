@@ -1,17 +1,15 @@
-ビブリオ劇場サイト一式
+ビブリオ劇場サイト 完成版 Ver.1.0
 
-GitHubの bibliotheater リポジトリに、以下のファイルをアップロードしてください。
+GitHubの bibliotheater リポジトリに、このフォルダ内のファイルをすべてアップロードしてください。
 
-index.html
-style.css
-hero.png
-about.html
-schedule.html
-works.html
-profile.html
-contact.html
+必ず同じ階層に置くファイル：
+- index.html
+- style.css
+- hero.png
+- about.html
+- schedule.html
+- works.html
+- profile.html
+- contact.html
 
-GitHub Pages公開URL例:
-https://nanatsumori.github.io/bibliotheater/
-
-トップ画像を差し替える場合は、新しい画像を hero.png という名前で上書きしてください。
+トップ画像の上に文字は重ねていません。hero.png自体をトップ画像として表示します。
