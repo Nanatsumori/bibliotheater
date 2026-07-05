@@ -1,4 +1,52 @@
-text-align:center;
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ビブリオ劇場</title>
+<style>
+body{
+  margin:0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:#2b211c;
+  background:#f7f1e6;
+  line-height:1.9;
+}
+.hero img{
+  width:100%;
+  display:block;
+}
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  background:#fffaf0;
+  border-top:1px solid #c8b894;
+  border-bottom:1px solid #c8b894;
+}
+nav a{
+  padding:18px 30px;
+  color:#2b211c;
+  text-decoration:none;
+  border-right:1px solid #d8c9aa;
+}
+section{
+  max-width:900px;
+  margin:0 auto;
+  padding:60px 8%;
+}
+h2{
+  font-size:30px;
+  border-bottom:1px solid #b49a5a;
+  padding-bottom:10px;
+}
+.card{
+  background:#fffdf7;
+  padding:24px;
+  margin:20px 0;
+  border-left:6px solid #b49a5a;
+}
+footer{
+  text-align:center;
   padding:35px;
   background:#2b211c;
   color:#fffaf0;
@@ -8,16 +56,9 @@ text-align:center;
 
 <body>
 
-<header id="top">
-  <div class="catch">本のある場所が、舞台になる。</div>
-  <h1>BIBLIO<br>THEATER</h1>
-  <div class="jp">ビブリオ劇場</div>
-  <p>
-    図書館・書店・学校など、<br>
-    本のある場所を舞台に、<br>
-    本の魅力を演劇で届けるプロジェクトです。
-  </p>
-</header>
+<div class="hero">
+  <img src="hero.png" alt="ビブリオ劇場　本のある場所が舞台になる">
+</div>
 
 <nav>
   <a href="#about">ビブリオ劇場とは</a>
@@ -29,13 +70,12 @@ text-align:center;
 
 <section id="about">
   <h2>ビブリオ劇場とは</h2>
-  <p class="lead">
-    ビブリオ劇場は、本のある場所で、本に関係する劇を上演する取り組みです。
+  <p>
+    図書館、書店、まちライブラリーなど、本のある場所を舞台に、
+    本に関係する劇を上演する取り組みです。
   </p>
   <p>
-    朗読ではなく、衣装を着て演じることで、物語の世界を観客の目の前に立ち上げます。
-    一冊の本との出会いが、心を動かす物語になる。
-    ビブリオ劇場は、本と人をつなぐ演劇です。
+    本を通して、人と人、人と本をつなぎ、新しい出会いを生み出します。
   </p>
 </section>
 
@@ -45,34 +85,15 @@ text-align:center;
     <strong>次回公演</strong><br>
     詳細が決まり次第、こちらでお知らせします。
   </div>
-  <div class="card">
-    <strong>上演予定・申込み</strong><br>
-    公演日程、会場、申込み方法については、準備が整い次第掲載します。
-  </div>
 </section>
 
 <section id="works">
   <h2>過去の上演作品</h2>
 
-  <div class="card">
-    <strong>ラビリンス</strong><br>
-    図書館全体を舞台にした、本の迷宮をめぐる物語。
-  </div>
-
-  <div class="card">
-    <strong>COLORS</strong><br>
-    色とりどりの本と人の声が響き合う作品。
-  </div>
-
-  <div class="card">
-    <strong>Book Birds 本を届ける鳥たち</strong><br>
-    本を届ける鳥たちをめぐる、やさしい物語。
-  </div>
-
-  <div class="card">
-    <strong>怪談の多い図書館</strong><br>
-    図書館に棲む妖怪たちが登場する怪談劇。
-  </div>
+  <div class="card"><strong>ラビリンス</strong><br>図書館全体を舞台にした、本の迷宮をめぐる物語。</div>
+  <div class="card"><strong>COLORS</strong><br>色とりどりの本と人の声が響き合う作品。</div>
+  <div class="card"><strong>Book Birds 本を届ける鳥たち</strong><br>本を届ける鳥たちをめぐる物語。</div>
+  <div class="card"><strong>怪談の多い図書館</strong><br>図書館に棲む妖怪たちが登場する怪談劇。</div>
 </section>
 
 <section id="profile">
@@ -80,7 +101,7 @@ text-align:center;
   <p>
     <strong>サイトウトシオ</strong><br>
     久喜市立太東中学校ゲキ部の演劇指導を担当。
-    図書館・書店・学校など、本のある場所と中学生を演劇でつなぐ活動を行っています。
+    本のある場所と中学生を演劇でつなぐ活動を行っています。
   </p>
   <p>
     <strong>ゲキ部</strong><br>
