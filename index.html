@@ -2,123 +2,83 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ビブリオ劇場</title>
-<style>
-body{
-  margin:0;
-  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
-  color:#2b211c;
-  background:#f7f1e6;
-  line-height:1.9;
-}
-.hero img{
-  width:100%;
-  display:block;
-}
-nav{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  background:#fffaf0;
-  border-top:1px solid #c8b894;
-  border-bottom:1px solid #c8b894;
-}
-nav a{
-  padding:18px 30px;
-  color:#2b211c;
-  text-decoration:none;
-  border-right:1px solid #d8c9aa;
-}
-section{
-  max-width:900px;
-  margin:0 auto;
-  padding:60px 8%;
-}
-h2{
-  font-size:30px;
-  border-bottom:1px solid #b49a5a;
-  padding-bottom:10px;
-}
-.card{
-  background:#fffdf7;
-  padding:24px;
-  margin:20px 0;
-  border-left:6px solid #b49a5a;
-}
-footer{
-  text-align:center;
-  padding:35px;
-  background:#2b211c;
-  color:#fffaf0;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">ビブリオ劇場</a>
+    <nav class="nav-links">
+      <a href="about.html">ビブリオ劇場とは</a>
+      <a href="schedule.html">今後の予定</a>
+      <a href="works.html">過去の上演作品</a>
+      <a href="profile.html">プロフィール</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
 
-<div class="hero">
-  <img src="hero.png" alt="ビブリオ劇場　本のある場所が舞台になる">
-</div>
-
-<nav>
-  <a href="#about">ビブリオ劇場とは</a>
-  <a href="#schedule">今後の予定</a>
-  <a href="#works">過去の上演作品</a>
-  <a href="#profile">プロフィール</a>
-  <a href="#contact">お問い合わせ</a>
-</nav>
-
-<section id="about">
-  <h2>ビブリオ劇場とは</h2>
-  <p>
-    図書館、書店、まちライブラリーなど、本のある場所を舞台に、
-    本に関係する劇を上演する取り組みです。
-  </p>
-  <p>
-    本を通して、人と人、人と本をつなぎ、新しい出会いを生み出します。
-  </p>
-</section>
-
-<section id="schedule">
-  <h2>今後の予定</h2>
-  <div class="card">
-    <strong>次回公演</strong><br>
-    詳細が決まり次第、こちらでお知らせします。
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="catch">本のある場所が　舞台になる</p>
+      <h1>ビブリオ劇場</h1>
+      <p class="en-title">BIBLIO THEATER</p>
+      <p class="lead">
+        図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。<br>
+        劇を通して、人と本、人と人がつながり、新しい出会いが生まれます。
+      </p>
+    </div>
+    <div class="hero-image" role="img" aria-label="本棚のある空間で上演されるビブリオ劇場のイラスト"></div>
   </div>
 </section>
 
-<section id="works">
-  <h2>過去の上演作品</h2>
+<main>
+  <section class="section" id="about">
+    <h2 class="section-title">ビブリオ劇場とは</h2>
+    <p class="large-text">
+      ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。
+    </p>
+    <p>
+      朗読ではなく、衣装を着て演じることで、本の世界を観客の前に立ち上げます。本を紹介するだけでなく、本のある場所そのものを劇場に変え、人と本、人と人がつながる時間をつくります。
+    </p>
+    <a class="btn" href="about.html">詳しく見る</a>
+  </section>
 
-  <div class="card"><strong>ラビリンス</strong><br>図書館全体を舞台にした、本の迷宮をめぐる物語。</div>
-  <div class="card"><strong>COLORS</strong><br>色とりどりの本と人の声が響き合う作品。</div>
-  <div class="card"><strong>Book Birds 本を届ける鳥たち</strong><br>本を届ける鳥たちをめぐる物語。</div>
-  <div class="card"><strong>怪談の多い図書館</strong><br>図書館に棲む妖怪たちが登場する怪談劇。</div>
-</section>
+  <section class="section" id="schedule">
+    <h2 class="section-title">今後の予定</h2>
+    <div class="card">
+      <h3>次回公演</h3>
+      <p>詳細が決まり次第、こちらでお知らせします。</p>
+    </div>
+    <a class="btn" href="schedule.html">今後の予定を見る</a>
+  </section>
 
-<section id="profile">
-  <h2>プロフィール</h2>
-  <p>
-    <strong>サイトウトシオ</strong><br>
-    久喜市立太東中学校ゲキ部の演劇指導を担当。
-    本のある場所と中学生を演劇でつなぐ活動を行っています。
-  </p>
-  <p>
-    <strong>ゲキ部</strong><br>
-    本のある場所を舞台に、物語の魅力を演劇で届ける活動を続けています。
-  </p>
-</section>
+  <section class="section" id="works">
+    <h2 class="section-title">過去の上演作品</h2>
+    <div class="cards">
+      <div class="card"><h3>ラビリンス</h3><p>図書館全体を舞台にした、本の迷宮をめぐる物語。</p></div>
+      <div class="card"><h3>COLORS</h3><p>色とりどりの本と人の声が響き合う作品。</p></div>
+      <div class="card"><h3>Book Birds 本を届ける鳥たち</h3><p>本を届ける鳥たちをめぐる物語。</p></div>
+      <div class="card"><h3>怪談の多い図書館</h3><p>図書館に棲む妖怪たちが登場する怪談劇。</p></div>
+    </div>
+    <a class="btn" href="works.html">上演作品を見る</a>
+  </section>
 
-<section id="contact">
-  <h2>お問い合わせ</h2>
-  <p>
-    公演・取材・上演についてのお問い合わせは、今後こちらに掲載します。
-  </p>
-</section>
+  <section class="section" id="profile">
+    <h2 class="section-title">プロフィール</h2>
+    <div class="two-col">
+      <div class="card"><h3>サイトウトシオ</h3><p>久喜市立太東中学校ゲキ部の演劇指導を担当。本のある場所と中学生を演劇でつなぐ活動を行っています。</p></div>
+      <div class="card"><h3>ゲキ部</h3><p>本のある場所を舞台に、物語の魅力を演劇で届ける活動を続けています。</p></div>
+    </div>
+    <a class="btn" href="profile.html">プロフィールを見る</a>
+  </section>
+</main>
 
-<footer>
+<footer class="site-footer">
   <p>© BIBLIO THEATER</p>
 </footer>
-
 </body>
 </html>
