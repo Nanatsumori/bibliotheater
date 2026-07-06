@@ -118,3 +118,61 @@ p{font-size:18px;margin:0 0 18px;}
   .work-grid{grid-template-columns:1fr;}
   .panel,.work-card,.profile-block{padding:22px;border-radius:14px;}
 }
+
+/* ラビリンス追加ページ用 */
+.detail-button{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 20px;
+  background:var(--brown);
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  letter-spacing:.08em;
+  font-size:15px;
+}
+.detail-button:hover{background:#6d4e1f;color:#fff;}
+.work-category{
+  margin:0 0 8px;
+  color:#8a682f;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:.16em;
+}
+.featured-work-card{
+  background:#fff8e8;
+}
+.page-header{
+  background:var(--paper);
+}
+.work-detail-hero{
+  padding-top:96px;
+  border-bottom:1px solid rgba(177,138,63,.35);
+}
+.feature-list{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.feature-list .panel{
+  margin:0;
+}
+.outline-list{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:12px 22px;
+  margin:0;
+  font-size:18px;
+}
+.outline-list dt{
+  font-weight:bold;
+  color:#6e4d20;
+}
+.outline-list dd{
+  margin:0;
+}
+@media (max-width:700px){
+  .feature-list{grid-template-columns:1fr;}
+  .outline-list{grid-template-columns:1fr;gap:2px 0;}
+  .outline-list dd{margin:0 0 12px;}
+}
