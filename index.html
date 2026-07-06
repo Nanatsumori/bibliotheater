@@ -4,8 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ビブリオ劇場｜本のある場所が 舞台になる</title>
-  <meta name="description" content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。">
+  <meta name="description" content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。現在の上演『怪談の多い図書館』を紹介しています。">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .current-section { background: linear-gradient(135deg, #f7f3ff 0%, #eef4ff 100%); }
+    .current-card { display: grid; grid-template-columns: minmax(220px, 360px) 1fr; gap: 32px; align-items: center; }
+    .current-card img { width: 100%; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,0,0,.18); }
+    .current-title { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.15; margin: .2em 0; }
+    .current-copy { font-size: 1.25rem; font-weight: 700; line-height: 1.8; }
+    .event-summary { margin: 1.5em 0; padding: 1.2em; background: rgba(255,255,255,.78); border-radius: 14px; }
+    .event-summary p { margin: .35em 0; }
+    .current-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1.2em; }
+    .primary-button, .secondary-button { display: inline-block; padding: .85em 1.3em; border-radius: 999px; text-decoration: none; font-weight: 700; }
+    .primary-button { background: #2f3cff; color: #fff; }
+    .secondary-button { background: #fff; color: #2f3cff; border: 1px solid #2f3cff; }
+    .ongoing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -13,18 +28,42 @@
       <img src="hero.png" alt="ビブリオ劇場 本のある場所が 舞台になる">
     </div>
     <nav class="global-nav" aria-label="メインメニュー">
+      <a href="#current">現在の上演</a>
       <a href="#about">ビブリオ劇場とは</a>
       <a href="#schedule">今後の予定</a>
-      <a href="#works">ビブリオ劇場アーカイブ</a>
+      <a href="#ongoing">進行中の作品</a>
+      <a href="#works">アーカイブ</a>
       <a href="#profile">プロフィール</a>
-      <a href="#contact">お問い合わせ</a>
     </nav>
   </header>
 
   <main>
+    <section id="current" class="section current-section">
+      <p class="section-label">NOW PLAYING</p>
+      <div class="current-card">
+        <a href="kaidan.html"><img src="kaidan_flyer_front.jpg" alt="怪談の多い図書館 フライヤー表面"></a>
+        <div>
+          <p class="small-heading">久喜市立太東中学校ゲキ部 自主公演</p>
+          <h1 class="current-title">怪談の多い図書館</h1>
+          <p class="current-copy">図書館に棲む妖怪たちが<br>あなたをお待ちしております</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年7月26日（日）開場 13:30／開演 14:00</p>
+            <p><strong>会場：</strong>栗橋文化会館イリス</p>
+            <p><strong>入場：</strong>無料</p>
+            <p><strong>作：</strong>サイトウトシオ　<strong>illustration：</strong>髙橋咲</p>
+          </div>
+          <p>休館日の図書館を訪れた森本静花は、上演準備中の『怪談の多い図書館』と出会う。現実と劇の世界が重なり始め、静花は妖怪・天邪鬼をめぐる物語の真実へ近づいていきます。</p>
+          <div class="current-actions">
+            <a class="primary-button" href="kaidan.html">詳しく見る →</a>
+            <a class="secondary-button" href="kaidan_flyer_front.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section intro-section">
       <p class="section-label">ABOUT</p>
-      <h1>ビブリオ劇場とは</h1>
+      <h2>ビブリオ劇場とは</h2>
       <p class="catch">本のある場所が　舞台になる</p>
       <p>図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。</p>
       <p>劇を通して、人と本、人と人がつながり、新しい出会いが生まれます。</p>
@@ -34,19 +73,44 @@
       <p class="section-label">SCHEDULE</p>
       <h2>今後の予定</h2>
       <div class="panel highlight-panel">
-        <h3>次回公演</h3>
-        <p>詳細が決まり次第、こちらでお知らせします。</p>
+        <h3>2026年7月26日（日）　怪談の多い図書館</h3>
+        <p>栗橋文化会館イリスにて、久喜市立太東中学校ゲキ部自主公演として上演します。</p>
+        <p><a class="detail-button" href="kaidan.html">公演紹介を見る →</a></p>
       </div>
       <div class="panel">
-        <h3>上演予定・申込み</h3>
-        <p>公演日程、会場、申込み方法については、準備が整い次第掲載します。</p>
+        <h3>2026年7月30日・31日・8月18日　ブックハウスカフェ／久喜市立中央図書館</h3>
+        <p>ビブリオ劇場とモノガタリマジック、COLORS、怪談の多い図書館＆モノガタリマジックなど、今後の上演を予定しています。</p>
+      </div>
+    </section>
+
+    <section id="ongoing" class="section">
+      <p class="section-label">ONGOING</p>
+      <h2>現在進行中の作品</h2>
+      <div class="ongoing-list">
+        <article class="panel">
+          <h3>怪談の多い図書館</h3>
+          <p>2026年7月26日上演。図書館と怪談、妖怪、演劇が重なり合う現在の中心作品です。</p>
+          <p><a class="detail-button" href="kaidan.html">詳しく見る →</a></p>
+        </article>
+        <article class="panel">
+          <h3>ビブリオ劇場＆モノガタリマジック</h3>
+          <p>本のある場所で、物語とマジックが出会う新しい上演形式です。</p>
+        </article>
+        <article class="panel">
+          <h3>COLORS</h3>
+          <p>色とりどりの本と人の声が響き合う作品です。</p>
+        </article>
+        <article class="panel">
+          <h3>ラビリンス</h3>
+          <p>図書館全体を舞台にした、本の迷宮をめぐる作品です。</p>
+        </article>
       </div>
     </section>
 
     <section id="works" class="section works-section">
       <p class="section-label">ARCHIVE</p>
       <h2>ビブリオ劇場アーカイブ</h2>
-      <p class="archive-lead">ビブリオ劇場の歩みを、上演順に紹介します。</p>
+      <p class="archive-lead">これまでの上演を、作品ごとに紹介します。</p>
       <div class="work-grid">
         <article class="work-card featured-work">
           <p class="work-number">01</p>
@@ -62,26 +126,14 @@
         </article>
         <article class="work-card">
           <p class="work-number">03</p>
-          <h3>COLORS</h3>
-          <p>色とりどりの本と人の声が響き合う作品。</p>
+          <h3>Book Birds</h3>
+          <p>本を届ける鳥たちを描いたビブリオ劇場作品。</p>
           <p class="work-button"><span class="detail-button coming-soon">準備中</span></p>
         </article>
         <article class="work-card">
           <p class="work-number">04</p>
-          <h3>図書館・絵本<br><span>ドラマリーディング</span></h3>
-          <p>演劇的読み聞かせ、ビブリオ劇場 vol.1・vol.2 をまとめて紹介します。</p>
-          <p class="work-button"><span class="detail-button coming-soon">準備中</span></p>
-        </article>
-        <article class="work-card">
-          <p class="work-number">05</p>
-          <h3>アトム</h3>
-          <p>ビブリオ劇場の流れの中で上演された作品。</p>
-          <p class="work-button"><span class="detail-button coming-soon">準備中</span></p>
-        </article>
-        <article class="work-card">
-          <p class="work-number">06</p>
-          <h3>怪談の多い図書館</h3>
-          <p>図書館に棲む妖怪たちが登場する怪談劇。</p>
+          <h3>COLORS</h3>
+          <p>色とりどりの本と人の声が響き合う作品。</p>
           <p class="work-button"><span class="detail-button coming-soon">準備中</span></p>
         </article>
       </div>
