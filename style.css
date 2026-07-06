@@ -69,6 +69,7 @@ h1{font-size:clamp(34px,5vw,54px);}
 h2{font-size:clamp(28px,4vw,42px);}
 h3{margin:0 0 10px;font-size:22px;letter-spacing:.06em;}
 p{font-size:18px;margin:0 0 18px;}
+ul{font-size:17px;margin:0 0 22px;padding-left:1.4em;}
 .catch{
   display:inline-block;
   margin:0 0 28px;
@@ -80,6 +81,7 @@ p{font-size:18px;margin:0 0 18px;}
 }
 .lead{font-size:20px;color:#6e4d20;font-weight:600;}
 .small-heading{font-size:16px;color:#7f5f2f;margin-bottom:4px;letter-spacing:.12em;}
+.archive-lead{color:#6e4d20;}
 
 .intro-section{
   text-align:left;
@@ -101,29 +103,51 @@ p{font-size:18px;margin:0 0 18px;}
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:22px;
 }
-.work-card{margin:0;min-height:190px;transition:transform .2s ease, box-shadow .2s ease;}
+.work-card{
+  margin:0;
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+}
 .work-card h3 span{font-size:16px;font-weight:normal;}
-.work-card-link{
-  display:block;
-  color:inherit;
+.work-number{
+  margin:0 0 8px;
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:.22em;
+}
+.work-button{
+  margin-top:auto;
+  margin-bottom:0;
+  padding-top:10px;
+}
+.detail-button{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#8b6a3d;
+  color:#fff;
   text-decoration:none;
+  font-size:15px;
+  letter-spacing:.08em;
+  line-height:1.4;
+  box-shadow:0 8px 18px rgba(77,54,29,.12);
 }
-.work-card-link:hover .work-card{
-  transform:translateY(-4px);
-  box-shadow:0 18px 42px rgba(77,54,29,.14);
-}
-.work-card-link:focus-visible .work-card{
-  outline:3px solid var(--gold);
-  outline-offset:4px;
+.detail-button:hover{background:#6d522f;}
+.detail-button.coming-soon{
+  background:#d7c4a3;
+  color:#5d4a34;
+  box-shadow:none;
 }
 
-/* ラビリンスページ */
-.labyrinth-hero{
+/* 作品ページ共通 */
+.archive-hero,.labyrinth-hero{
   width:min(100%,980px);
   margin:0 auto;
   padding:76px 7% 56px;
 }
-.labyrinth-hero-text{
+.archive-hero-text,.labyrinth-hero-text{
   width:100%;
   margin:0 auto;
   background:rgba(255,253,247,.88);
@@ -133,6 +157,7 @@ p{font-size:18px;margin:0 0 18px;}
   padding:36px;
   box-shadow:0 16px 40px rgba(77,54,29,.07);
 }
+.campanella-theme .archive-hero-text{border-left-color:#9c7a36;}
 .labyrinth-hero-image{display:none;}
 .compact-section{padding-top:48px;padding-bottom:48px;}
 .event-info{
@@ -149,6 +174,7 @@ p{font-size:18px;margin:0 0 18px;}
   gap:22px;
 }
 .guest-card{margin:0;}
+.program-list li{margin-bottom:.4em;}
 .flyer-section{text-align:center;}
 .flyer-grid{
   display:grid;
@@ -175,6 +201,23 @@ p{font-size:18px;margin:0 0 18px;}
   object-fit:contain;
   border-radius:8px;
 }
+.archive-nav-section{padding-top:20px;}
+.archive-nav-box{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:14px;
+  background:rgba(255,253,247,.86);
+  border:1px solid rgba(177,138,63,.25);
+  border-radius:18px;
+  padding:22px;
+}
+.archive-nav-box a{
+  color:#6d4e1f;
+  text-decoration:none;
+  font-weight:bold;
+}
+.archive-nav-box a:hover{text-decoration:underline;}
 
 .profile-section,.contact-section{border-top:1px solid rgba(177,138,63,.28);}
 .site-footer{
@@ -194,11 +237,12 @@ p{font-size:18px;margin:0 0 18px;}
 @media (max-width:700px){
   .global-nav{position:static;}
   .global-nav a{width:50%;text-align:center;padding:13px 8px;font-size:13px;}
-  .section,.labyrinth-hero{padding:54px 6%;}
+  .section,.archive-hero,.labyrinth-hero{padding:54px 6%;}
   .compact-section{padding-top:42px;padding-bottom:42px;}
   p{font-size:16px;}
+  ul{font-size:16px;}
   .work-grid{grid-template-columns:1fr;}
-  .panel,.work-card,.profile-block,.info-box,.story-box,.guest-card,.labyrinth-hero-text{padding:22px;border-radius:14px;}
+  .panel,.work-card,.profile-block,.info-box,.story-box,.guest-card,.archive-hero-text,.labyrinth-hero-text{padding:22px;border-radius:14px;}
   .event-info{grid-template-columns:1fr;gap:2px 0;}
   .event-info dd{margin-bottom:12px;}
 }

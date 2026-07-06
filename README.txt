@@ -1,13 +1,13 @@
-ビブリオ劇場 ラビリンス追加版
+ビブリオ劇場 カンパネラ完成版
 
-このフォルダ内のファイルを、GitHub の bibliotheater リポジトリに上書き・追加してください。
+上書き・追加するファイル:
+- index.html（カンパネラをアーカイブ先頭に追加）
+- style.css（作品ページ共通レイアウトとボタンを追加）
+- campanella.html（新規追加）
+- labyrinth.html（ゲキ部紹介・サイトウトシオ紹介を削除した版）
+- campanella_flyer_front.jpg（新規追加）
+- campanella_flyer_back.jpg（新規追加）
+- campanella_flyer_blue.jpg（新規追加）
 
-上書きするファイル:
-- index.html
-- style.css
-- hero.png
-
-追加するファイル:
-- labyrinth.html
-
-hero.png は、トップ画像が表示されるようにファイル名を修正して入れています。
+hero.png は変更していません。
+既存のラビリンス用フライヤー画像はそのまま使用します。
