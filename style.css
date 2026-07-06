@@ -46,6 +46,7 @@ body{
 }
 .global-nav a:hover{background:#efe2cb;color:#6d4e1f;}
 
+main{width:100%;}
 .section{
   width:min(100%,980px);
   margin:0 auto;
@@ -77,12 +78,14 @@ p{font-size:18px;margin:0 0 18px;}
   color:#6e4d20;
   border-bottom:2px solid var(--gold);
 }
+.lead{font-size:20px;color:#6e4d20;font-weight:600;}
+.small-heading{font-size:16px;color:#7f5f2f;margin-bottom:4px;letter-spacing:.12em;}
 
 .intro-section{
   text-align:left;
   border-bottom:1px solid rgba(177,138,63,.35);
 }
-.panel,.work-card,.profile-block{
+.panel,.work-card,.profile-block,.info-box,.story-box,.guest-card{
   background:rgba(255,253,247,.86);
   border:1px solid rgba(177,138,63,.25);
   border-left:7px solid var(--gold);
@@ -98,8 +101,80 @@ p{font-size:18px;margin:0 0 18px;}
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:22px;
 }
-.work-card{margin:0;min-height:190px;}
+.work-card{margin:0;min-height:190px;transition:transform .2s ease, box-shadow .2s ease;}
 .work-card h3 span{font-size:16px;font-weight:normal;}
+.work-card-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+.work-card-link:hover .work-card{
+  transform:translateY(-4px);
+  box-shadow:0 18px 42px rgba(77,54,29,.14);
+}
+.work-card-link:focus-visible .work-card{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+
+/* ラビリンスページ */
+.labyrinth-hero{
+  width:min(100%,980px);
+  margin:0 auto;
+  padding:76px 7% 56px;
+}
+.labyrinth-hero-text{
+  width:100%;
+  margin:0 auto;
+  background:rgba(255,253,247,.88);
+  border:1px solid rgba(177,138,63,.25);
+  border-left:7px solid var(--gold);
+  border-radius:22px;
+  padding:36px;
+  box-shadow:0 16px 40px rgba(77,54,29,.07);
+}
+.labyrinth-hero-image{display:none;}
+.compact-section{padding-top:48px;padding-bottom:48px;}
+.event-info{
+  display:grid;
+  grid-template-columns:7em 1fr;
+  gap:10px 18px;
+  margin:0;
+}
+.event-info dt{font-weight:bold;color:#6e4d20;}
+.event-info dd{margin:0;}
+.guest-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.guest-card{margin:0;}
+.flyer-section{text-align:center;}
+.flyer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  align-items:start;
+  margin-top:26px;
+}
+.flyer-grid a{
+  display:block;
+  background:rgba(255,253,247,.92);
+  border:1px solid rgba(177,138,63,.28);
+  border-radius:16px;
+  padding:12px;
+  box-shadow:0 12px 28px rgba(77,54,29,.08);
+  text-decoration:none;
+}
+.flyer-grid img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+  border-radius:8px;
+}
 
 .profile-section,.contact-section{border-top:1px solid rgba(177,138,63,.28);}
 .site-footer{
@@ -110,117 +185,20 @@ p{font-size:18px;margin:0 0 18px;}
 }
 .site-footer p{margin:0;font-size:14px;letter-spacing:.16em;}
 
-@media (max-width:700px){
-  .global-nav{position:static;}
-  .global-nav a{width:50%;text-align:center;padding:13px 8px;font-size:13px;}
-  .section{padding:54px 6%;}
-  p{font-size:16px;}
-  .work-grid{grid-template-columns:1fr;}
-  .panel,.work-card,.profile-block{padding:22px;border-radius:14px;}
-}
-
-/* labyrinth.html layout fix */
-.labyrinth-page main{
-  width:100%;
-}
-.labyrinth-title-section{
-  margin-top:42px;
-  margin-bottom:0;
-  background:rgba(255,253,247,.86);
-  border:1px solid rgba(177,138,63,.25);
-  border-left:7px solid var(--gold);
-  border-radius:22px;
-  box-shadow:0 14px 35px rgba(77,54,29,.06);
-}
-.small-heading{
-  margin:0 0 12px;
-  color:#6e4d20;
-  font-size:16px;
-  letter-spacing:.12em;
-}
-.lead{
-  color:#6e4d20;
-  font-weight:bold;
-}
-.main-introduction{
-  max-width:760px;
-}
-.compact-section{
-  padding-top:58px;
-  padding-bottom:58px;
-}
-.info-box,.story-box,.guest-card{
-  background:rgba(255,253,247,.86);
-  border:1px solid rgba(177,138,63,.25);
-  border-left:7px solid var(--gold);
-  border-radius:18px;
-  padding:28px;
-  box-shadow:0 14px 35px rgba(77,54,29,.06);
-}
-.event-info{
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:10px 18px;
-  margin:0;
-  font-size:18px;
-}
-.event-info dt{
-  font-weight:bold;
-  color:#6e4d20;
-}
-.event-info dd{
-  margin:0;
-}
-.guest-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;
-}
-.guest-card h3{
-  color:#6e4d20;
-}
-.flyer-section{
-  text-align:center;
-}
-.flyer-section h2,
-.flyer-section .section-label{
-  text-align:left;
-}
-.flyer-section > p{
-  text-align:left;
-}
-.flyer-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:22px;
-  align-items:start;
-  margin-top:28px;
-}
-.flyer-grid a{
-  display:block;
-  background:#fffdf7;
-  border:1px solid rgba(177,138,63,.28);
-  border-radius:16px;
-  padding:14px;
-  box-shadow:0 14px 35px rgba(77,54,29,.06);
-  text-decoration:none;
-}
-.flyer-grid img{
-  width:100%;
-  max-width:260px;
-  height:auto;
-  display:block;
-  margin:0 auto;
-  object-fit:contain;
-}
-@media (max-width:900px){
+@media (max-width:800px){
   .flyer-grid{grid-template-columns:1fr;}
   .flyer-grid img{max-width:360px;}
   .guest-grid{grid-template-columns:1fr;}
 }
+
 @media (max-width:700px){
-  .labyrinth-title-section{margin-top:24px;border-radius:16px;}
-  .event-info{grid-template-columns:1fr;gap:2px 0;font-size:16px;}
+  .global-nav{position:static;}
+  .global-nav a{width:50%;text-align:center;padding:13px 8px;font-size:13px;}
+  .section,.labyrinth-hero{padding:54px 6%;}
+  .compact-section{padding-top:42px;padding-bottom:42px;}
+  p{font-size:16px;}
+  .work-grid{grid-template-columns:1fr;}
+  .panel,.work-card,.profile-block,.info-box,.story-box,.guest-card,.labyrinth-hero-text{padding:22px;border-radius:14px;}
+  .event-info{grid-template-columns:1fr;gap:2px 0;}
   .event-info dd{margin-bottom:12px;}
-  .flyer-grid img{max-width:100%;}
 }
