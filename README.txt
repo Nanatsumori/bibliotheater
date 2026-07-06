@@ -1,15 +1,13 @@
-ビブリオ劇場 公式サイト 正式版 Ver.1.0
+ビブリオ劇場 ラビリンス追加版
 
-GitHub の bibliotheater リポジトリに、このフォルダ内のファイルをすべてアップロードしてください。
+このフォルダ内のファイルを、GitHub の bibliotheater リポジトリに上書き・追加してください。
 
-必要ファイル:
+上書きするファイル:
 - index.html
 - style.css
 - hero.png
-- about.html
-- schedule.html
-- works.html
-- profile.html
-- contact.html
 
-トップページは hero.png の画像だけを上部に表示します。画像の上にHTML文字は重ねていません。
+追加するファイル:
+- labyrinth.html
+
+hero.png は、トップ画像が表示されるようにファイル名を修正して入れています。
