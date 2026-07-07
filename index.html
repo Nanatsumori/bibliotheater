@@ -18,8 +18,21 @@
     .primary-button, .secondary-button { display: inline-block; padding: .85em 1.3em; border-radius: 999px; text-decoration: none; font-weight: 700; }
     .primary-button { background: #2f3cff; color: #fff; }
     .secondary-button { background: #fff; color: #2f3cff; border: 1px solid #2f3cff; }
+    .news-panel { background: #fff; border-radius: 18px; padding: 22px; box-shadow: 0 10px 28px rgba(0,0,0,.08); }
+    .news-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .news-list li { padding: 14px 16px; border-radius: 14px; background: #f8f8ff; }
+    .news-list a { font-weight: 700; color: #2f3cff; text-decoration: none; }
+    .badge { display: inline-block; margin-left: .4em; padding: .25em .65em; border-radius: 999px; font-size: .86em; font-weight: 700; background: #e9f9ee; color: #126b31; }
+    .badge-reserve { background: #fff1df; color: #9a5200; }
+    .next-grid { display: grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 24px; }
+    .next-card { background: rgba(255,255,255,.86); border-radius: 20px; padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,.12); display: flex; flex-direction: column; }
+    .next-card img { width: 100%; border-radius: 16px; box-shadow: 0 10px 28px rgba(0,0,0,.14); margin-bottom: 16px; }
+    .next-card h3 { font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.2; margin: .2em 0; }
+    .next-card .event-summary { margin-top: auto; }
+    .signup-button { background: #d94600; color: #fff; }
     .ongoing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-    @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } .next-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -28,9 +41,9 @@
       <img src="hero.png" alt="ビブリオ劇場 本のある場所が 舞台になる">
     </div>
     <nav class="global-nav" aria-label="メインメニュー">
+      <a href="#news">最新情報</a>
       <a href="#current">現在の上演</a>
       <a href="#next">次の上演</a>
-      <a href="#colors">COLORS</a>
       <a href="#about">ビブリオ劇場とは</a>
       <a href="#schedule">今後の予定</a>
       <a href="#ongoing">進行中の作品</a>
@@ -40,6 +53,18 @@
   </header>
 
   <main>
+    <section id="news" class="section">
+      <p class="section-label">NEWS</p>
+      <h1>ビブリオ劇場 News</h1>
+      <div class="news-panel">
+        <ul class="news-list">
+          <li><strong>7月26日（日）</strong>　<a href="kaidan.html">怪談の多い図書館</a>　栗橋文化会館イリス</li>
+          <li><strong>7月30日（木）</strong>　<a href="monogatari_magic.html">ビブリオ劇場＆モノガタリマジック</a>　ブックハウスカフェ <span class="badge">入場無料・申込不要</span></li>
+          <li><strong>7月31日（金）</strong>　<a href="colors.html">COLORS</a>　ブックハウスカフェ <span class="badge badge-reserve">要申込み</span>　<a href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら</a></li>
+        </ul>
+      </div>
+    </section>
+
     <section id="current" class="section current-section">
       <p class="section-label">NOW PLAYING</p>
       <div class="current-card">
@@ -63,50 +88,42 @@
       </div>
     </section>
 
-    <section id="next" class="section current-section" style="background: linear-gradient(135deg, #fff8df 0%, #e8f5f3 100%);">
+    <section id="next" class="section current-section" style="background: linear-gradient(135deg, #fff8df 0%, #f2fbff 100%);">
       <p class="section-label">NEXT STAGE</p>
-      <div class="current-card">
-        <a href="monogatari_magic.html"><img src="monogatari_magic_flyer.jpg" alt="ビブリオ劇場＆モノガタリマジック フライヤー"></a>
-        <div>
-          <p class="small-heading">久喜市立太東中学校ゲキ部 ＆ ザッキー</p>
-          <h2 class="current-title">ビブリオ劇場<br>＆モノガタリマジック</h2>
-          <p class="current-copy">ドラマとマジックが織りなす<br>特別な世界をブックハウスカフェで。</p>
+      <h2>次のブックハウスカフェ公演</h2>
+      <div class="next-grid">
+        <article class="next-card">
+          <a href="monogatari_magic.html"><img src="monogatari_magic_flyer.jpg" alt="ビブリオ劇場＆モノガタリマジック フライヤー"></a>
+          <p class="small-heading">7月30日（木）／申込不要</p>
+          <h3>ビブリオ劇場<br>＆モノガタリマジック</h3>
+          <p>絵本ドラマリーディングに、プロマジシャン・ザッキーによる「モノガタリマジック」が加わる特別ステージです。</p>
           <div class="event-summary">
             <p><strong>日時：</strong>2026年7月30日（木）開場 13:30／開演 14:00</p>
             <p><strong>会場：</strong>ブックハウスカフェ ひふみ</p>
-            <p><strong>入場：</strong>無料【申込不要】</p>
-            <p><strong>演出構成：</strong>サイトウトシオ　<strong>マジックショー：</strong>ザッキー</p>
+            <p><strong>入場：</strong>無料・申込不要</p>
           </div>
-          <p>絵本を立体的に表現する「絵本ドラマリーディング」に、プロマジシャン・ザッキーによる「モノガタリマジック」が加わります。物語とマジックが響き合う、ブックハウスカフェならではのステージです。</p>
           <div class="current-actions">
             <a class="primary-button" href="monogatari_magic.html">詳しく見る →</a>
             <a class="secondary-button" href="monogatari_magic_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section id="colors" class="section current-section" style="background: linear-gradient(135deg, #fffaf2 0%, #f2fbff 100%);">
-      <p class="section-label">BOOKHOUSE CAFE STAGE</p>
-      <div class="current-card">
-        <a href="colors.html"><img src="colors_flyer.jpg" alt="COLORS カラーズ フライヤー"></a>
-        <div>
-          <p class="small-heading">ビブリオ劇場＠ブックハウスカフェ</p>
-          <h2 class="current-title">COLORS<br>カラーズ</h2>
-          <p class="current-copy">想像して！<br>色とりどりの未来の声が<br>響き合う未来を</p>
+        <article class="next-card">
+          <a href="colors.html"><img src="colors_flyer.jpg" alt="COLORS カラーズ フライヤー"></a>
+          <p class="small-heading">7月31日（金）／要申込み</p>
+          <h3>COLORS<br>カラーズ</h3>
+          <p>自由でにぎやかな図書館「カラーズ」を舞台に、多様性、平和、未来への願いを、演劇とマジックで描きます。</p>
           <div class="event-summary">
-            <p><strong>日時：</strong>2026年7月31日（金）</p>
-            <p><strong>1回目：</strong>13:00〜14:00　<strong>2回目：</strong>15:00〜16:00</p>
+            <p><strong>日時：</strong>2026年7月31日（金）13:00〜／15:00〜</p>
             <p><strong>会場：</strong>ブックハウスカフェ 2階 ひふみ</p>
             <p><strong>参加費：</strong>大人 1,500円／中高生 1,000円／小学生 500円</p>
-            <p><strong>構成・演出：</strong>サイトウトシオ／マジシャン ザッキー</p>
           </div>
-          <p>自由でにぎやかな図書館「カラーズ」を舞台に、ある国の少女と日本の少年の出会いを描く物語です。中学生の演劇とプロマジシャン・ザッキーのマジックが重なり、言葉を超えたコミュニケーションと平和への願いを届けます。</p>
           <div class="current-actions">
             <a class="primary-button" href="colors.html">詳しく見る →</a>
+            <a class="primary-button signup-button" href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら</a>
             <a class="secondary-button" href="colors_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -134,7 +151,7 @@
       <div class="panel">
         <h3>2026年7月31日（金）　COLORS</h3>
         <p>ブックハウスカフェ 2階ひふみにて、ゲキ部とマジシャン・ザッキーによる「COLORS」を上演します。</p>
-        <p><a class="detail-button" href="colors.html">公演紹介を見る →</a></p>
+        <p><a class="detail-button" href="colors.html">公演紹介を見る →</a>　<a class="detail-button" href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら →</a></p>
       </div>
       <div class="panel">
         <h3>2026年8月18日（火）　怪談の多い図書館＆モノガタリマジック</h3>
