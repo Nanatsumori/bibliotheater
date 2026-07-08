@@ -30,8 +30,10 @@
     .next-card h3 { font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.2; margin: .2em 0; }
     .next-card .event-summary { margin-top: auto; }
     .signup-button { background: #d94600; color: #fff; }
+    .special-event-card { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 28px; align-items: center; background: #fff; border-radius: 22px; padding: 24px; box-shadow: 0 14px 34px rgba(0,0,0,.12); }
+    .special-event-card img { width: 100%; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
     .ongoing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-    @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } .next-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } .next-grid { grid-template-columns: 1fr; } .special-event-card { grid-template-columns: 1fr; } }
 
   </style>
 </head>
@@ -44,6 +46,7 @@
       <a href="#news">最新情報</a>
       <a href="#current">現在の上演</a>
       <a href="#next">次の上演</a>
+      <a href="#special">8月18日公演</a>
       <a href="#about">ビブリオ劇場とは</a>
       <a href="#works">作品一覧</a>
       <a href="#profile">プロフィール</a>
@@ -59,6 +62,7 @@
           <li><strong>7月26日（日）</strong>　<a href="kaidan.html">怪談の多い図書館</a>　栗橋文化会館イリス</li>
           <li><strong>7月30日（木）</strong>　<a href="monogatari_magic.html">ビブリオ劇場＆モノガタリマジック</a>　ブックハウスカフェ <span class="badge">入場無料・申込不要</span></li>
           <li><strong>7月31日（金）</strong>　<a href="colors.html">COLORS</a>　ブックハウスカフェ <span class="badge badge-reserve">要申込み</span>　<a href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら</a></li>
+          <li><strong>8月18日（火）</strong>　<a href="chuo_library.html">怪談の多い図書館＆モノガタリマジック</a>　久喜市立中央図書館 <span class="badge badge-reserve">8/7 9:00〜申込開始</span></li>
         </ul>
       </div>
     </section>
@@ -122,6 +126,29 @@
             <a class="secondary-button" href="colors_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="special" class="section" style="background: linear-gradient(135deg, #eef0ff 0%, #f8fbff 100%);">
+      <p class="section-label">SPECIAL EVENT</p>
+      <h2>8月18日　久喜市立中央図書館 休館日特別公演</h2>
+      <div class="special-event-card">
+        <a href="chuo_library.html"><img src="chuo_library_flyer.jpg" alt="怪談の多い図書館＆モノガタリマジック フライヤー"></a>
+        <div>
+          <p class="small-heading">図書館全体を舞台にした、ビブリオ劇場の中心的な発表</p>
+          <h3>怪談の多い図書館<br>＆モノガタリマジック</h3>
+          <p>『怪談の多い図書館』は、久喜市立中央図書館の休館日に、図書館全体を舞台として上演するために創作された作品です。8月18日は、その本来の舞台である中央図書館で上演します。</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年8月18日（火）13:30〜15:30</p>
+            <p><strong>会場：</strong>久喜市立中央図書館</p>
+            <p><strong>定員：</strong>90人（申込先着順・座席60人／立見30人）</p>
+            <p><strong>申込：</strong>8月7日（金）9:00〜 申込フォーム（WEB）にて受付</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="chuo_library.html">詳しく見る →</a>
+            <a class="secondary-button" href="chuo_library_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </div>
       </div>
     </section>
 
