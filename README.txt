@@ -1,13 +1,13 @@
-ビブリオ劇場 カンパネラ完成版
+ビブリオ劇場「アトム」追加用ファイル
 
-上書き・追加するファイル:
-- index.html（カンパネラをアーカイブ先頭に追加）
-- style.css（作品ページ共通レイアウトとボタンを追加）
-- campanella.html（新規追加）
-- labyrinth.html（ゲキ部紹介・サイトウトシオ紹介を削除した版）
-- campanella_flyer_front.jpg（新規追加）
-- campanella_flyer_back.jpg（新規追加）
-- campanella_flyer_blue.jpg（新規追加）
+含まれるもの：
+- atom.html
+- assets/atom-flyer-front.jpg
+- assets/atom-flyer-back.jpg
+- assets/atom-event-flyer.jpg
+- index_atom_section.html（トップページのレパートリー欄に追加するカード例）
 
-hero.png は変更していません。
-既存のラビリンス用フライヤー画像はそのまま使用します。
+使い方：
+1. atom.html を bibliotheater フォルダ直下に入れます。
+2. assets フォルダ内の3枚の画像を、既存サイトの assets フォルダに入れます。
+3. index.html のレパートリー一覧に、index_atom_section.html の内容を追加します。
