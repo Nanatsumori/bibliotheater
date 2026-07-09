@@ -145,9 +145,43 @@
 	line-height: 1.9;
 }
 
+
+    .picturebook-catch{
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.2; letter-spacing: .04em; white-space: nowrap; margin: 0 0 .6em; color: var(--bt-ink);
+    }
+    .open-book-list{
+      background: transparent; box-shadow: none; padding: 0;
+    }
+    .book-list-title{
+      text-align: center; margin: 0 0 14px; letter-spacing: .04em;
+    }
+    .open-book{
+      position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fffdf8; border-radius: 22px; box-shadow: 0 18px 38px rgba(0,0,0,.12); overflow: hidden; border: 1px solid #efe3cc;
+    }
+    .open-book::before{
+      content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #d9c7a4; box-shadow: -8px 0 18px rgba(120,90,40,.10), 8px 0 18px rgba(120,90,40,.10);
+    }
+    .book-page{
+      list-style: none; margin: 0; padding: 26px 24px; line-height: 1.9;
+    }
+    .book-page-left{
+      text-align: right; padding-right: 32px;
+    }
+    .book-page-right{
+      text-align: left; padding-left: 32px;
+    }
+    .book-page li{
+      margin: 0 0 .7em; font-weight: 700;
+    }
+
     @media (max-width: 760px) {
       .about-points { grid-template-columns: 1fr; }
       .picturebook-card { grid-template-columns: 1fr; }
+      .picturebook-catch { font-size: clamp(1.55rem, 7vw, 2.2rem); white-space: normal; }
+      .open-book { grid-template-columns: 1fr; }
+      .open-book::before { display: none; }
+      .book-page, .book-page-left, .book-page-right { text-align: left; padding: 22px 24px; }
+      .book-page-right { padding-top: 0; }
       .global-nav{
 	justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px;
 }
@@ -316,7 +350,8 @@
       <div class="picturebook-card">
         <div>
           <p class="small-heading">ビブリオ劇場のもう一つの柱</p>
-          <h3>絵本が、舞台になる。</h3>
+          <p class="picturebook-catch">絵本の世界が　舞台になる</p>
+          <h3>絵本ドラマリーディング</h3>
           <p>絵本ドラマリーディングは、一冊の絵本を声と身体を使って、表現する取組です。基本的に絵は読み聞かせと同様の形で観客に提示し、脚色はしません。</p>
           <ul class="picturebook-points">
             <li>図書館や書店など、本のある場所で上演しやすい形式です。</li>
@@ -327,9 +362,24 @@
             <a class="primary-button" href="picturebook-reading.html">詳しく見る →</a>
           </div>
         </div>
-        <div class="picturebook-note">
-          <p><strong>これまでに取り上げた絵本</strong></p>
-          <p>『ちいさなハチドリのちいさないってき』／『うそつきのつき』／『うさぎのしま』／『ぼくはふね』／『がっこうにまにあわない』 ほか</p>
+        <div class="picturebook-note open-book-list">
+          <p class="book-list-title"><strong>これまでに取り上げた絵本</strong></p>
+          <div class="open-book">
+            <ul class="book-page book-page-left">
+              <li>『ちいさなハチドリのちいさないってき』</li>
+              <li>『うそつきのつき』</li>
+              <li>『うさぎのしま』</li>
+              <li>『ぼくはふね』</li>
+              <li>『がっこうにまにあわない』</li>
+            </ul>
+            <ul class="book-page book-page-right">
+              <li>『Dear 16とおりのへいわへのちかい』</li>
+              <li>『どしゃぶり』</li>
+              <li>『がいとうのひっこし』</li>
+              <li>『ともだちや』</li>
+              <li>『ひとのなみだ』</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
