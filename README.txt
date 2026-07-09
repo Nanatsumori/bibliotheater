@@ -1,13 +1,16 @@
-ビブリオ劇場「アトム」追加用ファイル
+ビブリオ劇場「絵本ドラマリーディング」追加用ファイル
 
-含まれるもの：
-- atom.html
-- assets/atom-flyer-front.jpg
-- assets/atom-flyer-back.jpg
-- assets/atom-event-flyer.jpg
-- index_atom_section.html（トップページのレパートリー欄に追加するカード例）
+【内容】
+- picturebook-reading.html
+- index_picturebook_section.html（トップページへの追加用HTML断片）
+- assets/picturebook-flyer-1.png
+- assets/picturebook-flyer-2.jpg
+- assets/picturebook-flyer-3.jpg
+- assets/bookhouse-0730-flyer.jpg
 
-使い方：
-1. atom.html を bibliotheater フォルダ直下に入れます。
-2. assets フォルダ内の3枚の画像を、既存サイトの assets フォルダに入れます。
-3. index.html のレパートリー一覧に、index_atom_section.html の内容を追加します。
+【使い方】
+1. picturebook-reading.html を既存サイトの index.html と同じ階層に置いてください。
+2. assets フォルダ内の画像を、既存サイトの assets フォルダに追加してください。
+3. トップページには index_picturebook_section.html の内容を、活動紹介またはレパートリー付近に貼り付けてください。
+
+※絵本の表紙画像・挿絵は使用せず、書名・作者・絵・出版社のみを掲載しています。
