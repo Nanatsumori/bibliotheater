@@ -149,39 +149,31 @@
     .picturebook-catch{
       font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.2; letter-spacing: .04em; white-space: nowrap; margin: 0 0 .6em; color: var(--bt-ink);
     }
-    .open-book-list{
-      background: transparent; box-shadow: none; padding: 0;
+    .picturebook-program{
+      background: #fffdf8; border-radius: 22px; padding: clamp(20px, 3vw, 28px); box-shadow: 0 14px 34px rgba(0,0,0,.10); border: 1px solid #efe3cc;
     }
-    .book-list-title{
-      text-align: center; margin: 0 0 14px; letter-spacing: .04em;
+    .program-title{
+      text-align: center; margin: 0 0 18px; letter-spacing: .04em; font-size: 1.08rem; color: var(--bt-ink);
     }
-    .open-book{
-      position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fffdf8; border-radius: 22px; box-shadow: 0 18px 38px rgba(0,0,0,.12); overflow: hidden; border: 1px solid #efe3cc;
+    .program-list{
+      list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px;
     }
-    .open-book::before{
-      content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #d9c7a4; box-shadow: -8px 0 18px rgba(120,90,40,.10), 8px 0 18px rgba(120,90,40,.10);
+    .program-list li{
+      position: relative; background: #fff; border-radius: 14px; padding: .8em 1em .8em 2.45em; line-height: 1.55; font-weight: 700; box-shadow: 0 6px 18px rgba(0,0,0,.06); border-left: 4px solid #d7c4a3;
     }
-    .book-page{
-      list-style: none; margin: 0; padding: 26px 24px; line-height: 1.9;
+    .program-list li::before{
+      content: "📖"; position: absolute; left: .85em; top: .78em; font-size: 1rem;
     }
-    .book-page-left{
-      text-align: right; padding-right: 32px;
-    }
-    .book-page-right{
-      text-align: left; padding-left: 32px;
-    }
-    .book-page li{
-      margin: 0 0 .7em; font-weight: 700;
+    .program-footnote{
+      margin: 18px 0 0; text-align: center; font-size: .95rem; line-height: 1.8; color: #555;
     }
 
     @media (max-width: 760px) {
       .about-points { grid-template-columns: 1fr; }
       .picturebook-card { grid-template-columns: 1fr; }
       .picturebook-catch { font-size: clamp(1.55rem, 7vw, 2.2rem); white-space: normal; }
-      .open-book { grid-template-columns: 1fr; }
-      .open-book::before { display: none; }
-      .book-page, .book-page-left, .book-page-right { text-align: left; padding: 22px 24px; }
-      .book-page-right { padding-top: 0; }
+      .program-list { grid-template-columns: 1fr; }
+      .program-list li { padding-left: 2.35em; }
       .global-nav{
 	justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px;
 }
@@ -362,24 +354,21 @@
             <a class="primary-button" href="picturebook-reading.html">詳しく見る →</a>
           </div>
         </div>
-        <div class="picturebook-note open-book-list">
-          <p class="book-list-title"><strong>これまでに取り上げた絵本</strong></p>
-          <div class="open-book">
-            <ul class="book-page book-page-left">
-              <li>『ちいさなハチドリのちいさないってき』</li>
-              <li>『うそつきのつき』</li>
-              <li>『うさぎのしま』</li>
-              <li>『ぼくはふね』</li>
-              <li>『がっこうにまにあわない』</li>
-            </ul>
-            <ul class="book-page book-page-right">
-              <li>『Dear 16とおりのへいわへのちかい』</li>
-              <li>『どしゃぶり』</li>
-              <li>『がいとうのひっこし』</li>
-              <li>『ともだちや』</li>
-              <li>『ひとのなみだ』</li>
-            </ul>
-          </div>
+        <div class="picturebook-program">
+          <p class="program-title"><strong>これまでに取り上げた絵本</strong></p>
+          <ul class="program-list">
+            <li>『ちいさなハチドリのちいさないってき』</li>
+            <li>『うそつきのつき』</li>
+            <li>『うさぎのしま』</li>
+            <li>『ぼくはふね』</li>
+            <li>『がっこうにまにあわない』</li>
+            <li>『Dear 16とおりのへいわへのちかい』</li>
+            <li>『どしゃぶり』</li>
+            <li>『がいとうのひっこし』</li>
+            <li>『ともだちや』</li>
+            <li>『ひとのなみだ』</li>
+          </ul>
+          <p class="program-footnote">表紙画像は使用せず、舞台プログラムのように作品名を並べています。</p>
         </div>
       </div>
     </section>
