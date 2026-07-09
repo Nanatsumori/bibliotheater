@@ -33,7 +33,20 @@
     .special-event-card { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 28px; align-items: center; background: #fff; border-radius: 22px; padding: 24px; box-shadow: 0 14px 34px rgba(0,0,0,.12); }
     .special-event-card img { width: 100%; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
     .ongoing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .upcoming-section { background: linear-gradient(135deg, #f7f3ff 0%, #eef4ff 50%, #fff8df 100%); }
+    .upcoming-lead { max-width: 760px; font-size: 1.08rem; line-height: 1.9; margin-bottom: 1.8em; }
+    .upcoming-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .upcoming-card { background: rgba(255,255,255,.9); border-radius: 20px; padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,.12); display: flex; flex-direction: column; }
+    .upcoming-card img { width: 100%; border-radius: 16px; box-shadow: 0 10px 28px rgba(0,0,0,.14); margin-bottom: 16px; }
+    .upcoming-card h3 { font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.2; margin: .2em 0; }
+    .upcoming-card .event-summary { margin-top: auto; }
     @media (max-width: 760px) { .current-card { grid-template-columns: 1fr; } .next-grid { grid-template-columns: 1fr; } .special-event-card { grid-template-columns: 1fr; } }
+
+    .pickup-grid { display: grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 24px; }
+    .pickup-card { background: rgba(255,255,255,.88); border-radius: 20px; padding: 22px; box-shadow: 0 12px 32px rgba(0,0,0,.10); }
+    .pickup-card h3 { font-size: clamp(1.5rem, 3vw, 2.4rem); margin: .25em 0; line-height: 1.2; }
+    .pickup-card p { line-height: 1.85; }
+    @media (max-width: 760px) { .pickup-grid { grid-template-columns: 1fr; } }
 
   </style>
 </head>
@@ -44,9 +57,7 @@
     </div>
     <nav class="global-nav" aria-label="メインメニュー">
       <a href="#news">最新情報</a>
-      <a href="#current">現在の上演</a>
-      <a href="#next">次の上演</a>
-      <a href="#special">8月18日公演</a>
+      <a href="#upcoming">これからの上演</a>
       <a href="#about">ビブリオ劇場とは</a>
       <a href="#works">作品一覧</a>
       <a href="#profile">プロフィール</a>
@@ -63,38 +74,35 @@
           <li><strong>7月30日（木）</strong>　<a href="monogatari_magic.html">ビブリオ劇場＆モノガタリマジック</a>　ブックハウスカフェ <span class="badge">入場無料・申込不要</span></li>
           <li><strong>7月31日（金）</strong>　<a href="colors.html">COLORS</a>　ブックハウスカフェ <span class="badge badge-reserve">要申込み</span>　<a href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら</a></li>
           <li><strong>8月18日（火）</strong>　<a href="chuo_library.html">怪談の多い図書館＆モノガタリマジック</a>　久喜市立中央図書館 <span class="badge badge-reserve">8/7 9:00〜申込開始</span></li>
+          <li><strong>作品紹介</strong>　<a href="atom.html">アトム</a>／<a href="picturebook_drama_reading.html">絵本ドラマリーディング</a>をレパートリーに追加しました。</li>
         </ul>
       </div>
     </section>
 
-    <section id="current" class="section current-section">
-      <p class="section-label">NOW PLAYING</p>
-      <div class="current-card">
-        <a href="kaidan.html"><img src="kaidan_flyer_front.jpg" alt="怪談の多い図書館 フライヤー表面"></a>
-        <div>
-          <p class="small-heading">久喜市立太東中学校ゲキ部 自主公演</p>
-          <h1 class="current-title">怪談の多い図書館</h1>
-          <p class="current-copy">図書館に棲む妖怪たちが<br>あなたをお待ちしております</p>
+    <section id="upcoming" class="section upcoming-section">
+      <p class="section-label">UPCOMING STAGE</p>
+      <h2>これからの上演</h2>
+      <p class="upcoming-lead">現在の上演、次の上演、8月18日の図書館公演、新しく紹介する作品を、開催日順・紹介順に一つの場所へまとめました。</p>
+
+      <div class="upcoming-grid">
+        <article class="upcoming-card">
+          <a href="kaidan.html"><img src="kaidan_flyer_front.jpg" alt="怪談の多い図書館 フライヤー表面"></a>
+          <p class="small-heading">7月26日（日）／久喜市立太東中学校ゲキ部 自主公演</p>
+          <h3>怪談の多い図書館</h3>
+          <p>休館日の図書館を訪れた森本静花は、上演準備中の『怪談の多い図書館』と出会う。現実と劇の世界が重なり始め、静花は妖怪・天邪鬼をめぐる物語の真実へ近づいていきます。</p>
           <div class="event-summary">
             <p><strong>日時：</strong>2026年7月26日（日）開場 13:30／開演 14:00</p>
             <p><strong>会場：</strong>栗橋文化会館イリス</p>
             <p><strong>入場：</strong>無料</p>
             <p><strong>作：</strong>サイトウトシオ　<strong>illustration：</strong>髙橋咲</p>
           </div>
-          <p>休館日の図書館を訪れた森本静花は、上演準備中の『怪談の多い図書館』と出会う。現実と劇の世界が重なり始め、静花は妖怪・天邪鬼をめぐる物語の真実へ近づいていきます。</p>
           <div class="current-actions">
             <a class="primary-button" href="kaidan.html">詳しく見る →</a>
             <a class="secondary-button" href="kaidan_flyer_front.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section id="next" class="section current-section" style="background: linear-gradient(135deg, #fff8df 0%, #f2fbff 100%);">
-      <p class="section-label">NEXT STAGE</p>
-      <h2>次のブックハウスカフェ公演</h2>
-      <div class="next-grid">
-        <article class="next-card">
+        <article class="upcoming-card">
           <a href="monogatari_magic.html"><img src="monogatari_magic_flyer.jpg" alt="ビブリオ劇場＆モノガタリマジック フライヤー"></a>
           <p class="small-heading">7月30日（木）／申込不要</p>
           <h3>ビブリオ劇場<br>＆モノガタリマジック</h3>
@@ -110,7 +118,7 @@
           </div>
         </article>
 
-        <article class="next-card">
+        <article class="upcoming-card">
           <a href="colors.html"><img src="colors_flyer.jpg" alt="COLORS カラーズ フライヤー"></a>
           <p class="small-heading">7月31日（金）／要申込み</p>
           <h3>COLORS<br>カラーズ</h3>
@@ -126,16 +134,10 @@
             <a class="secondary-button" href="colors_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
         </article>
-      </div>
-    </section>
 
-    <section id="special" class="section" style="background: linear-gradient(135deg, #eef0ff 0%, #f8fbff 100%);">
-      <p class="section-label">SPECIAL EVENT</p>
-      <h2>8月18日　久喜市立中央図書館 休館日特別公演</h2>
-      <div class="special-event-card">
-        <a href="chuo_library.html"><img src="chuo_library_flyer.jpg" alt="怪談の多い図書館＆モノガタリマジック フライヤー"></a>
-        <div>
-          <p class="small-heading">図書館全体を舞台にした、ビブリオ劇場の中心的な発表</p>
+        <article class="upcoming-card">
+          <a href="chuo_library.html"><img src="chuo_library_flyer.jpg" alt="怪談の多い図書館＆モノガタリマジック フライヤー"></a>
+          <p class="small-heading">8月18日（火）／久喜市立中央図書館 休館日特別公演</p>
           <h3>怪談の多い図書館<br>＆モノガタリマジック</h3>
           <p>『怪談の多い図書館』は、久喜市立中央図書館の休館日に、図書館全体を舞台として上演するために創作された作品です。8月18日は、その本来の舞台である中央図書館で上演します。</p>
           <div class="event-summary">
@@ -148,7 +150,33 @@
             <a class="primary-button" href="chuo_library.html">詳しく見る →</a>
             <a class="secondary-button" href="chuo_library_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
           </div>
-        </div>
+        </article>
+
+        <article class="upcoming-card">
+          <p class="small-heading">NEW REPERTOIRE</p>
+          <h3>アトム</h3>
+          <p>本のある場所で、物語と演劇が出会うビブリオ劇場のレパートリー作品です。作品の紹介ページへ移動できます。</p>
+          <div class="event-summary">
+            <p><strong>分類：</strong>ビブリオ劇場 レパートリー</p>
+            <p><strong>紹介：</strong>作品ページを新設</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="atom.html">作品紹介を見る →</a>
+          </div>
+        </article>
+
+        <article class="upcoming-card">
+          <p class="small-heading">PROGRAM</p>
+          <h3>絵本ドラマリーディング</h3>
+          <p>絵本をただ読むのではなく、登場人物・声・動き・空間を使って、絵本の世界を劇として立ち上げるプログラムです。</p>
+          <div class="event-summary">
+            <p><strong>分類：</strong>ビブリオ劇場 プログラム</p>
+            <p><strong>紹介：</strong>紹介ページを新設</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="picturebook_drama_reading.html">紹介ページを見る →</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -183,6 +211,19 @@
           <p>色とりどりの未来を描く、演劇とマジックによる平和の物語。</p>
           <p class="work-button"><a class="detail-button" href="colors.html">作品紹介を見る →</a></p>
         </article>
+
+        <article class="work-card featured-work">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>アトム</h3>
+          <p>物語を演劇として立ち上げる、ビブリオ劇場の新しいレパートリー作品。</p>
+          <p class="work-button"><a class="detail-button" href="atom.html">作品紹介を見る →</a></p>
+        </article>
+        <article class="work-card featured-work">
+          <p class="work-number">PROGRAM</p>
+          <h3>絵本ドラマリーディング</h3>
+          <p>絵本の世界を、声・身体・空間によって劇として届けるビブリオ劇場の基本プログラム。</p>
+          <p class="work-button"><a class="detail-button" href="picturebook_drama_reading.html">紹介ページを見る →</a></p>
+        </article>
         <article class="work-card">
           <p class="work-number">REPERTOIRE</p>
           <h3>カンパネラ</h3>
@@ -194,12 +235,6 @@
           <h3>ラビリンス</h3>
           <p>図書館全体を舞台にした、本の迷宮をめぐるビブリオ劇場の原点となる作品。</p>
           <p class="work-button"><a class="detail-button" href="labyrinth.html">作品紹介を見る →</a></p>
-        </article>
-        <article class="work-card">
-          <p class="work-number">REPERTOIRE</p>
-          <h3>Book Birds</h3>
-          <p>本を届ける鳥たちを描いたビブリオ劇場作品。</p>
-          <p class="work-button"><span class="detail-button coming-soon">準備中</span></p>
         </article>
       </div>
     </section>
