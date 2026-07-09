@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ビブリオ劇場｜本のある場所が 舞台になる</title>
+  <meta name="description" content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。これからの上演、レパートリー、絵本ドラマリーディングを紹介しています。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bt-blue: #2f3cff;
+      --bt-orange: #d94600;
+      --bt-ink: #1f2440;
+      --bt-soft: rgba(255,255,255,.9);
+    }
+    html { scroll-behavior: smooth; }
+    .site-header .hero img { width: 100%; display: block; }
+    .global-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .global-nav a { text-decoration: none; }
+    .section { scroll-margin-top: 24px; }
+    .section-label { letter-spacing: .12em; font-weight: 700; color: var(--bt-blue); }
+    .catch { font-size: clamp(1.8rem, 4vw, 3.4rem); font-weight: 800; line-height: 1.35; margin: .25em 0 .55em; }
+    .lead-text { max-width: 860px; font-size: 1.08rem; line-height: 2; }
+
+    .about-section { background: linear-gradient(135deg, #fffaf2 0%, #eef4ff 100%); }
+    .about-panel { background: var(--bt-soft); border-radius: 24px; padding: clamp(22px, 4vw, 42px); box-shadow: 0 16px 42px rgba(0,0,0,.10); }
+    .about-points { display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 18px; margin-top: 26px; }
+    .about-point { background: #fff; border-radius: 18px; padding: 18px; line-height: 1.8; box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .about-point strong { display: block; font-size: 1.08rem; margin-bottom: .35em; color: var(--bt-ink); }
+
+    .upcoming-section { background: linear-gradient(135deg, #f7f3ff 0%, #eef4ff 50%, #fff8df 100%); }
+    .upcoming-lead { max-width: 760px; font-size: 1.08rem; line-height: 1.9; margin-bottom: 1.8em; }
+    .upcoming-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .upcoming-card { background: var(--bt-soft); border-radius: 22px; padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,.12); display: flex; flex-direction: column; }
+    .upcoming-card img { width: 100%; border-radius: 16px; box-shadow: 0 10px 28px rgba(0,0,0,.14); margin-bottom: 16px; }
+    .upcoming-card h3 { font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.22; margin: .2em 0; }
+    .event-summary { margin: 1.4em 0; padding: 1.1em; background: rgba(255,255,255,.82); border-radius: 14px; }
+    .event-summary p { margin: .35em 0; }
+    .current-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; }
+    .primary-button, .secondary-button, .detail-button { display: inline-block; padding: .85em 1.3em; border-radius: 999px; text-decoration: none; font-weight: 700; }
+    .primary-button, .detail-button { background: var(--bt-blue); color: #fff; }
+    .secondary-button { background: #fff; color: var(--bt-blue); border: 1px solid var(--bt-blue); }
+    .signup-button { background: var(--bt-orange); color: #fff; }
+    .small-heading { font-weight: 700; color: #555; }
+
+    .works-section { background: #fff; }
+    .archive-lead { max-width: 860px; line-height: 1.95; }
+    .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 24px; }
+    .work-card { background: linear-gradient(135deg, #ffffff 0%, #f7f8ff 100%); border-radius: 20px; padding: 22px; box-shadow: 0 12px 30px rgba(0,0,0,.09); display: flex; flex-direction: column; }
+    .featured-work { background: linear-gradient(135deg, #fff8df 0%, #f7f3ff 100%); }
+    .work-number { font-size: .82rem; letter-spacing: .12em; font-weight: 800; color: var(--bt-blue); }
+    .work-card h3 { font-size: clamp(1.45rem, 3vw, 2.2rem); line-height: 1.25; margin: .2em 0 .4em; }
+    .work-card p { line-height: 1.8; }
+    .work-button { margin-top: auto; }
+
+    .picturebook-section { background: linear-gradient(135deg, #fffaf2 0%, #f4fbff 100%); }
+    .picturebook-card { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; background: var(--bt-soft); border-radius: 24px; padding: clamp(22px, 4vw, 34px); box-shadow: 0 14px 34px rgba(0,0,0,.10); }
+    .picturebook-card h3 { font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.25; margin: .2em 0 .5em; }
+    .picturebook-points { margin: 1.2em 0; padding-left: 1.2em; line-height: 1.9; }
+    .picturebook-note { background: #fff; border-radius: 18px; padding: 20px; line-height: 1.85; box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+
+    .profile-section { background: #f8f8ff; }
+    .profile-block { background: #fff; border-radius: 18px; padding: 20px; margin-top: 18px; box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .profile-block p { line-height: 1.9; }
+
+    @media (max-width: 760px) {
+      .about-points { grid-template-columns: 1fr; }
+      .picturebook-card { grid-template-columns: 1fr; }
+      .global-nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+      .global-nav a { white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="hero">
+      <img src="hero.png" alt="ビブリオ劇場 本のある場所が 舞台になる">
+    </div>
+    <nav class="global-nav" aria-label="メインメニュー">
+      <a href="#about">ビブリオ劇場とは</a>
+      <a href="#upcoming">これからの上演</a>
+      <a href="#works">レパートリー</a>
+      <a href="#picturebook-reading">絵本ドラマリーディング</a>
+      <a href="#profile">プロフィール</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section about-section">
+      <div class="about-panel">
+        <p class="section-label">ABOUT</p>
+        <h1>ビブリオ劇場とは</h1>
+        <p class="catch">本のある場所が　舞台になる</p>
+        <p class="lead-text">図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。劇を通して、人と本、人と人がつながり、新しい出会いが生まれます。</p>
+        <p class="lead-text">ビブリオ劇場は、舞台装置のある劇場だけでなく、書架のある空間そのものを舞台としてとらえます。本を開くように物語が始まり、観客は本の世界に近い場所で劇と出会います。</p>
+        <div class="about-points">
+          <div class="about-point"><strong>本と出会う</strong>物語を劇として体験することで、上演後に本を手に取りたくなる入口をつくります。</div>
+          <div class="about-point"><strong>場所とつながる</strong>図書館や書店など、本のある場所の魅力を、演劇によって新しいかたちで伝えます。</div>
+          <div class="about-point"><strong>人が集まる</strong>観る人、演じる人、場所を支える人が、同じ物語の時間を共有します。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming" class="section upcoming-section">
+      <p class="section-label">UPCOMING STAGE</p>
+      <h2>これからの上演</h2>
+      <p class="upcoming-lead">これから上演予定の公演を、開催日順にまとめました。各公演の詳細は、それぞれの紹介ページでご覧いただけます。</p>
+
+      <div class="upcoming-grid">
+        <article class="upcoming-card">
+          <a href="kaidan.html"><img src="kaidan_flyer_front.jpg" alt="怪談の多い図書館 フライヤー表面"></a>
+          <p class="small-heading">7月26日（日）／久喜市立太東中学校ゲキ部 自主公演</p>
+          <h3>怪談の多い図書館</h3>
+          <p>休館日の図書館を訪れた森本静花は、上演準備中の『怪談の多い図書館』と出会う。現実と劇の世界が重なり始め、静花は妖怪・天邪鬼をめぐる物語の真実へ近づいていきます。</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年7月26日（日）開場 13:30／開演 14:00</p>
+            <p><strong>会場：</strong>栗橋文化会館イリス</p>
+            <p><strong>入場：</strong>無料</p>
+            <p><strong>作：</strong>サイトウトシオ　<strong>illustration：</strong>髙橋咲</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="kaidan.html">詳しく見る →</a>
+            <a class="secondary-button" href="kaidan_flyer_front.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </article>
+
+        <article class="upcoming-card">
+          <a href="monogatari_magic.html"><img src="monogatari_magic_flyer.jpg" alt="ビブリオ劇場＆モノガタリマジック フライヤー"></a>
+          <p class="small-heading">7月30日（木）／申込不要</p>
+          <h3>ビブリオ劇場<br>＆モノガタリマジック</h3>
+          <p>ブックハウスカフェで上演する特別公演です。絵本ドラマリーディングと、プロマジシャン・ザッキーによるステージをお楽しみいただけます。</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年7月30日（木）開場 13:30／開演 14:00</p>
+            <p><strong>会場：</strong>ブックハウスカフェ ひふみ</p>
+            <p><strong>入場：</strong>無料・申込不要</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="monogatari_magic.html">詳しく見る →</a>
+            <a class="secondary-button" href="monogatari_magic_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </article>
+
+        <article class="upcoming-card">
+          <a href="colors.html"><img src="colors_flyer.jpg" alt="COLORS カラーズ フライヤー"></a>
+          <p class="small-heading">7月31日（金）／要申込み</p>
+          <h3>COLORS<br>カラーズ</h3>
+          <p>自由でにぎやかな図書館「カラーズ」を舞台に、多様性、平和、未来への願いを、演劇とマジックで描きます。</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年7月31日（金）13:00〜／15:00〜</p>
+            <p><strong>会場：</strong>ブックハウスカフェ 2階 ひふみ</p>
+            <p><strong>参加費：</strong>大人 1,500円／中高生 1,000円／小学生 500円</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="colors.html">詳しく見る →</a>
+            <a class="primary-button signup-button" href="https://bookhousecafe.jp/event/content/2214" target="_blank" rel="noopener">申込みはこちら</a>
+            <a class="secondary-button" href="colors_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </article>
+
+        <article class="upcoming-card">
+          <a href="chuo_library.html"><img src="chuo_library_flyer.jpg" alt="怪談の多い図書館 久喜市立中央図書館公演 フライヤー"></a>
+          <p class="small-heading">8月18日（火）／久喜市立中央図書館 休館日特別公演</p>
+          <h3>怪談の多い図書館<br>久喜市立中央図書館公演</h3>
+          <p>『怪談の多い図書館』は、久喜市立中央図書館の休館日に、図書館全体を舞台として上演するために創作された作品です。8月18日は、その本来の舞台である中央図書館で上演します。</p>
+          <div class="event-summary">
+            <p><strong>日時：</strong>2026年8月18日（火）13:30〜15:30</p>
+            <p><strong>会場：</strong>久喜市立中央図書館</p>
+            <p><strong>定員：</strong>90人（申込先着順・座席60人／立見30人）</p>
+            <p><strong>申込：</strong>8月7日（金）9:00〜 申込フォーム（WEB）にて受付</p>
+          </div>
+          <div class="current-actions">
+            <a class="primary-button" href="chuo_library.html">詳しく見る →</a>
+            <a class="secondary-button" href="chuo_library_flyer.jpg" target="_blank" rel="noopener">フライヤーを見る</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="works" class="section works-section">
+      <p class="section-label">REPERTOIRE</p>
+      <h2>レパートリー</h2>
+      <p class="archive-lead">ビブリオ劇場の作品は、初演で終わるのではなく、図書館・書店・地域の場で再演されながら育っていきます。ここでは、現在上演中の作品も、これまでに上演してきた作品も「レパートリー」として紹介します。</p>
+      <div class="work-grid">
+        <article class="work-card featured-work">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>怪談の多い図書館</h3>
+          <p>図書館に棲む妖怪たちが登場する怪談劇。現在の中心作品です。</p>
+          <p class="work-button"><a class="detail-button" href="kaidan.html">作品紹介を見る →</a></p>
+        </article>
+
+        <article class="work-card featured-work">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>アトム</h3>
+          <p>物語を演劇として立ち上げる、ビブリオ劇場の新しいレパートリー作品。</p>
+          <p class="work-button"><a class="detail-button" href="atom.html">作品紹介を見る →</a></p>
+        </article>
+
+        <article class="work-card featured-work">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>COLORS</h3>
+          <p>色とりどりの未来を描く、演劇とマジックによる平和の物語。</p>
+          <p class="work-button"><a class="detail-button" href="colors.html">作品紹介を見る →</a></p>
+        </article>
+
+        <article class="work-card">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>カンパネラ</h3>
+          <p>ピアノと演劇が響き合う、平和への願いを込めた物語。</p>
+          <p class="work-button"><a class="detail-button" href="campanella.html">作品紹介を見る →</a></p>
+        </article>
+
+        <article class="work-card">
+          <p class="work-number">REPERTOIRE</p>
+          <h3>ラビリンス</h3>
+          <p>図書館全体を舞台にした、本の迷宮をめぐるビブリオ劇場の原点となる作品。</p>
+          <p class="work-button"><a class="detail-button" href="labyrinth.html">作品紹介を見る →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="picturebook-reading" class="section picturebook-section">
+      <p class="section-label">PICTURE BOOK DRAMA READING</p>
+      <h2>絵本ドラマリーディング</h2>
+      <div class="picturebook-card">
+        <div>
+          <p class="small-heading">ビブリオ劇場のもう一つの柱</p>
+          <h3>絵本が、舞台になる。</h3>
+          <p>絵本ドラマリーディングは、一冊の絵本を「読む」だけではなく、衣装を着け、声と身体を使って、物語を小さな劇として届けるプログラムです。</p>
+          <ul class="picturebook-points">
+            <li>図書館や書店など、本のある場所で上演しやすい形式です。</li>
+            <li>観客との距離が近く、絵本の世界を身近に感じられます。</li>
+            <li>上演後に、その絵本を手に取ってもらうきっかけをつくります。</li>
+          </ul>
+          <div class="current-actions">
+            <a class="primary-button" href="picturebook-reading.html">詳しく見る →</a>
+          </div>
+        </div>
+        <div class="picturebook-note">
+          <p><strong>これまでに取り上げた絵本</strong></p>
+          <p>『ちいさなハチドリのちいさないってき』／『うそつきのつき』／『うさぎのしま』／『ぼくはふね』／『がっこうにまにあわない』 ほか</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="section profile-section">
+      <p class="section-label">PROFILE</p>
+      <h2>プロフィール</h2>
+      <div class="profile-block">
+        <h3>サイトウトシオ</h3>
+        <p>久喜市立太東中学校ゲキ部の演劇指導を担当。図書館・書店・学校など、本のある場所と中学生を演劇でつなぐ活動を行っています。</p>
+      </div>
+      <div class="profile-block">
+        <h3>ゲキ部</h3>
+        <p>本のある場所を舞台に、物語の魅力を演劇で届ける活動を続けています。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© BIBLIO THEATER</p>
+  </footer>
+</body>
+</html>
