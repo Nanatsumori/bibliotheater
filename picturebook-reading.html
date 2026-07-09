@@ -1,208 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>絵本ドラマリーディング｜ビブリオ劇場</title>
-  <meta name="description" content="久喜市立太東中学校ゲキ部によるビブリオ劇場の取り組み『絵本ドラマリーディング』紹介ページ。絵本を読む。そして、物語が動き出す。">
-  <style>
-    :root{
-      --ink:#24201d;
-      --muted:#6f665f;
-      --paper:#fff8ec;
-      --cream:#fffdf7;
-      --accent:#ea8b1c;
-      --accent-2:#51b8aa;
-      --accent-dark:#9b4a16;
-      --rose:#d96e77;
-      --navy:#0f2430;
-      --line:#eadfd0;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#fffbe8 0%,#fffdf8 42%,#f7efe7 100%);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;line-height:1.9;letter-spacing:.04em}
-    a{color:inherit}
-    .wrap{width:min(1080px,92vw);margin:auto}
-    header{padding:18px 0;border-bottom:1px solid var(--line);background:rgba(255,253,248,.92);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
-    .brand{display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-weight:700;letter-spacing:.08em}
-    .brand a{text-decoration:none}
-    .back{font-size:.9rem;color:var(--muted)}
-    .hero{padding:58px 0 42px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
-    .eyebrow{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.88rem;font-weight:700;color:var(--accent-dark);letter-spacing:.18em;margin-bottom:10px}
-    h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.15;margin:0 0 18px;font-weight:900;letter-spacing:.08em;color:var(--navy)}
-    .lead{font-size:clamp(1.35rem,3vw,2.15rem);line-height:1.65;font-weight:800;margin:0 0 22px;color:var(--accent-dark)}
-    .intro{font-size:1.03rem;color:#332c26;margin:0 0 24px}
-    .tag{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:10px 18px;border-radius:999px;font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-weight:700;font-size:.92rem}
-    .flyer-card{background:white;border:1px solid var(--line);box-shadow:0 18px 45px rgba(69,43,22,.16);padding:12px;border-radius:18px;transform:rotate(1.1deg)}
-    .flyer-card img{display:block;width:100%;height:auto;border-radius:10px}
-    section{padding:58px 0;border-top:1px solid var(--line)}
-    h2{font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.35;margin:0 0 24px;color:var(--accent-dark);letter-spacing:.08em}
-    h3{font-family:"Hiragino Sans","Yu Gothic",sans-serif;margin:0 0 10px;font-size:1.25rem;color:var(--navy)}
-    .text-box{background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 10px 28px rgba(80,50,20,.06)}
-    .quote{font-size:clamp(1.45rem,4vw,2.6rem);line-height:1.65;font-weight:800;text-align:center;margin:0;color:var(--navy)}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:175px;box-shadow:0 8px 20px rgba(80,50,20,.05)}
-    .timeline{display:grid;gap:26px}
-    .event{display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:start;background:white;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 28px rgba(80,50,20,.07)}
-    .event img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
-    .date{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-weight:800;color:var(--accent-dark);letter-spacing:.08em;margin:0 0 8px}
-    .books{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
-    .book{background:#fffaf0;border:1px solid var(--line);border-radius:14px;padding:15px 17px}
-    .book b{display:block;font-size:1.07rem;color:var(--navy);margin-bottom:4px}
-    .book span{display:block;font-size:.94rem;color:#4d443d;font-family:"Hiragino Sans","Yu Gothic",sans-serif;line-height:1.65}
-    .book-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}
-    figure{margin:0;background:white;border:1px solid var(--line);padding:10px;border-radius:16px;box-shadow:0 8px 20px rgba(80,50,20,.08)}
-    figure img{width:100%;height:auto;display:block;border-radius:10px}
-    figcaption{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.85rem;color:var(--muted);padding:8px 4px 0;text-align:center}
-    .next{display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center}
-    .next .flyer-card{transform:rotate(-1deg)}
-    footer{padding:50px 0;text-align:center;background:var(--navy);color:white}
-    footer .copy{font-size:1.4rem;font-weight:700;letter-spacing:.12em;margin:0 0 12px}
-    footer a{color:white;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
-    @media (max-width:900px){.hero-grid,.features,.event,.next{grid-template-columns:1fr}.book-list{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.flyer-card,.next .flyer-card{transform:none}.hero{padding-top:34px}section{padding:42px 0}.text-box{padding:24px}}
-    @media (max-width:620px){.books,.book-list,.gallery{grid-template-columns:1fr}.brand{align-items:flex-start;flex-direction:column;gap:4px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>絵本ドラマリーディング｜ビブリオ劇場</title>
+<meta name="description" content="ビブリオ劇場の絵本ドラマリーディング紹介ページです。これまで上演した9冊の絵本を、本棚のようなギャラリーで紹介します。">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{
+    --ink:#2d241f;
+    --brown:#7a4d25;
+    --deep:#2a1a12;
+    --wood:#8a5a2b;
+    --wood-dark:#5f371b;
+    --paper:#fffaf0;
+    --cream:#f6ead6;
+    --line:#dec49a;
+    --blue:#2f3cff;
+  }
+  body{ margin:0; color:var(--ink); background:linear-gradient(180deg,#fffaf0 0%,#f5ead8 46%,#efe0c6 100%); font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif; line-height:1.9; }
+  a{ color:inherit; }
+  .global-nav{ position:sticky; top:0; z-index:20; display:flex; justify-content:center; flex-wrap:wrap; gap:0; background:rgba(255,250,240,.96); border-bottom:1px solid var(--line); box-shadow:0 8px 22px rgba(80,45,15,.08); }
+  .global-nav a{ padding:14px 18px; text-decoration:none; font-weight:700; color:#49321f; }
+  .global-nav a:hover{ background:#f0ddbd; }
+  .page-hero{ padding:72px 24px 54px; background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.9),transparent 32%),linear-gradient(135deg,#432712 0%,#8a5a2b 52%,#d1a35f 100%); color:#fff; text-align:center; }
+  .page-hero-inner{ max-width:980px; margin:0 auto; }
+  .section-label{ letter-spacing:.16em; font-size:.82rem; font-weight:800; color:#9b6a2e; margin:0 0 .6em; }
+  .page-hero .section-label{ color:#ffe6b1; }
+  h1{ font-size:clamp(2.4rem,7vw,5rem); line-height:1.1; margin:.1em 0 .25em; }
+  h2{ font-size:clamp(1.9rem,4vw,3.2rem); line-height:1.25; margin:.15em 0 .6em; }
+  h3{ line-height:1.3; }
+  .lead{ max-width:840px; margin:0 auto; font-size:clamp(1.05rem,2.2vw,1.3rem); font-weight:700; }
+  .section{ max-width:1120px; margin:0 auto; padding:64px 24px; }
+  .concept-card{ background:rgba(255,255,255,.9); border:1px solid var(--line); border-radius:26px; padding:32px; box-shadow:0 18px 42px rgba(90,55,18,.12); }
+  .concept-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:start; }
+  .concept-card p{ margin:.4em 0 1em; }
+  .concept-points{ margin:1.2em 0 0; padding-left:1.2em; }
+  .note-box{ background:#fff6e4; border-left:6px solid #b7823e; border-radius:16px; padding:18px 20px; }
+  .shelf-stage{ position:relative; margin-top:30px; padding:34px 28px 42px; background:linear-gradient(90deg,#6c3d1c,#8a5429 18%,#a66b37 50%,#7c471f 82%,#5d3218); border-radius:28px; box-shadow:inset 0 0 0 2px rgba(255,255,255,.18),0 24px 52px rgba(55,31,12,.28); }
+  .shelf-stage::before,.shelf-stage::after{ content:""; position:absolute; left:18px; right:18px; height:18px; border-radius:12px; background:linear-gradient(180deg,#c58a4d,#6d3d1b); box-shadow:0 7px 14px rgba(43,21,7,.35); }
+  .shelf-stage::before{ top:18px; }
+  .shelf-stage::after{ bottom:18px; }
+  .shelf-title{ position:relative; z-index:2; display:inline-block; margin:0 0 26px; padding:10px 18px; border-radius:999px; background:#fff4d9; color:#4c2a12; font-weight:800; box-shadow:0 8px 18px rgba(45,20,6,.2); }
+  .book-grid{ position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+  .book-card{ display:flex; flex-direction:column; min-height:360px; text-decoration:none; color:var(--ink); background:linear-gradient(180deg,#fffaf2,#f7e8cd); border:1px solid rgba(255,255,255,.65); border-radius:18px 18px 12px 12px; overflow:hidden; box-shadow:0 16px 28px rgba(38,17,6,.24); transform:translateY(0); transition:transform .22s ease, box-shadow .22s ease; }
+  .book-card:hover,.book-card:focus{ transform:translateY(-8px); box-shadow:0 24px 34px rgba(38,17,6,.34); outline:none; }
+  .book-cover-placeholder{ min-height:168px; display:flex; align-items:center; justify-content:center; padding:22px; color:#fff; text-align:center; background:linear-gradient(135deg,var(--c1),var(--c2)); border-bottom:8px solid rgba(255,255,255,.32); }
+  .book-cover-placeholder span{ display:block; font-size:clamp(1.35rem,2.4vw,2rem); line-height:1.25; font-weight:900; letter-spacing:.02em; text-shadow:0 3px 8px rgba(0,0,0,.22); }
+  .book-info{ flex:1; padding:20px 20px 18px; display:flex; flex-direction:column; }
+  .book-info h3{ margin:.1em 0 .45em; font-size:1.35rem; }
+  .book-meta{ margin:.2em 0 1em; font-size:.92rem; color:#5c4b3c; line-height:1.65; }
+  .book-comment{ margin:auto 0 0; padding-top:12px; border-top:1px dashed #d3b98d; font-size:.96rem; }
+  .permission-list{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:24px; }
+  .permission-card{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:0 10px 24px rgba(70,40,15,.08); }
+  .permission-card h3{ margin:.1em 0 .4em; font-size:1.15rem; }
+  .back-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:24px; }
+  .primary-button,.secondary-button{ display:inline-block; padding:.85em 1.25em; border-radius:999px; text-decoration:none; font-weight:800; }
+  .primary-button{ background:var(--blue); color:#fff; }
+  .secondary-button{ background:#fff; color:var(--blue); border:1px solid var(--blue); }
+  .site-footer{ text-align:center; padding:32px 16px; color:#6c5238; }
+  @media (max-width:900px){ .concept-grid{ grid-template-columns:1fr; } .book-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .permission-list{ grid-template-columns:1fr; } }
+  @media (max-width:560px){ .section{ padding:48px 18px; } .shelf-stage{ padding:30px 16px 38px; border-radius:22px; } .book-grid{ grid-template-columns:1fr; gap:18px; } .book-card{ min-height:auto; } .book-cover-placeholder{ min-height:140px; } .global-nav a{ padding:12px 11px; font-size:.9rem; } }
+</style>
 </head>
 <body>
-<header>
-  <div class="wrap brand">
-    <a href="index.html">ビブリオ劇場</a>
-    <a class="back" href="index.html#activities">活動紹介へ</a>
-  </div>
-</header>
+  <nav class="global-nav" aria-label="メインメニュー">
+    <a href="index.html">トップ</a>
+    <a href="index.html#upcoming">これからの上演</a>
+    <a href="index.html#works">レパートリー</a>
+    <a href="index.html#profile">プロフィール</a>
+  </nav>
 
-<main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">BIBLIO THEATER ACTIVITY</div>
-        <h1>絵本ドラマ<br>リーディング</h1>
-        <p class="lead">絵本を読む。<br>そして、物語が動き出す。</p>
-        <p class="intro">絵本ドラマリーディングは、絵本の世界を演劇として表現する、ビブリオ劇場のもう一つの柱です。一冊の絵本から生まれる言葉、動き、空間を、観客とともに味わいます。</p>
-        <span class="tag">一冊の絵本から、一つの舞台へ。</span>
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <p class="section-label">PICTURE BOOK DRAMA READING</p>
+      <h1>絵本ドラマリーディング</h1>
+      <p class="lead">本を手に取るように、気になる一冊を開いてみてください。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="concept-card concept-grid">
+        <div>
+          <p class="section-label">CONCEPT</p>
+          <h2>絵本の言葉を大切に、声と身体で届ける。</h2>
+          <p>絵本ドラマリーディングは、一冊の絵本を、声と身体を使って表現する取組です。基本的に絵は読み聞かせと同様に紹介し、基本的に脚色はしません。</p>
+          <ul class="concept-points">
+            <li>絵本そのものの言葉と絵を尊重します。</li>
+            <li>読み聞かせの親しみやすさに、演劇の身体表現を加えます。</li>
+            <li>上演後に、観客がその絵本を手に取りたくなる時間を目指します。</li>
+          </ul>
+        </div>
+        <div class="note-box">
+          <h3>ビブリオ劇場での位置づけ</h3>
+          <p>図書館や書店など、本のある場所で上演しやすい形式です。観客との距離が近く、絵本の世界をその場で共有できます。</p>
+        </div>
       </div>
-      <div class="flyer-card">
-        <img src="assets/picturebook-flyer-3.jpg" alt="ビブリオ劇場 vol.2 フライヤー">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="wrap text-box">
-      <h2>絵本を「演じる」という読み聞かせ</h2>
-      <p>絵本ドラマリーディングでは、絵本をただ読むだけではなく、登場人物の言葉、場面の空気、物語のリズムを、演劇表現として立ち上げていきます。</p>
-      <p>図書館という本のある場所で、絵本のページから生まれた物語が、声と身体を通して観客の前に現れます。子どもたちはもちろん、大人もまた、絵本の新しい楽しみ方と出会うことができます。</p>
-    </div>
-  </section>
+    <section class="section" id="bookshelf">
+      <p class="section-label">BOOKSHELF</p>
+      <h2>これまで上演した絵本</h2>
+      <p>本棚を眺めるように、9冊の絵本を並べました。書影を正式に掲載できるものは、出版社の条件を確認したうえで表紙画像へ差し替えられる構成にしています。</p>
 
-  <section>
-    <div class="wrap">
-      <p class="quote">物語が動き出す。<br>本のある場所が、舞台になる。</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>上演のあゆみ</h2>
-      <div class="timeline">
-        <article class="event">
-          <img src="assets/picturebook-flyer-1.png" alt="演劇的読み聞かせ フライヤー">
-          <div>
-            <p class="date">第1回　2025年12月7日（日）</p>
-            <h3>演劇的読み聞かせ</h3>
-            <p>会場：久喜市立中央図書館 視聴覚室</p>
-            <div class="books">
-              <div class="book"><b>がっこうにまにあわない</b><span>作・絵　ザ・キャビンカンパニー<br>あかね書房</span></div>
-              <div class="book"><b>ひとのなみだ</b><span>作　内田麟太郎<br>絵　nakaban<br>童心社</span></div>
-              <div class="book"><b>ぼくはふね</b><span>作・絵　五味太郎<br>福音館書店</span></div>
+      <div class="shelf-stage" aria-label="これまで上演した絵本の本棚">
+        <p class="shelf-title">上演した絵本たち</p>
+        <div class="book-grid">
+          <a class="book-card" href="#dosyaburi" style="--c1:#385f88;--c2:#86a9c7;">
+            <div class="book-cover-placeholder"><span>どしゃぶり</span></div>
+            <div class="book-info">
+              <h3>どしゃぶり</h3>
+              <p class="book-meta">おーなり由子／文<br>はたこうしろう／絵<br>講談社</p>
+              <p class="book-comment">雨の音や空気の変化を、声と身体で立ち上げる一冊。</p>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="event">
-          <img src="assets/picturebook-flyer-2.jpg" alt="ビブリオ劇場 vol.1＆モノガタリマジック フライヤー">
-          <div>
-            <p class="date">第2回　2026年4月12日（日）</p>
-            <h3>ビブリオ劇場 vol.1 ＆ モノガタリマジック</h3>
-            <p>会場：久喜市立中央図書館 視聴覚室<br>プロマジシャン・ザッキーとの共演</p>
-            <div class="books">
-              <div class="book"><b>がっこうにまにあわない</b><span>作・絵　ザ・キャビンカンパニー<br>あかね書房</span></div>
-              <div class="book"><b>ひとのなみだ</b><span>作　内田麟太郎<br>絵　nakaban<br>童心社</span></div>
-              <div class="book"><b>ぼくはふね</b><span>作・絵　五味太郎<br>福音館書店</span></div>
-              <div class="book"><b>うそつきのつき</b><span>作　内田麟太郎<br>絵　荒井良二<br>文溪堂</span></div>
-              <div class="book"><b>うさぎのしま</b><span>作　近藤えり<br>絵　たてのひろし<br>世界文化社</span></div>
+          <a class="book-card" href="#gaito" style="--c1:#57402f;--c2:#d6a65d;">
+            <div class="book-cover-placeholder"><span>がいとうの<br>ひっこし</span></div>
+            <div class="book-info">
+              <h3>がいとうのひっこし</h3>
+              <p class="book-meta">山田彩央里／文<br>山田和明／絵<br>イマジネイション・プラス</p>
+              <p class="book-comment">街灯をめぐる物語を、静かなユーモアと余韻で届ける一冊。</p>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="event">
-          <img src="assets/picturebook-flyer-3.jpg" alt="ビブリオ劇場 vol.2 フライヤー">
-          <div>
-            <p class="date">第3回　2026年6月7日（日）</p>
-            <h3>ビブリオ劇場 vol.2</h3>
-            <p>会場：久喜市立中央図書館 視聴覚室</p>
-            <div class="books">
-              <div class="book"><b>どしゃぶり</b><span>作　おーなり由子<br>絵　はたこうしろう<br>講談社</span></div>
-              <div class="book"><b>がいとうのひっこし</b><span>作　山田彩央里<br>絵　山田和明<br>イマジネイション・プラス</span></div>
-              <div class="book"><b>ともだちや</b><span>作　内田麟太郎<br>絵　降矢なな<br>偕成社</span></div>
-              <div class="book"><b>ちいさなハチドリのちいさないってき</b><span>企画　橋爪千代子<br>再話・絵　ウノサワケイスケ<br>イマジネイション・プラス</span></div>
+          <a class="book-card" href="#tomodachiya" style="--c1:#91433d;--c2:#e6a96a;">
+            <div class="book-cover-placeholder"><span>ともだちや</span></div>
+            <div class="book-info">
+              <h3>ともだちや</h3>
+              <p class="book-meta">内田麟太郎／作<br>降矢なな／絵<br>偕成社</p>
+              <p class="book-comment">「ともだち」とは何かを、楽しくあたたかく届ける一冊。</p>
             </div>
-          </div>
+          </a>
+
+          <a class="book-card" href="#namida" style="--c1:#26384e;--c2:#8fa3b8;">
+            <div class="book-cover-placeholder"><span>ひとのなみだ</span></div>
+            <div class="book-info">
+              <h3>ひとのなみだ</h3>
+              <p class="book-meta">内田麟太郎／作<br>nakaban／絵<br>童心社</p>
+              <p class="book-comment">涙にこめられた思いや問いを、丁寧に表現する一冊。</p>
+            </div>
+          </a>
+
+          <a class="book-card" href="#hummingbird" style="--c1:#2f6c55;--c2:#b9d675;">
+            <div class="book-cover-placeholder"><span>ちいさな<br>ハチドリの<br>ちいさな<br>いってき</span></div>
+            <div class="book-info">
+              <h3>ちいさなハチドリのちいさないってき</h3>
+              <p class="book-meta">はしづめちよこ／企画<br>ウノサワケイスケ／絵<br>イマジネイション・プラス</p>
+              <p class="book-comment">小さな行動が世界につながることを伝える一冊。</p>
+            </div>
+          </a>
+
+          <a class="book-card" href="#usotsuki" style="--c1:#5e416f;--c2:#c9a2d7;">
+            <div class="book-cover-placeholder"><span>うそつきの<br>つき</span></div>
+            <div class="book-info">
+              <h3>うそつきのつき</h3>
+              <p class="book-meta">内田麟太郎／作<br>荒井良二／絵<br>文溪堂</p>
+              <p class="book-comment">言葉遊びの面白さを、声と動きで広げられる一冊。</p>
+            </div>
+          </a>
+
+          <a class="book-card" href="#usagi" style="--c1:#5e6f49;--c2:#d8c9a0;">
+            <div class="book-cover-placeholder"><span>うさぎのしま</span></div>
+            <div class="book-info">
+              <h3>うさぎのしま</h3>
+              <p class="book-meta">たてのひろし・近藤えり／作<br>世界文化社</p>
+              <p class="book-comment">島の記憶と未来を、静かに見つめる一冊。</p>
+            </div>
+          </a>
+
+          <a class="book-card" href="#fune" style="--c1:#1f6a79;--c2:#80c7d4;">
+            <div class="book-cover-placeholder"><span>ぼくは<br>ふね</span></div>
+            <div class="book-info">
+              <h3>ぼくは ふね</h3>
+              <p class="book-meta">五味太郎／作・絵<br>福音館書店</p>
+              <p class="book-comment">小さな船の旅を、身体の方向や距離で表現できる一冊。</p>
+            </div>
+          </a>
+
+          <a class="book-card" href="#gakko" style="--c1:#9b5d2e;--c2:#f0c77d;">
+            <div class="book-cover-placeholder"><span>がっこうに<br>まにあわない</span></div>
+            <div class="book-info">
+              <h3>がっこうにまにあわない</h3>
+              <p class="book-meta">作者・出版社確認中</p>
+              <p class="book-comment">急ぐ気持ち、時間、身体のリズムを舞台化しやすい一冊。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">COVER IMAGE POLICY</p>
+      <h2>表紙画像について</h2>
+      <p>このページでは、まず著作権上安全なデザイン表現で本棚を作成しています。出版社が公式に書影利用を認めているものは、条件に従って表紙画像へ差し替えます。</p>
+      <div class="permission-list">
+        <article class="permission-card">
+          <h3>掲載可能性が高いもの</h3>
+          <p>偕成社は、ホームページ等で本を紹介する場合、書名・著者名・画家名・出版社名などを明記し、偕成社ホームページの表紙画像を流用してよいと案内しています。</p>
+        </article>
+        <article class="permission-card">
+          <h3>確認してから差し替えるもの</h3>
+          <p>講談社、イマジネイション・プラス、童心社、文溪堂、世界文化社、福音館書店などは、各社の規定または個別確認に従って扱います。</p>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>上演した絵本</h2>
-      <div class="book-list">
-        <div class="book"><b>がっこうにまにあわない</b><span>作・絵　ザ・キャビンカンパニー<br>あかね書房</span></div>
-        <div class="book"><b>ひとのなみだ</b><span>作　内田麟太郎<br>絵　nakaban<br>童心社</span></div>
-        <div class="book"><b>ぼくはふね</b><span>作・絵　五味太郎<br>福音館書店</span></div>
-        <div class="book"><b>うそつきのつき</b><span>作　内田麟太郎<br>絵　荒井良二<br>文溪堂</span></div>
-        <div class="book"><b>うさぎのしま</b><span>作　近藤えり<br>絵　たてのひろし<br>世界文化社</span></div>
-        <div class="book"><b>どしゃぶり</b><span>作　おーなり由子<br>絵　はたこうしろう<br>講談社</span></div>
-        <div class="book"><b>がいとうのひっこし</b><span>作　山田彩央里<br>絵　山田和明<br>イマジネイション・プラス</span></div>
-        <div class="book"><b>ともだちや</b><span>作　内田麟太郎<br>絵　降矢なな<br>偕成社</span></div>
-        <div class="book"><b>ちいさなハチドリのちいさないってき</b><span>企画　橋爪千代子<br>再話・絵　ウノサワケイスケ<br>イマジネイション・プラス</span></div>
+      <div class="back-actions">
+        <a class="primary-button" href="index.html">トップページへ戻る</a>
+        <a class="secondary-button" href="#bookshelf">本棚を見る</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section>
-    <div class="wrap">
-      <h2>フライヤー</h2>
-      <div class="gallery">
-        <figure><img src="assets/picturebook-flyer-1.png" alt="第1回 演劇的読み聞かせ フライヤー"><figcaption>第1回　演劇的読み聞かせ</figcaption></figure>
-        <figure><img src="assets/picturebook-flyer-2.jpg" alt="第2回 ビブリオ劇場 vol.1 フライヤー"><figcaption>第2回　ビブリオ劇場 vol.1</figcaption></figure>
-        <figure><img src="assets/picturebook-flyer-3.jpg" alt="第3回 ビブリオ劇場 vol.2 フライヤー"><figcaption>第3回　ビブリオ劇場 vol.2</figcaption></figure>
-        <figure><img src="assets/bookhouse-0730-flyer.jpg" alt="ブックハウスカフェ ビブリオ劇場＆モノガタリマジック フライヤー"><figcaption>2026年7月30日　ブックハウスカフェ</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap next">
-      <div class="text-box">
-        <h2>そして、新たな公演へ</h2>
-        <p>これまで続けてきた絵本ドラマリーディングは、2026年7月30日にブックハウスカフェで上演予定の<strong>「ビブリオ劇場＆モノガタリマジック」</strong>へとつながっていきます。</p>
-        <p>絵本ドラマリーディングをもとにした新しいビブリオ劇場と、プロマジシャン・ザッキーによるモノガタリマジック。</p>
-        <p>それぞれ異なる表現でありながら、「本」と「物語」の魅力を伝える公演として、新たな一歩を踏み出します。</p>
-      </div>
-      <div class="flyer-card">
-        <img src="assets/bookhouse-0730-flyer.jpg" alt="2026年7月30日 ブックハウスカフェ公演フライヤー">
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <p class="copy">本のある場所が、舞台になる。</p>
-    <p><a href="index.html">ビブリオ劇場トップへ戻る</a></p>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <p>© BIBLIO THEATER</p>
+  </footer>
 </body>
 </html>
