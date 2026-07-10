@@ -89,6 +89,77 @@
       .pickup-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 520px) { .picturebook-bookshelf { grid-template-columns: 1fr; } }
+
+    /* 日本図書館協会『図書館雑誌』掲載 */
+    .journal-section {
+      background: #faf8f2;
+    }
+    .journal-card {
+      display: grid;
+      grid-template-columns: minmax(190px, 260px) 1fr;
+      gap: 40px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 28px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(139,106,63,.22);
+      border-radius: 22px;
+      box-shadow: 0 14px 34px rgba(0,0,0,.09);
+    }
+    .journal-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    }
+    .journal-text {
+      line-height: 1.95;
+    }
+    .journal-title {
+      margin-top: 0;
+      font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+      font-weight: 700;
+    }
+    .journal-highlight {
+      margin: 18px 0;
+      font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+      line-height: 1.35;
+      font-weight: 700;
+      color: #6d4a1f;
+    }
+    .journal-page {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background: #f5efe3;
+      border-radius: 10px;
+    }
+    .journal-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: #fff;
+      border-left: 5px solid #8b6a3f;
+      border-radius: 8px;
+    }
+    .journal-actions {
+      margin-top: 22px;
+    }
+    @media (max-width: 760px) {
+      .journal-card {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 22px;
+      }
+      .journal-image {
+        max-width: 260px;
+        margin: 0 auto;
+      }
+      .journal-text {
+        text-align: left;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -206,6 +277,57 @@
         <p>ビブリオ劇場は、演劇を通して、本のある場所とYA（ヤングアダルト）をつなぐことを目指しています。</p>
       </div>
     </section>
+
+
+    <section id="library-journal" class="section journal-section">
+      <p class="section-label">MEDIA</p>
+      <h2>日本図書館協会『図書館雑誌』で紹介されました</h2>
+
+      <div class="journal-card">
+        <div class="journal-image">
+          <img src="library_journal_2026_02.jpg" alt="日本図書館協会『図書館雑誌』2026年2月号 表紙">
+        </div>
+
+        <div class="journal-text">
+          <p class="journal-title">『図書館雑誌』2026年2月号</p>
+
+          <p>
+            日本図書館協会発行『図書館雑誌』2026年2月号の特集
+            <strong>「トピックスで追う図書館とその周辺」</strong>において、
+          </p>
+
+          <p class="journal-highlight">「図書館が劇場に！」</p>
+
+          <p>
+            と題し、ビブリオドラマ（現・ビブリオ劇場）の取組について、
+            サイトウトシオが執筆しました。
+          </p>
+
+          <p>
+            図書館を舞台にした演劇の可能性や、演劇を通して本のある場所と
+            YA（ヤングアダルト）をつなぐ実践について紹介しています。
+          </p>
+
+          <p class="journal-page">
+            <strong>掲載ページ：</strong>P.70〜72（PDFでは21〜23ページ）
+          </p>
+
+          <p class="journal-note">
+            <strong>ビブリオ劇場が生まれた経緯や、その理念について詳しく紹介しています。</strong>
+          </p>
+
+          <p class="journal-actions">
+            <a class="detail-button"
+               href="https://www.jla.or.jp/wp/wp-content/uploads/2026/02/tz202602.pdf"
+               target="_blank"
+               rel="noopener">
+              記事（PDF）を読む →
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
 
     <section id="works" class="section works-section">
       <p class="section-label">REPERTOIRE</p>
