@@ -47,6 +47,9 @@
   .book-card:hover,.book-card:focus{ transform:translateY(-8px); box-shadow:0 24px 34px rgba(38,17,6,.34); outline:none; }
   .book-cover-placeholder{ min-height:168px; display:flex; align-items:center; justify-content:center; padding:22px; color:#fff; text-align:center; background:linear-gradient(135deg,var(--c1),var(--c2)); border-bottom:8px solid rgba(255,255,255,.32); }
   .book-cover-placeholder span{ display:block; font-size:clamp(1.35rem,2.4vw,2rem); line-height:1.25; font-weight:900; letter-spacing:.02em; text-shadow:0 3px 8px rgba(0,0,0,.22); }
+  .book-cover-image{ min-height:250px; padding:14px; display:flex; align-items:center; justify-content:center; background:#f2e5cf; border-bottom:8px solid rgba(255,255,255,.32); }
+  .book-cover-image img{ display:block; width:100%; height:250px; object-fit:contain; object-position:center; border-radius:8px; box-shadow:0 8px 18px rgba(45,24,8,.2); background:#fff; }
+  .cover-credit{ margin:.65em 0 0; font-size:.78rem; color:#76614d; line-height:1.5; }
   .book-info{ flex:1; padding:20px 20px 18px; display:flex; flex-direction:column; }
   .book-info h3{ margin:.1em 0 .45em; font-size:1.35rem; }
   .book-meta{ margin:.2em 0 1em; font-size:.92rem; color:#5c4b3c; line-height:1.65; }
@@ -60,7 +63,7 @@
   .secondary-button{ background:#fff; color:var(--blue); border:1px solid var(--blue); }
   .site-footer{ text-align:center; padding:32px 16px; color:#6c5238; }
   @media (max-width:900px){ .concept-grid{ grid-template-columns:1fr; } .book-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .permission-list{ grid-template-columns:1fr; } }
-  @media (max-width:560px){ .section{ padding:48px 18px; } .shelf-stage{ padding:30px 16px 38px; border-radius:22px; } .book-grid{ grid-template-columns:1fr; gap:18px; } .book-card{ min-height:auto; } .book-cover-placeholder{ min-height:140px; } .global-nav a{ padding:12px 11px; font-size:.9rem; } }
+  @media (max-width:560px){ .section{ padding:48px 18px; } .shelf-stage{ padding:30px 16px 38px; border-radius:22px; } .book-grid{ grid-template-columns:1fr; gap:18px; } .book-card{ min-height:auto; } .book-cover-placeholder{ min-height:140px; } .book-cover-image{ min-height:220px; } .book-cover-image img{ height:220px; } .global-nav a{ padding:12px 11px; font-size:.9rem; } }
 </style>
 </head>
 <body>
@@ -102,7 +105,7 @@
     <section class="section" id="bookshelf">
       <p class="section-label">BOOKSHELF</p>
       <h2>これまで上演した絵本</h2>
-      <p>本棚を眺めるように、9冊の絵本を並べました。書影を正式に掲載できるものは、出版社の条件を確認したうえで表紙画像へ差し替えられる構成にしています。</p>
+      <p>本棚を眺めるように、9冊の絵本を並べました。書影の掲載が確認できた3冊は、出版社公式サイトの表紙画像を使用しています。</p>
 
       <div class="shelf-stage" aria-label="これまで上演した絵本の本棚">
         <p class="shelf-title">上演した絵本たち</p>
@@ -116,21 +119,23 @@
             </div>
           </a>
 
-          <a class="book-card" href="#gaito" style="--c1:#57402f;--c2:#d6a65d;">
-            <div class="book-cover-placeholder"><span>がいとうの<br>ひっこし</span></div>
+          <a class="book-card" href="https://imaginationpluspress.com/booklist/%E3%80%8E%E3%81%8C%E3%81%84%E3%81%A8%E3%81%86%E3%81%AE-%E3%81%B2%E3%81%A3%E3%81%93%E3%81%97%E3%80%8F/" target="_blank" rel="noopener">
+            <div class="book-cover-image"><img src="images/books/gaitou.jpg" alt="『がいとうのひっこし』表紙"></div>
             <div class="book-info">
               <h3>がいとうのひっこし</h3>
               <p class="book-meta">山田彩央里／文<br>山田和明／絵<br>イマジネイション・プラス</p>
               <p class="book-comment">街灯をめぐる物語を、静かなユーモアと余韻で届ける一冊。</p>
+              <p class="cover-credit">書影：イマジネイション・プラス公式サイト</p>
             </div>
           </a>
 
-          <a class="book-card" href="#tomodachiya" style="--c1:#91433d;--c2:#e6a96a;">
-            <div class="book-cover-placeholder"><span>ともだちや</span></div>
+          <a class="book-card" href="https://www.kaiseisha.co.jp/books/9784032048902" target="_blank" rel="noopener">
+            <div class="book-cover-image"><img src="images/books/tomodachiya.jpg" alt="『ともだちや』表紙"></div>
             <div class="book-info">
               <h3>ともだちや</h3>
               <p class="book-meta">内田麟太郎／作<br>降矢なな／絵<br>偕成社</p>
               <p class="book-comment">「ともだち」とは何かを、楽しくあたたかく届ける一冊。</p>
+              <p class="cover-credit">書影：偕成社公式サイト</p>
             </div>
           </a>
 
@@ -143,12 +148,13 @@
             </div>
           </a>
 
-          <a class="book-card" href="#hummingbird" style="--c1:#2f6c55;--c2:#b9d675;">
-            <div class="book-cover-placeholder"><span>ちいさな<br>ハチドリの<br>ちいさな<br>いってき</span></div>
+          <a class="book-card" href="https://imaginationpluspress.com/booklist/%E3%81%A1%E3%81%84%E3%81%95%E3%81%AA-%E3%83%8F%E3%83%81%E3%83%89%E3%83%AA%E3%81%AE-%E3%81%A1%E3%81%84%E3%81%95%E3%81%AA-%E3%81%84%E3%81%A3%E3%81%A6%E3%81%8D/" target="_blank" rel="noopener">
+            <div class="book-cover-image"><img src="images/books/hachidori.png" alt="『ちいさなハチドリのちいさないってき』表紙"></div>
             <div class="book-info">
               <h3>ちいさなハチドリのちいさないってき</h3>
-              <p class="book-meta">はしづめちよこ／企画<br>ウノサワケイスケ／絵<br>イマジネイション・プラス</p>
+              <p class="book-meta">ウノサワケイスケ／再話・絵<br>はしづめちよこ／企画<br>イマジネイション・プラス</p>
               <p class="book-comment">小さな行動が世界につながることを伝える一冊。</p>
+              <p class="cover-credit">書影：イマジネイション・プラス公式サイト</p>
             </div>
           </a>
 
@@ -194,15 +200,15 @@
     <section class="section">
       <p class="section-label">COVER IMAGE POLICY</p>
       <h2>表紙画像について</h2>
-      <p>このページでは、まず著作権上安全なデザイン表現で本棚を作成しています。出版社が公式に書影利用を認めているものは、条件に従って表紙画像へ差し替えます。</p>
+      <p>このページでは、出版社が書影利用を認めているものだけを、各社の条件に従って掲載しています。現在は『ともだちや』『がいとうのひっこし』『ちいさなハチドリのちいさないってき』の表紙を掲載しています。</p>
       <div class="permission-list">
         <article class="permission-card">
-          <h3>掲載可能性が高いもの</h3>
-          <p>偕成社は、ホームページ等で本を紹介する場合、書名・著者名・画家名・出版社名などを明記し、偕成社ホームページの表紙画像を流用してよいと案内しています。</p>
+          <h3>表紙を掲載した絵本</h3>
+          <p>『ともだちや』（偕成社）、『がいとうのひっこし』『ちいさなハチドリのちいさないってき』（イマジネイション・プラス）の3冊です。</p>
         </article>
         <article class="permission-card">
-          <h3>確認してから差し替えるもの</h3>
-          <p>講談社、イマジネイション・プラス、童心社、文溪堂、世界文化社、福音館書店などは、各社の規定または個別確認に従って扱います。</p>
+          <h3>その他の絵本</h3>
+          <p>出版社の利用条件を確認できるまでは、現在のオリジナルデザインで紹介します。確認できたものから順に公式書影へ差し替えます。</p>
         </article>
       </div>
       <div class="back-actions">
