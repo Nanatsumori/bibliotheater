@@ -274,6 +274,44 @@
 }
     .current-awareness-card .journal-highlight{ font-size: clamp(1.35rem, 3vw, 1.9rem); }
 
+    /* 関連サイト「七つ森」への案内 */
+    .nanatsumori-section{
+      background: linear-gradient(135deg, #eef7f0 0%, #fffaf0 100%);
+    }
+    .nanatsumori-card{
+      max-width: 1050px;
+      margin: 26px auto 0;
+      padding: 30px 34px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(55,104,67,.22);
+      border-radius: 22px;
+      box-shadow: 0 14px 34px rgba(0,0,0,.09);
+    }
+    .nanatsumori-card h3{
+      margin: .2em 0 .55em;
+      color: #244f30;
+      font-size: clamp(1.6rem,3.4vw,2.5rem);
+      line-height: 1.3;
+    }
+    .nanatsumori-card p{
+      max-width: 850px;
+      line-height: 1.9;
+    }
+    .nanatsumori-button{
+      display: inline-block;
+      margin-top: 12px;
+      padding: .85em 1.35em;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      background: #2f653d;
+      border-radius: 999px;
+    }
+    .site-footer a{
+      color: inherit;
+      font-weight: 700;
+    }
+
     @media (max-width: 760px) {
       .journal-card{
         grid-template-columns: 1fr;
@@ -305,6 +343,7 @@
 <a href="#picturebook-reading">絵本ドラマリーディング</a>
 <a href="#profile">プロフィール</a>
 <a href="#contact">ご相談・ご依頼</a>
+<a href="https://www.nanatsumori.art/">脚本・上演記録｜七つ森</a>
 </nav>
 </header>
 <main>
@@ -534,6 +573,16 @@
 <p><span style='color: rgb(45, 36, 31); font-family: "Yu Mincho", "Hiragino Mincho ProN", "Yu Gothic", serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(255, 253, 247, 0.86); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>全国大会・関東大会での上演経験を経た後、現在は「競争より共創」「バトルよりシャトル」を合言葉に、図書館や書店など本のある場所で、本に関する劇を上演する取組「ビブリオ劇場」を推進しています。</span></p>
 </div>
 </section>
+<section class="section nanatsumori-section" id="nanatsumori">
+<p class="section-label">RELATED SITE</p>
+<h2>ビブリオ劇場の原点</h2>
+<div class="nanatsumori-card">
+<p class="small-heading">脚本・上演記録サイト</p>
+<h3>七つ森｜中学生と創るドラマ</h3>
+<p>ビブリオ劇場の作品と活動は、中学生とともに創ってきた脚本と上演の蓄積から生まれました。サイトウトシオの脚本、作品集、全国の上演校・上演団体の記録を「七つ森」で紹介しています。</p>
+<a class="nanatsumori-button" href="https://www.nanatsumori.art/">脚本・上演記録サイト「七つ森」へ →</a>
+</div>
+</section>
 <section class="section contact-section" id="contact">
 <div class="contact-invitation">
 <p class="section-label">CONTACT</p>
@@ -579,6 +628,7 @@
 </main>
 <footer class="site-footer">
 <p>© BIBLIO THEATER</p>
+<p><a href="https://www.nanatsumori.art/">サイトウトシオ脚本・上演記録サイト「七つ森」</a></p>
 </footer>
 
 <script>
