@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>過去の上演作品｜ビブリオ劇場</title>
-<meta name="description" content="ビブリオ劇場でこれまで上演してきた『ラビリンス』『COLORS』『怪談の多い図書館』などの作品を紹介します。">
-<link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/works.html"><link rel="stylesheet" href="style.css"></head>
-<body><nav class="global-nav"><a href="index.html">トップ</a><a href="about.html">ビブリオ劇場とは</a><a href="schedule.html">今後の予定</a><a href="profile.html">プロフィール</a><a href="contact.html">お問い合わせ</a></nav><main><section class="section works-section"><p class="section-label">WORKS</p><h1>過去の上演作品</h1><div class="work-grid"><article class="work-card"><h3>ラビリンス</h3><p>図書館全体を舞台にした、本の迷宮をめぐる物語。</p></article><article class="work-card"><h3>COLORS</h3><p>色とりどりの本と人の声が響き合う作品。</p></article><article class="work-card"><h3>Book Birds<br><span>本を届ける鳥たち</span></h3><p>本を届ける鳥たちをめぐる、やさしい物語。</p></article><article class="work-card"><h3>怪談の多い図書館</h3><p>図書館に棲む妖怪たちが登場する怪談劇。</p></article></div></section></main><footer class="site-footer"><p>© BIBLIO THEATER</p></footer></body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レパートリー｜ビブリオ劇場</title>
+<meta name="description" content="ビブリオ劇場のレパートリーを、フライヤーとともに紹介します。">
+<link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/works.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.repertoire-page{background:linear-gradient(180deg,#f7efe2 0%,#fffaf0 100%)}
+.repertoire-lead{max-width:800px;color:#6e4d20;font-size:19px}
+.repertoire-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:34px}
+.repertoire-entry{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid rgba(177,138,63,.3);border-radius:20px;box-shadow:0 14px 34px rgba(77,54,29,.11)}
+.repertoire-entry>a:first-child{display:flex;align-items:center;justify-content:center;min-height:440px;padding:22px;background:linear-gradient(145deg,#ead9bd,#f7efe2)}
+.repertoire-entry img{display:block;width:100%;height:400px;object-fit:contain;border-radius:9px;box-shadow:0 9px 22px rgba(45,24,8,.22)}
+.repertoire-copy{display:flex;flex:1;flex-direction:column;padding:26px}
+.repertoire-copy h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:14px}
+.repertoire-copy p{font-size:16px}.repertoire-copy .detail-button{align-self:flex-start;margin-top:auto}
+@media(max-width:760px){.repertoire-list{grid-template-columns:1fr}.repertoire-entry>a:first-child{min-height:0}.repertoire-entry img{height:auto;max-height:500px}}
+</style>
+</head>
+<body class="repertoire-page">
+<nav class="global-nav" aria-label="メインメニュー">
+<a href="index.html">トップ</a><a href="index.html#about">ビブリオ劇場とは</a><a href="index.html#news">最新情報</a><a href="index.html#upcoming">これからの上演</a><a href="index.html#activities">活動・作品</a><a href="creation.html">ビブリオドラマ創作</a><a href="picturebook-reading.html">絵本ドラマリーディング</a>
+</nav>
+<main><section class="section">
+<p class="section-label">REPERTOIRE</p><h1>レパートリー</h1>
+<p class="repertoire-lead">ビブリオ劇場の作品は、初演で終わるのではなく、図書館・書店・地域の場で再演されながら育っていきます。フライヤーをクリックすると、大きな画像でご覧いただけます。</p>
+<div class="repertoire-list">
+<article class="repertoire-entry"><a href="kaidan_flyer_front.jpg" target="_blank" rel="noopener"><img src="kaidan_flyer_front.jpg" alt="『怪談の多い図書館』フライヤー"></a><div class="repertoire-copy"><p class="work-number">REPERTOIRE</p><h2>怪談の多い図書館</h2><p>図書館に棲む妖怪たちが登場する怪談劇。休館日の図書館全体を舞台に、現実と物語の世界が重なります。</p><a class="detail-button" href="kaidan.html">作品紹介を見る →</a></div></article>
+<article class="repertoire-entry"><a href="colors_flyer.jpg" target="_blank" rel="noopener"><img src="colors_flyer.jpg" alt="『COLORS』フライヤー"></a><div class="repertoire-copy"><p class="work-number">REPERTOIRE</p><h2>COLORS</h2><p>自由でにぎやかな図書館「カラーズ」を舞台に、多様性、平和、未来への願いを、演劇とマジックで描きます。</p><a class="detail-button" href="colors.html">作品紹介を見る →</a></div></article>
+<article class="repertoire-entry"><a href="assets/atom-event-flyer.jpg" target="_blank" rel="noopener"><img src="assets/atom-event-flyer.jpg" alt="『アトム』上演フライヤー"></a><div class="repertoire-copy"><p class="work-number">REPERTOIRE</p><h2>アトム</h2><p>過去に描かれた未来と、現在を生きる私たちをつなぎ、「もし今アトムが生まれたら」と問いかけるドラマです。</p><a class="detail-button" href="atom.html">作品紹介を見る →</a></div></article>
+<article class="repertoire-entry"><a href="campanella_flyer_front.jpg" target="_blank" rel="noopener"><img src="campanella_flyer_front.jpg" alt="『カンパネラ』フライヤー"></a><div class="repertoire-copy"><p class="work-number">REPERTOIRE</p><h2>カンパネラ</h2><p>ピアノと演劇が響き合う、平和への願いを込めた物語。神保町の子どもの本専門店でも上演しました。</p><a class="detail-button" href="campanella.html">作品紹介を見る →</a></div></article>
+<article class="repertoire-entry"><a href="labyrinth_flyer_0819.jpg" target="_blank" rel="noopener"><img src="labyrinth_flyer_0819.jpg" alt="『ラビリンス』フライヤー"></a><div class="repertoire-copy"><p class="work-number">REPERTOIRE</p><h2>ラビリンス</h2><p>図書館全体を舞台にした、本の迷宮をめぐる物語。ビブリオ劇場の原点となった作品です。</p><a class="detail-button" href="labyrinth.html">作品紹介を見る →</a></div></article>
+</div></section></main>
+<footer class="site-footer"><p>© BIBLIO THEATER</p></footer>
+</body></html>

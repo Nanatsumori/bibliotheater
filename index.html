@@ -328,6 +328,14 @@
     }
 
   -->
+.activity-link-section{width:100%;max-width:none;background:linear-gradient(135deg,#fffaf2 0%,#eef8ff 52%,#f7f3ff 100%);padding-left:max(7%,calc((100% - 1080px)/2 + 4%));padding-right:max(7%,calc((100% - 1080px)/2 + 4%))}
+.activity-link-section>h2,.activity-link-section>.section-label,.activity-link-section>.activity-link-lead,.activity-link-section>.activity-link-grid{max-width:1080px;margin-left:auto;margin-right:auto}
+.activity-link-lead{margin-bottom:28px;color:#6e4d20}
+.activity-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.activity-link-card{display:flex;flex-direction:column;min-height:280px;padding:28px;background:rgba(255,255,255,.94);border:1px solid rgba(177,138,63,.25);border-top:7px solid var(--gold);border-radius:18px;box-shadow:0 14px 32px rgba(77,54,29,.09)}
+.activity-link-card:nth-child(2){border-top-color:#5f8fc9}.activity-link-card:nth-child(3){border-top-color:#78a56f}
+.activity-link-card h3{font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.35}.activity-link-card p{font-size:16px}.activity-link-card .detail-button{margin-top:auto;align-self:flex-start}
+@media(max-width:800px){.activity-link-grid{grid-template-columns:1fr}.activity-link-card{min-height:0}}
 </style>
 </head>
 <body>
@@ -336,31 +344,44 @@
 <img alt="ビブリオ劇場 本のある場所が 舞台になる" src="hero.png"/>
 </div>
 <nav aria-label="メインメニュー" class="global-nav">
+<a href="#top">トップ</a>
+<a href="#about">ビブリオ劇場とは</a>
 <a href="#news">最新情報</a>
 <a href="#upcoming">これからの上演</a>
-<a href="#about">ビブリオ劇場とは</a>
-<a href="creation.html">ビブリオドラマ創作</a>
-<a href="#works">レパートリー</a>
-<a href="#picturebook-reading">絵本ドラマリーディング</a>
+<a href="#activities">活動・作品</a>
 <a href="#profile">プロフィール</a>
 <a href="#contact">ご相談・ご依頼</a>
 <a href="https://www.nanatsumori.art/">脚本・上演記録｜七つ森</a>
 </nav>
 </header>
-<main>
+<main id="top">
+<section class="section intro-section" id="about">
+<p class="section-label">ABOUT</p>
+<h1>ビブリオ劇場とは</h1>
+<p class="catch">本のある場所が、舞台になる。</p>
+<p>図書館や書店、カフェ。<br/>本のある場所だからこそ生まれる物語があります。</p>
+<p>ビブリオ劇場では、<strong>図書館が舞台の作品を図書館で、本が題材の作品を本のある場所で上演します。</strong></p>
+<p>物語の世界と現実の場所が重なり合うことで、その場所でしか味わえない演劇体験が生まれます。</p>
+<p>ビブリオ劇場は、本と人、人と物語、人と人をつなぐ、新しい文化活動です。</p>
+<div class="about-mission">
+<p>ビブリオ劇場は、演劇を通して、本のある場所とYA（ヤングアダルト）をつなぐことを目指しています。</p>
+</div>
+</section>
 <section class="section" id="news">
 <p class="section-label">NEWS</p>
 <h1>ビブリオ劇場 News</h1>
 <div class="news-panel">
 <ul class="news-list">
     <li><strong>8月18日（火）</strong>　<a href="chuo_library.html">怪談の多い図書館</a>　久喜市立中央図書館 休館日特別公演 <span class="badge badge-reserve">8/7 9:00〜申込開始</span></li>
+    <li><strong>2026年7月23日</strong>　国立国会図書館「カレントアウェアネス-E」に<a href="https://current.ndl.go.jp/e2899" target="_blank" rel="noopener">ビブリオ劇場の記事</a>が掲載されました。</li>
+    <li><strong>2026年2月</strong>　日本図書館協会『図書館雑誌』に<a href="https://www.jla.or.jp/wp/wp-content/uploads/2026/02/tz202602.pdf" target="_blank" rel="noopener">「図書館が劇場に！」</a>が掲載されました。</li>
 </ul>
 </div>
 </section>
 <section class="section upcoming-section" id="upcoming">
 <p class="section-label">UPCOMING STAGE</p>
 <h2>これからの上演</h2>
-<p class="upcoming-lead">これから上演予定の公演を、開催日順にまとめました。新しい作品紹介は下の「レパートリー」でご覧いただけます。</p>
+<p class="upcoming-lead">これから上演予定の公演を、開催日順にまとめました。作品については「活動・作品」からレパートリーページへお進みください。</p>
 <div class="upcoming-grid">
 <article class="upcoming-card">
 <a href="kaidan.html"><img alt="怪談の多い図書館 フライヤー表面" src="kaidan_flyer_front.jpg"/></a>
@@ -427,19 +448,7 @@
 </article>
 </div>
 </section>
-<section class="section intro-section" id="about">
-<p class="section-label">ABOUT</p>
-<h2>ビブリオ劇場とは</h2>
-<p class="catch">本のある場所が、舞台になる。</p>
-<p>図書館や書店、カフェ。<br/>本のある場所だからこそ生まれる物語があります。</p>
-<p>ビブリオ劇場では、<strong>図書館が舞台の作品を図書館で、本が題材の作品を本のある場所で上演します。</strong></p>
-<p>物語の世界と現実の場所が重なり合うことで、その場所でしか味わえない演劇体験が生まれます。</p>
-<p>ビブリオ劇場は、本と人、人と物語、人と人をつなぐ、新しい文化活動です。</p>
-<div class="about-mission">
-<p>ビブリオ劇場は、演劇を通して、本のある場所とYA（ヤングアダルト）をつなぐことを目指しています。</p>
-</div>
-</section>
-<section class="section journal-section" id="library-journal">
+<section class="section journal-section" id="library-journal" hidden>
 <p class="section-label">MEDIA</p>
 <h2>日本図書館協会『図書館雑誌』で紹介されました</h2>
 <div class="journal-card">
@@ -486,7 +495,32 @@
 <p class="journal-actions"><a class="detail-button" href="https://current.ndl.go.jp/e2899" rel="noopener" target="_blank">カレントアウェアネス-Eの記事を読む →</a></p>
 </div>
 </section>
-<section class="section works-section" id="works">
+<section class="section activity-link-section" id="activities">
+<p class="section-label">ACTIVITIES &amp; WORKS</p>
+<h2>活動・作品</h2>
+<p class="activity-link-lead">ビブリオ劇場の創作方法、上演作品、絵本を使った表現を、それぞれのページで詳しく紹介します。</p>
+<div class="activity-link-grid">
+<article class="activity-link-card">
+<p class="work-number">CREATION</p>
+<h3>ビブリオドラマ創作</h3>
+<p>中学生が好きな本から、自分たちの表現でドラマを創ります。「競争より共創」「バトルよりシャトル」を大切にした活動です。</p>
+<a class="detail-button" href="creation.html">創作活動を見る →</a>
+</article>
+<article class="activity-link-card">
+<p class="work-number">REPERTOIRE</p>
+<h3>レパートリー</h3>
+<p>『怪談の多い図書館』『COLORS』『アトム』『カンパネラ』『ラビリンス』など、上演を重ねながら育ってきた作品を紹介します。</p>
+<a class="detail-button" href="works.html">作品を見る →</a>
+</article>
+<article class="activity-link-card">
+<p class="work-number">PICTURE BOOK</p>
+<h3>絵本ドラマ<br/>リーディング</h3>
+<p>一冊の絵本を、声と身体で舞台に立ち上げる取組です。これまでに上演した絵本も紹介します。</p>
+<a class="detail-button" href="picturebook-reading.html">詳しく見る →</a>
+</article>
+</div>
+</section>
+<section class="section works-section" hidden>
 <p class="section-label">REPERTOIRE</p>
 <h2>レパートリー</h2>
 <p class="archive-lead">ビブリオ劇場の作品は、初演で終わるのではなく、図書館・書店・地域の場で再演されながら育っていきます。ここでは、現在上演中の作品も、これまでに上演してきた作品も「レパートリー」として紹介します。絵本ドラマリーディングは、下の独立したセクションで紹介します。</p>
@@ -523,7 +557,7 @@
 </article>
 </div>
 </section>
-<section class="section picturebook-section" id="picturebook-reading">
+<section class="section picturebook-section" hidden>
 <p class="section-label">PICTURE BOOK DRAMA READING</p>
 <h2>絵本ドラマリーディング</h2>
 <div class="picturebook-card">
