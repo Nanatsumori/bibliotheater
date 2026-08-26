@@ -411,6 +411,26 @@
 .activity-link-card:nth-child(2){border-top-color:#5f8fc9}.activity-link-card:nth-child(3){border-top-color:#78a56f}
 .activity-link-card h3{font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.35}.activity-link-card p{font-size:16px}.activity-link-card .detail-button{margin-top:auto;align-self:flex-start}
 @media(max-width:800px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-card{min-height:0}}
+.global-nav .external-site-link{
+	background:#e8f4e9;
+	color:#245c35;
+	border:1px solid #9fc8a8;
+}
+.global-nav .external-site-link .external-mark{
+	font-size:1.05em;
+	margin-left:.15em;
+}
+.global-nav .external-site-link .external-label{
+	display:inline-block;
+	margin-left:.45em;
+	padding:.12em .45em;
+	border-radius:999px;
+	background:#fff;
+	color:#39704a;
+	font-size:.72em;
+	font-weight:700;
+	white-space:nowrap;
+}
 </style>
 </head>
 <body>
@@ -425,7 +445,7 @@
 <a href="#performances">上演作品</a>
 <a href="#creative-activity">創作活動</a>
 <a href="#contact">ご相談・ご依頼</a>
-<a href="https://www.nanatsumori.art/">脚本・上演記録｜七つ森</a>
+<a class="external-site-link" href="https://www.nanatsumori.art/" aria-label="脚本・上演記録サイト 七つ森（別サイト）">脚本・上演記録｜七つ森<span aria-hidden="true" class="external-mark">↗</span><span class="external-label">別サイト</span></a>
 </nav>
 </header>
 <main id="top">
