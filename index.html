@@ -431,6 +431,36 @@
 	font-weight:700;
 	white-space:nowrap;
 }
+
+/* トップページの各項目は、淡い2色の背景を交互にして統一する */
+main > .section{
+	width:100%;
+	max-width:none;
+	padding-left:max(7%,calc((100% - 1080px)/2 + 4%));
+	padding-right:max(7%,calc((100% - 1080px)/2 + 4%));
+	border-top:0;
+	border-bottom:0;
+}
+main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.contact-form-wrap){
+	max-width:1080px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.intro-section,
+.performance-link-section,
+.nanatsumori-section{
+	background:#fffdf8;
+}
+#news,
+.creation-link-section,
+.contact-section{
+	background:#f2f6f1;
+}
+.performance-link-section,
+.creation-link-section,
+.nanatsumori-section{
+	background-image:none;
+}
 </style>
 </head>
 <body>
