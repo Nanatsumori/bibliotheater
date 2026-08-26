@@ -399,14 +399,18 @@
     }
 
   -->
-.activity-link-section{width:100%;max-width:none;background:linear-gradient(135deg,#fffaf2 0%,#eef8ff 52%,#f7f3ff 100%);padding-left:max(7%,calc((100% - 1080px)/2 + 4%));padding-right:max(7%,calc((100% - 1080px)/2 + 4%))}
+.activity-link-section{width:100%;max-width:none;padding-left:max(7%,calc((100% - 1080px)/2 + 4%));padding-right:max(7%,calc((100% - 1080px)/2 + 4%))}
+.performance-link-section{background:linear-gradient(135deg,#eef8ff 0%,#f7f3ff 100%)}
+.creation-link-section{background:linear-gradient(135deg,#fffaf2 0%,#f7fbf3 100%)}
 .activity-link-section>h2,.activity-link-section>.section-label,.activity-link-section>.activity-link-lead,.activity-link-section>.activity-link-grid{max-width:1080px;margin-left:auto;margin-right:auto}
 .activity-link-lead{margin-bottom:28px;color:#6e4d20}
-.activity-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.activity-link-grid{display:grid;gap:22px}
+.activity-link-grid.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.activity-link-grid.creation-grid{grid-template-columns:minmax(0,720px);justify-content:center}
 .activity-link-card{display:flex;flex-direction:column;min-height:280px;padding:28px;background:rgba(255,255,255,.94);border:1px solid rgba(177,138,63,.25);border-top:7px solid var(--gold);border-radius:18px;box-shadow:0 14px 32px rgba(77,54,29,.09)}
 .activity-link-card:nth-child(2){border-top-color:#5f8fc9}.activity-link-card:nth-child(3){border-top-color:#78a56f}
 .activity-link-card h3{font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.35}.activity-link-card p{font-size:16px}.activity-link-card .detail-button{margin-top:auto;align-self:flex-start}
-@media(max-width:800px){.activity-link-grid{grid-template-columns:1fr}.activity-link-card{min-height:0}}
+@media(max-width:800px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-card{min-height:0}}
 </style>
 </head>
 <body>
@@ -418,7 +422,8 @@
 <a href="#top">トップ</a>
 <a href="#about">ビブリオ劇場とは</a>
 <a href="#news">最新情報</a>
-<a href="#activities">活動・作品</a>
+<a href="#performances">上演作品</a>
+<a href="#creative-activity">創作活動</a>
 <a href="#contact">ご相談・ご依頼</a>
 <a href="https://www.nanatsumori.art/">脚本・上演記録｜七つ森</a>
 </nav>
@@ -544,17 +549,11 @@
 <p class="journal-actions"><a class="detail-button" href="https://current.ndl.go.jp/e2899" rel="noopener" target="_blank">カレントアウェアネス-Eの記事を読む →</a></p>
 </div>
 </section>
-<section class="section activity-link-section" id="activities">
-<p class="section-label">ACTIVITIES &amp; WORKS</p>
-<h2>活動・作品</h2>
-<p class="activity-link-lead">ビブリオ劇場の創作方法、上演作品、絵本を使った表現を、それぞれのページで詳しく紹介します。</p>
-<div class="activity-link-grid">
-<article class="activity-link-card">
-<p class="work-number">CREATION</p>
-<h3>ビブリオスキット創作</h3>
-<p>ビブリオスキットは、本を紹介する短い劇で、ビブリオ劇場を形づくる作品です。中学生が好きな本を出発点に、自分たちの表現で創作します。</p>
-<a class="detail-button" href="creation.html">創作活動を見る →</a>
-</article>
+<section class="section activity-link-section performance-link-section" id="performances">
+<p class="section-label">PERFORMANCES</p>
+<h2>上演作品</h2>
+<p class="activity-link-lead">ビブリオ劇場で上演している劇作品と、絵本を声と身体で舞台に立ち上げる取組を紹介します。</p>
+<div class="activity-link-grid performance-grid">
 <article class="activity-link-card">
 <p class="work-number">REPERTOIRE</p>
 <h3>レパートリー</h3>
@@ -566,6 +565,19 @@
 <h3>絵本ドラマ<br/>リーディング</h3>
 <p>一冊の絵本を、声と身体で舞台に立ち上げる取組です。これまでに上演した絵本も紹介します。</p>
 <a class="detail-button" href="picturebook-reading.html">詳しく見る →</a>
+</article>
+</div>
+</section>
+<section class="section activity-link-section creation-link-section" id="creative-activity">
+<p class="section-label">CREATIVE ACTIVITY</p>
+<h2>創作活動</h2>
+<p class="activity-link-lead">中学生が好きな本を出発点に、自分たちの表現でビブリオスキットを創作します。</p>
+<div class="activity-link-grid creation-grid">
+<article class="activity-link-card">
+<p class="work-number">CREATION</p>
+<h3>ビブリオスキット創作</h3>
+<p>ビブリオスキットは、本を紹介する短い劇で、ビブリオ劇場を形づくる作品です。中学生が好きな本を出発点に、自分たちの表現で創作します。</p>
+<a class="detail-button" href="creation.html">創作活動を見る →</a>
 </article>
 </div>
 </section>
