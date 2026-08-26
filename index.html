@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ビブリオ劇場｜本のある場所が 舞台になる</title>
 <meta content="ビブリオ劇場,図書館,書店,中学生,中学校,演劇,脚本,サイトウトシオ,斉藤俊雄,ビブリオスキット,絵本ドラマリーディング,久喜市立太東中学校ゲキ部,怪談の多い図書館,ラビリンス,カラーズ,ゲキ部" name="keywords"/>
-<meta content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。最新の上演情報と、ビブリオ劇場のレパートリーを紹介しています。" name="description"/>
+<meta content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。最新ニュースと、ビブリオ劇場のレパートリーを紹介しています。" name="description"/>
 <link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/">
 <meta content="JustSystems Homepage Builder Version 22.0.5.0 for Windows" name="GENERATOR">
 <link href="style.css" rel="stylesheet"/>
@@ -54,6 +54,36 @@
 }
     .news-list a{
 	font-weight: 700; color: #2f3cff; text-decoration: none;
+}
+    .news-stage-grid{
+	display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 0 0 32px;
+}
+    .news-stage-card{
+	display: flex; flex-direction: column; overflow: hidden; background: #fff; border-radius: 20px; box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+    .news-stage-card > a{
+	display: block; background: #f4f1ea;
+}
+    .news-stage-card img{
+	display: block; width: 100%; height: auto;
+}
+    .news-stage-body{
+	display: flex; flex: 1; flex-direction: column; padding: 22px 24px 24px;
+}
+    .news-stage-date{
+	margin: 0 0 8px; color: #765522; font-size: .94rem; font-weight: 700;
+}
+    .news-stage-card h2{
+	margin: 0 0 12px; font-size: clamp(1.35rem, 2.5vw, 1.85rem); line-height: 1.35;
+}
+    .news-stage-card h2 a{
+	color: inherit; text-decoration: none;
+}
+    .news-stage-report{
+	margin: 0 0 20px; line-height: 1.8;
+}
+    .news-stage-card .detail-button{
+	align-self: flex-start; margin-top: auto;
 }
     .badge{
 	display: inline-block; margin-left: .4em; padding: .25em .65em; border-radius: 999px; font-size: .86em; font-weight: 700; background: #e9f9ee; color: #126b31;
@@ -179,6 +209,7 @@
     }
 
     @media (max-width: 760px) {
+      .news-stage-grid { grid-template-columns: 1fr; gap: 22px; }
       .picturebook-bookshelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
       .open-book-card { grid-template-columns: 1fr; min-height: auto; }
       .open-book-card::before{
@@ -347,7 +378,6 @@
 <a href="#top">トップ</a>
 <a href="#about">ビブリオ劇場とは</a>
 <a href="#news">最新情報</a>
-<a href="#upcoming">これからの上演</a>
 <a href="#activities">活動・作品</a>
 <a href="#profile">プロフィール</a>
 <a href="#contact">ご相談・ご依頼</a>
@@ -370,82 +400,49 @@
 <section class="section" id="news">
 <p class="section-label">NEWS</p>
 <h1>ビブリオ劇場 News</h1>
+<div class="news-stage-grid">
+<article class="news-stage-card">
+<a href="chuo_library.html"><img alt="怪談の多い図書館 久喜市立中央図書館公演 フライヤー" src="chuo_library_flyer.jpg"/></a>
+<div class="news-stage-body">
+<p class="news-stage-date">2026年8月18日（火）／久喜市立中央図書館</p>
+<h2><a href="chuo_library.html">『怪談の多い図書館』</a></h2>
+<p class="news-stage-report">久喜市立中央図書館の休館日に、図書館全体を舞台として上演しました。</p>
+<a class="detail-button" href="chuo_library.html">詳しく見る →</a>
+</div>
+</article>
+<article class="news-stage-card">
+<a href="colors.html"><img alt="COLORS カラーズ フライヤー" src="colors_flyer.jpg"/></a>
+<div class="news-stage-body">
+<p class="news-stage-date">2026年7月31日（金）／ブックハウスカフェ</p>
+<h2><a href="colors.html">『COLORS（カラーズ）』</a></h2>
+<p class="news-stage-report">自由でにぎやかな図書館「カラーズ」を舞台に、演劇とマジックによる公演を行いました。</p>
+<a class="detail-button" href="colors.html">詳しく見る →</a>
+</div>
+</article>
+<article class="news-stage-card">
+<a href="monogatari_magic.html"><img alt="ビブリオ劇場＆モノガタリマジック フライヤー" src="monogatari_magic_flyer.jpg"/></a>
+<div class="news-stage-body">
+<p class="news-stage-date">2026年7月30日（木）／ブックハウスカフェ</p>
+<h2><a href="monogatari_magic.html">ビブリオ劇場<br/>＆モノガタリマジック</a></h2>
+<p class="news-stage-report">絵本ドラマリーディングと、プロマジシャン・ザッキーによるモノガタリマジックを上演しました。</p>
+<a class="detail-button" href="monogatari_magic.html">詳しく見る →</a>
+</div>
+</article>
+<article class="news-stage-card">
+<a href="kaidan.html"><img alt="怪談の多い図書館 栗橋文化会館イリス公演 フライヤー" src="kaidan_flyer_front.jpg"/></a>
+<div class="news-stage-body">
+<p class="news-stage-date">2026年7月26日（日）／栗橋文化会館イリス</p>
+<h2><a href="kaidan.html">『怪談の多い図書館』</a></h2>
+<p class="news-stage-report">久喜市立太東中学校ゲキ部の自主公演として上演しました。</p>
+<a class="detail-button" href="kaidan.html">詳しく見る →</a>
+</div>
+</article>
+</div>
 <div class="news-panel">
 <ul class="news-list">
-    <li><strong>8月18日（火）</strong>　<a href="chuo_library.html">怪談の多い図書館</a>　久喜市立中央図書館 休館日特別公演 <span class="badge badge-reserve">8/7 9:00〜申込開始</span></li>
     <li><strong>2026年7月23日</strong>　国立国会図書館「カレントアウェアネス-E」に<a href="https://current.ndl.go.jp/e2899" target="_blank" rel="noopener">ビブリオ劇場の記事</a>が掲載されました。</li>
     <li><strong>2026年2月</strong>　日本図書館協会『図書館雑誌』に<a href="https://www.jla.or.jp/wp/wp-content/uploads/2026/02/tz202602.pdf" target="_blank" rel="noopener">「図書館が劇場に！」</a>が掲載されました。</li>
 </ul>
-</div>
-</section>
-<section class="section upcoming-section" id="upcoming">
-<p class="section-label">UPCOMING STAGE</p>
-<h2>これからの上演</h2>
-<p class="upcoming-lead">これから上演予定の公演を、開催日順にまとめました。作品については「活動・作品」からレパートリーページへお進みください。</p>
-<div class="upcoming-grid">
-<article class="upcoming-card">
-<a href="kaidan.html"><img alt="怪談の多い図書館 フライヤー表面" src="kaidan_flyer_front.jpg"/></a>
-<p class="small-heading">7月26日（日）／久喜市立太東中学校ゲキ部 自主公演</p>
-<h3>怪談の多い図書館</h3>
-<p>休館日の図書館を訪れた森本静花は、上演準備中の『怪談の多い図書館』と出会う。現実と劇の世界が重なり始め、静花は妖怪・天邪鬼をめぐる物語の真実へ近づいていきます。</p>
-<div class="event-summary">
-<p><strong>日時：</strong>2026年7月26日（日）開場 13:30／開演 14:00</p>
-<p><strong>会場：</strong>栗橋文化会館イリス</p>
-<p><strong>入場：</strong>無料</p>
-<p><strong>作：</strong>サイトウトシオ　<strong>illustration：</strong>髙橋咲</p>
-</div>
-<div class="current-actions">
-<a class="primary-button" href="kaidan.html">詳しく見る →</a>
-<a class="secondary-button" href="kaidan_flyer_front.jpg" rel="noopener" target="_blank">フライヤーを見る</a>
-</div>
-</article>
-<article class="upcoming-card">
-<a href="monogatari_magic.html"><img alt="ビブリオ劇場＆モノガタリマジック フライヤー" src="monogatari_magic_flyer.jpg"/></a>
-<p class="small-heading">7月30日（木）／申込不要</p>
-<h3>ビブリオ劇場<br/>＆モノガタリマジック</h3>
-<p>絵本ドラマリーディングに、プロマジシャン・ザッキーによる「モノガタリマジック」が加わる特別ステージです。</p>
-<div class="event-summary">
-<p><strong>日時：</strong>2026年7月30日（木）開場 13:30／開演 14:00</p>
-<p><strong>会場：</strong>ブックハウスカフェ ひふみ</p>
-<p><strong>入場：</strong>無料・申込不要</p>
-</div>
-<div class="current-actions">
-<a class="primary-button" href="monogatari_magic.html">詳しく見る →</a>
-<a class="secondary-button" href="monogatari_magic_flyer.jpg" rel="noopener" target="_blank">フライヤーを見る</a>
-</div>
-</article>
-<article class="upcoming-card">
-<a href="colors.html"><img alt="COLORS カラーズ フライヤー" src="colors_flyer.jpg"/></a>
-<p class="small-heading">7月31日（金）／要申込み</p>
-<h3>COLORS<br/>カラーズ</h3>
-<p>自由でにぎやかな図書館「カラーズ」を舞台に、多様性、平和、未来への願いを、演劇とマジックで描きます。</p>
-<div class="event-summary">
-<p><strong>日時：</strong>2026年7月31日（金）13:00〜／15:00〜</p>
-<p><strong>会場：</strong>ブックハウスカフェ 2階 ひふみ</p>
-<p><strong>参加費：</strong>大人 1,500円／中高生 1,000円／小学生 500円</p>
-</div>
-<div class="current-actions">
-<a class="primary-button" href="colors.html">詳しく見る →</a>
-<a class="primary-button signup-button" href="https://bookhousecafe.jp/event/content/2214" rel="noopener" target="_blank">申込みはこちら</a>
-<a class="secondary-button" href="colors_flyer.jpg" rel="noopener" target="_blank">フライヤーを見る</a>
-</div>
-</article>
-<article class="upcoming-card">
-<a href="chuo_library.html"><img alt="怪談の多い図書館 久喜市立中央図書館公演 フライヤー" src="chuo_library_flyer.jpg"/></a>
-<p class="small-heading">8月18日（火）／久喜市立中央図書館 休館日特別公演</p>
-<h3>怪談の多い図書館<br/>久喜市立中央図書館公演</h3>
-<p>『怪談の多い図書館』は、久喜市立中央図書館の休館日に、図書館全体を舞台として上演するために創作された作品です。8月18日は、その本来の舞台である中央図書館で上演します。</p>
-<div class="event-summary">
-<p><strong>日時：</strong>2026年8月18日（火）13:30〜15:30</p>
-<p><strong>会場：</strong>久喜市立中央図書館</p>
-<p><strong>定員：</strong>90人（申込先着順・座席60人／立見30人）</p>
-<p><strong>申込：</strong>8月7日（金）9:00〜 申込フォーム（WEB）にて受付</p>
-</div>
-<div class="current-actions">
-<a class="primary-button" href="chuo_library.html">詳しく見る →</a>
-<a class="secondary-button" href="chuo_library_flyer.jpg" rel="noopener" target="_blank">フライヤーを見る</a>
-</div>
-</article>
 </div>
 </section>
 <section class="section journal-section" id="library-journal" hidden>
