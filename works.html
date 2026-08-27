@@ -8,16 +8,20 @@
 <link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/works.html">
 <link rel="stylesheet" href="style.css">
 <style>
-.repertoire-page{background:linear-gradient(180deg,#f7efe2 0%,#fffaf0 100%)}
-.repertoire-lead{max-width:800px;color:#6e4d20;font-size:19px}
-.repertoire-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:34px}
-.repertoire-entry{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid rgba(177,138,63,.3);border-radius:20px;box-shadow:0 14px 34px rgba(77,54,29,.11)}
-.repertoire-entry>a:first-child{display:flex;align-items:center;justify-content:center;min-height:440px;padding:22px;background:linear-gradient(145deg,#ead9bd,#f7efe2)}
-.repertoire-entry img{display:block;width:100%;height:400px;object-fit:contain;border-radius:9px;box-shadow:0 9px 22px rgba(45,24,8,.22)}
-.repertoire-copy{display:flex;flex:1;flex-direction:column;padding:26px}
-.repertoire-copy h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:14px}
-.repertoire-copy p{font-size:16px}.repertoire-copy .detail-button{align-self:flex-start;margin-top:auto}
-@media(max-width:760px){.repertoire-list{grid-template-columns:1fr}.repertoire-entry>a:first-child{min-height:0}.repertoire-entry img{height:auto;max-height:500px}}
+.repertoire-page{background:linear-gradient(180deg,#f4f8f3 0%,#fff 100%);color:#202820}
+.repertoire-page h1,.repertoire-page h2{color:#183a2a}
+.repertoire-page .section-label{color:#276044}
+.repertoire-lead{max-width:850px;color:#26332b;font-size:19px;line-height:1.9}
+.repertoire-list{display:grid;grid-template-columns:1fr;gap:32px;margin-top:38px}
+.repertoire-entry{display:grid;grid-template-columns:minmax(300px,42%) 1fr;overflow:hidden;background:#fff;border:2px solid #9bb3a1;border-radius:22px;box-shadow:0 14px 34px rgba(31,65,46,.13)}
+.repertoire-entry>a:first-child{display:flex;align-items:center;justify-content:center;min-height:440px;padding:24px;background:#eef4ee;border-right:1px solid #c7d5ca}
+.repertoire-entry img{display:block;width:100%;height:400px;object-fit:contain;border-radius:9px;box-shadow:0 9px 22px rgba(20,45,31,.2)}
+.repertoire-copy{display:flex;flex-direction:column;justify-content:center;padding:38px 40px;background:#fff}
+.repertoire-copy h2{margin:0 0 16px;color:#183a2a;font-size:clamp(1.7rem,3vw,2.4rem)}
+.repertoire-copy p{color:#26332b;font-size:17px;line-height:1.85}
+.repertoire-copy .work-number{color:#356b4d;font-weight:700;letter-spacing:.12em}
+.repertoire-copy .detail-button{align-self:flex-start;margin-top:14px}
+@media(max-width:760px){.repertoire-entry{grid-template-columns:1fr}.repertoire-entry>a:first-child{min-height:0;border-right:0;border-bottom:1px solid #c7d5ca}.repertoire-entry img{height:auto;max-height:500px}.repertoire-copy{padding:28px 24px}}
 </style>
 </head>
 <body class="repertoire-page">
