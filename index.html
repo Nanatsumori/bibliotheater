@@ -517,8 +517,8 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	display:flex;
 	align-items:center;
 	justify-content:center;
-	width:min(100%,270px);
-	height:220px;
+	width:min(100%,190px);
+	height:100%;
 	padding:34px 20px 28px;
 	color:#fffdf4;
 	text-align:center;
@@ -561,6 +561,12 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	font-size:clamp(1.35rem,2.2vw,1.85rem);
 	letter-spacing:.03em;
 }
+@media(min-width:981px){
+	.pillar-title h3{
+		font-size:clamp(1.05rem,1.55vw,1.35rem);
+		white-space:nowrap;
+	}
+}
 .pillar-catch{
 	color:#6d4a1f;
 	font-weight:700;
@@ -583,7 +589,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	.pillar-visual{height:250px;padding:15px;}
 	.pillar-book-covers{gap:9px;}
 	.pillar-body{padding:23px 21px 25px;}
-	.skit-stage{height:195px;}
+	.skit-stage{height:100%;}
 }
 .intro-section .about-origin{
 	color:#222;
@@ -640,7 +646,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p class="about-origin">ビブリオ劇場は、ドラマクリエイターの<a href="saito-toshio.html">サイトウトシオ</a>が、<a href="taito-gekibu.html">久喜市立太東中学校ゲキ部</a>とともに始めた、本のある場所を舞台に、図書館を舞台にした劇、絵本ドラマリーディング、ビブリオスキットを上演する取組です。</p>
 <div class="three-pillars-block" id="performances" aria-labelledby="three-pillars-title">
 <h2 class="three-pillars-heading" id="three-pillars-title">ビブリオ劇場には、三つの上演スタイルがあります</h2>
-<p class="three-pillars-lead">本のある場所と物語をつなぐ、三本の柱です。</p>
+<p class="three-pillars-lead">本のある場所と演劇をつなぐ、三本の柱です。</p>
 <div class="three-pillars-grid">
 <article class="pillar-card">
 <div class="pillar-title"><h3>図書館を舞台にした劇</h3></div>
@@ -653,10 +659,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 </article>
 <article class="pillar-card">
 <div class="pillar-title"><h3>絵本ドラマリーディング</h3></div>
-<div class="pillar-visual"><div class="pillar-book-covers">
-<img src="images/books/hachidori.png" alt="『ちいさなハチドリのちいさないってき』表紙"/>
-<img src="images/books/gaitou.jpg" alt="『がいとうのひっこし』表紙"/>
-</div></div>
+<div class="pillar-visual"><img src="images/books/hachidori.png" alt="『ちいさなハチドリのちいさないってき』表紙"/></div>
 <div class="pillar-body">
 <p class="pillar-catch">絵本が、声と身体で動き出す。</p>
 <p>絵本の言葉と絵を大切にしながら、一冊の絵本を声と身体を使って表現します。</p>
@@ -668,14 +671,14 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <div class="pillar-visual skit-visual" aria-hidden="true"><div class="skit-stage"><span>本から生まれる<br/>短い劇</span></div></div>
 <div class="pillar-body">
 <p class="pillar-catch">一冊の本から、短い劇が生まれる。</p>
-<p>ビブリオスキットは、本の魅力を演劇で伝える「本を紹介する寸劇」です。サイトウトシオが制作した作品を紹介します。</p>
+<p>本の魅力を演劇で伝える、本を紹介する短い劇を上演します。</p>
 <a class="detail-button" href="biblioskit.html">詳しく見る →</a>
 </div>
 </article>
 </div>
 </div>
 <p class="catch">本のある場所が、舞台になる。</p>
-<p>図書館や書店、カフェ。<br/>本のある場所だからこそ生まれる物語があります。</p>
+<p>図書館、書店、まちライブラリー、ブックカフェ。<br/>本のある場所だからこそ生まれる物語があります。</p>
 <p>ビブリオ劇場では、<strong>図書館が舞台の作品を図書館で、本が題材の作品を本のある場所で上演します。</strong></p>
 <p>物語の世界と現実の場所が重なり合うことで、その場所でしか味わえない演劇体験が生まれます。</p>
 <p>ビブリオ劇場は、本と人、人と物語、人と人をつなぐ、新しい文化活動です。</p>
