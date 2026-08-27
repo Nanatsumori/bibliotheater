@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ビブリオ劇場｜本のある場所が 舞台になる</title>
 <meta content="ビブリオ劇場,図書館,書店,中学生,中学校,演劇,脚本,サイトウトシオ,斉藤俊雄,ビブリオスキット,絵本ドラマリーディング,久喜市立太東中学校ゲキ部,怪談の多い図書館,ラビリンス,カラーズ,ゲキ部" name="keywords"/>
-<meta content="ビブリオ劇場は、図書館、書店、まちライブラリーなど、本のある場所を舞台に、本に関係する劇を上演する取り組みです。最新ニュースと、ビブリオ劇場のレパートリーを紹介しています。" name="description"/>
+<meta content="ビブリオ劇場は、図書館を舞台にした劇、絵本ドラマリーディング、本を紹介する寸劇「ビブリオスキット」を上演する取組です。" name="description"/>
 <link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/">
 <meta content="JustSystems Homepage Builder Version 22.0.5.0 for Windows" name="GENERATOR">
 <link href="style.css" rel="stylesheet"/>
@@ -405,12 +405,13 @@
 .activity-link-section>h2,.activity-link-section>.section-label,.activity-link-section>.activity-link-lead,.activity-link-section>.activity-link-grid{max-width:1080px;margin-left:auto;margin-right:auto}
 .activity-link-lead{margin-bottom:28px;color:#6e4d20}
 .activity-link-grid{display:grid;gap:22px}
-.activity-link-grid.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.activity-link-grid.performance-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .activity-link-grid.creation-grid{grid-template-columns:minmax(0,720px);justify-content:center}
 .activity-link-card{display:flex;flex-direction:column;min-height:280px;padding:28px;background:rgba(255,255,255,.94);border:1px solid rgba(177,138,63,.25);border-top:7px solid var(--gold);border-radius:18px;box-shadow:0 14px 32px rgba(77,54,29,.09)}
 .activity-link-card:nth-child(2){border-top-color:#5f8fc9}.activity-link-card:nth-child(3){border-top-color:#78a56f}
 .activity-link-card h3{font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.35}.activity-link-card p{font-size:16px}.activity-link-card .detail-button{margin-top:auto;align-self:flex-start}
-@media(max-width:800px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-card{min-height:0}}
+@media(max-width:900px){.activity-link-grid.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.activity-link-grid.performance-grid .activity-link-card:last-child{grid-column:1 / -1;width:calc(50% - 11px);justify-self:center}}
+@media(max-width:700px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-grid.performance-grid .activity-link-card:last-child{grid-column:auto;width:100%}.activity-link-card{min-height:0}}
 .global-nav .external-site-link{
 	background:#e8f4e9;
 	color:#245c35;
@@ -454,6 +455,135 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 .intro-section{
 	background:#f7faf8;
 	color:#222;
+}
+.three-pillars-block{margin:44px 0 48px;}
+.three-pillars-heading{
+	margin-bottom:14px;
+	text-align:center;
+	font-size:clamp(1.8rem,3.8vw,2.8rem);
+}
+.three-pillars-lead{
+	margin-bottom:32px;
+	text-align:center;
+	color:#5f431f;
+}
+.three-pillars-grid{
+	display:grid;
+	grid-template-columns:repeat(3,minmax(0,1fr));
+	gap:24px;
+}
+.pillar-card{
+	display:flex;
+	flex-direction:column;
+	overflow:hidden;
+	background:#fff;
+	border:1px solid rgba(177,138,63,.34);
+	border-radius:22px;
+	box-shadow:0 16px 36px rgba(62,45,26,.12);
+}
+.pillar-visual{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:310px;
+	padding:20px;
+	background:linear-gradient(135deg,#efe2cb 0%,#f8f1e5 100%);
+}
+.pillar-visual img{
+	display:block;
+	max-width:100%;
+	height:100%;
+	object-fit:contain;
+	border-radius:8px;
+	box-shadow:0 10px 24px rgba(45,27,17,.22);
+}
+.pillar-book-covers{
+	display:grid;
+	grid-template-columns:repeat(2,minmax(0,1fr));
+	gap:12px;
+	width:100%;
+	height:100%;
+	align-items:center;
+}
+.pillar-book-covers img{
+	width:100%;
+	height:100%;
+}
+.skit-visual{
+	background:linear-gradient(145deg,#e6f3e6 0%,#f7f0d9 100%);
+}
+.skit-stage{
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:min(100%,270px);
+	height:220px;
+	padding:34px 20px 28px;
+	color:#fffdf4;
+	text-align:center;
+	background:linear-gradient(135deg,#5a3826,#2f1d16);
+	border:8px solid #c8a96c;
+	border-radius:14px 14px 6px 6px;
+	box-shadow:0 12px 26px rgba(45,27,17,.24);
+}
+.skit-stage::before,
+.skit-stage::after{
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:34px;
+	background:linear-gradient(90deg,#7f2026,#a83a40);
+}
+.skit-stage::before{left:0;}
+.skit-stage::after{right:0;transform:scaleX(-1);}
+.skit-stage span{
+	position:relative;
+	z-index:1;
+	font-size:clamp(1.3rem,2.2vw,1.8rem);
+	font-weight:800;
+	line-height:1.55;
+	letter-spacing:.07em;
+}
+.pillar-body{
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	padding:26px 26px 28px;
+}
+.pillar-title{
+	padding:24px 22px 20px;
+	text-align:center;
+}
+.pillar-title h3{
+	margin:0;
+	font-size:clamp(1.35rem,2.2vw,1.85rem);
+	letter-spacing:.03em;
+}
+.pillar-catch{
+	color:#6d4a1f;
+	font-weight:700;
+}
+.pillar-body .detail-button{
+	align-self:flex-start;
+	margin-top:auto;
+}
+@media(max-width:980px){
+	.three-pillars-grid{grid-template-columns:1fr 1fr;}
+	.pillar-card:last-child{grid-column:1 / -1;width:calc(50% - 12px);justify-self:center;}
+}
+@media(max-width:700px){
+	.three-pillars-grid{grid-template-columns:1fr;}
+	.pillar-card:last-child{grid-column:auto;width:100%;}
+	.pillar-visual{height:300px;}
+}
+@media(max-width:520px){
+	.three-pillars-block{margin:34px 0 40px;}
+	.pillar-visual{height:250px;padding:15px;}
+	.pillar-book-covers{gap:9px;}
+	.pillar-body{padding:23px 21px 25px;}
+	.skit-stage{height:195px;}
 }
 .intro-section .about-origin{
 	color:#222;
@@ -507,7 +637,43 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <section class="section intro-section" id="about">
 <p class="section-label">ABOUT</p>
 <h1>ビブリオ劇場とは</h1>
-<p class="about-origin">ビブリオ劇場は、ドラマクリエイターの<a href="saito-toshio.html">サイトウトシオ</a>が、<a href="taito-gekibu.html">久喜市立太東中学校ゲキ部</a>とともに始めた、本のある場所を舞台に、本に関する劇や絵本ドラマリーディングを上演する取組です。</p>
+<p class="about-origin">ビブリオ劇場は、ドラマクリエイターの<a href="saito-toshio.html">サイトウトシオ</a>が、<a href="taito-gekibu.html">久喜市立太東中学校ゲキ部</a>とともに始めた、本のある場所を舞台に、図書館を舞台にした劇、絵本ドラマリーディング、ビブリオスキットを上演する取組です。</p>
+<div class="three-pillars-block" id="performances" aria-labelledby="three-pillars-title">
+<h2 class="three-pillars-heading" id="three-pillars-title">ビブリオ劇場には、三つの上演スタイルがあります</h2>
+<p class="three-pillars-lead">本のある場所と物語をつなぐ、三本の柱です。</p>
+<div class="three-pillars-grid">
+<article class="pillar-card">
+<div class="pillar-title"><h3>図書館を舞台にした劇</h3></div>
+<div class="pillar-visual"><img src="chuo_library_flyer.jpg" alt="『怪談の多い図書館』久喜市立中央図書館公演のフライヤー"/></div>
+<div class="pillar-body">
+<p class="pillar-catch">本のある場所から、物語が始まる。</p>
+<p>図書館など、本のある場所そのものを舞台に、その空間を生かした劇を上演します。</p>
+<a class="detail-button" href="works.html">詳しく見る →</a>
+</div>
+</article>
+<article class="pillar-card">
+<div class="pillar-title"><h3>絵本ドラマリーディング</h3></div>
+<div class="pillar-visual"><div class="pillar-book-covers">
+<img src="images/books/hachidori.png" alt="『ちいさなハチドリのちいさないってき』表紙"/>
+<img src="images/books/gaitou.jpg" alt="『がいとうのひっこし』表紙"/>
+</div></div>
+<div class="pillar-body">
+<p class="pillar-catch">絵本が、声と身体で動き出す。</p>
+<p>絵本の言葉と絵を大切にしながら、一冊の絵本を声と身体を使って表現します。</p>
+<a class="detail-button" href="picturebook-reading.html">詳しく見る →</a>
+</div>
+</article>
+<article class="pillar-card">
+<div class="pillar-title"><h3>ビブリオスキット</h3></div>
+<div class="pillar-visual skit-visual" aria-hidden="true"><div class="skit-stage"><span>本から生まれる<br/>短い劇</span></div></div>
+<div class="pillar-body">
+<p class="pillar-catch">一冊の本から、短い劇が生まれる。</p>
+<p>ビブリオスキットは、本の魅力を演劇で伝える「本を紹介する寸劇」です。サイトウトシオが制作した作品を紹介します。</p>
+<a class="detail-button" href="biblioskit.html">詳しく見る →</a>
+</div>
+</article>
+</div>
+</div>
 <p class="catch">本のある場所が、舞台になる。</p>
 <p>図書館や書店、カフェ。<br/>本のある場所だからこそ生まれる物語があります。</p>
 <p>ビブリオ劇場では、<strong>図書館が舞台の作品を図書館で、本が題材の作品を本のある場所で上演します。</strong></p>
@@ -624,25 +790,6 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p class="journal-actions"><a class="detail-button" href="https://current.ndl.go.jp/e2899" rel="noopener" target="_blank">カレントアウェアネス-Eの記事を読む →</a></p>
 </div>
 </section>
-<section class="section activity-link-section performance-link-section" id="performances">
-<p class="section-label">PERFORMANCES</p>
-<h2>上演作品</h2>
-<p class="activity-link-lead">ビブリオ劇場で上演している劇作品と、絵本を声と身体で舞台に立ち上げる取組を紹介します。</p>
-<div class="activity-link-grid performance-grid">
-<article class="activity-link-card">
-<p class="work-number">REPERTOIRE</p>
-<h3>レパートリー</h3>
-<p>『怪談の多い図書館』『COLORS』『アトム』『カンパネラ』『ラビリンス』など、上演を重ねながら育ってきた作品を紹介します。</p>
-<a class="detail-button" href="works.html">作品を見る →</a>
-</article>
-<article class="activity-link-card">
-<p class="work-number">PICTURE BOOK</p>
-<h3>絵本ドラマ<br/>リーディング</h3>
-<p>一冊の絵本を、声と身体で舞台に立ち上げる取組です。これまでに上演した絵本も紹介します。</p>
-<a class="detail-button" href="picturebook-reading.html">詳しく見る →</a>
-</article>
-</div>
-</section>
 <section class="section activity-link-section creation-link-section" id="creative-activity">
 <p class="section-label">CREATIVE ACTIVITY</p>
 <h2>創作活動</h2>
@@ -654,82 +801,6 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p>ビブリオスキットは、本を紹介する短い劇で、ビブリオ劇場を形づくる作品です。中学生が好きな本を出発点に、自分たちの表現で創作します。</p>
 <a class="detail-button" href="creation.html">創作活動を見る →</a>
 </article>
-</div>
-</section>
-<section class="section works-section" hidden>
-<p class="section-label">REPERTOIRE</p>
-<h2>レパートリー</h2>
-<p class="archive-lead">ビブリオ劇場の作品は、初演で終わるのではなく、図書館・書店・地域の場で再演されながら育っていきます。ここでは、現在上演中の作品も、これまでに上演してきた作品も「レパートリー」として紹介します。絵本ドラマリーディングは、下の独立したセクションで紹介します。</p>
-<div class="work-grid">
-<article class="work-card featured-work">
-<p class="work-number">REPERTOIRE</p>
-<h3>怪談の多い図書館</h3>
-<p>図書館に棲む妖怪たちが登場する怪談劇。現在の中心作品です。</p>
-<p class="work-button"><a class="detail-button" href="kaidan.html">作品紹介を見る →</a></p>
-</article>
-<article class="work-card featured-work">
-<p class="work-number">REPERTOIRE</p>
-<h3>COLORS</h3>
-<p>色とりどりの未来を描く、演劇とマジックによる平和の物語。</p>
-<p class="work-button"><a class="detail-button" href="colors.html">作品紹介を見る →</a></p>
-</article>
-<article class="work-card featured-work">
-<p class="work-number">REPERTOIRE</p>
-<h3>アトム</h3>
-<p>物語を演劇として立ち上げる、ビブリオ劇場の新しいレパートリー作品。</p>
-<p class="work-button"><a class="detail-button" href="atom.html">作品紹介を見る →</a></p>
-</article>
-<article class="work-card">
-<p class="work-number">REPERTOIRE</p>
-<h3>カンパネラ</h3>
-<p>ピアノと演劇が響き合う、平和への願いを込めた物語。</p>
-<p class="work-button"><a class="detail-button" href="campanella.html">作品紹介を見る →</a></p>
-</article>
-<article class="work-card">
-<p class="work-number">REPERTOIRE</p>
-<h3>ラビリンス</h3>
-<p>図書館全体を舞台にした、本の迷宮をめぐるビブリオ劇場の原点となる作品。</p>
-<p class="work-button"><a class="detail-button" href="labyrinth.html">作品紹介を見る →</a></p>
-</article>
-</div>
-</section>
-<section class="section picturebook-section" hidden>
-<p class="section-label">PICTURE BOOK DRAMA READING</p>
-<h2>絵本ドラマリーディング</h2>
-<div class="picturebook-card">
-<div class="picturebook-intro">
-<p class="small-heading">ビブリオ劇場のもう一つの柱</p>
-<h3>絵本が、舞台になる。</h3>
-<p>絵本ドラマリーディングは、一冊の絵本を、声と身体を使って表現する取組です。基本的に絵は読み聞かせと同様に紹介し、基本的に脚色はしません。</p>
-<ul class="picturebook-points">
-<li>図書館や書店など、本のある場所で上演しやすい形式です。</li>
-<li>観客との距離が近く、絵本の世界を身近に感じられます。</li>
-<li>上演後に、その絵本を手に取ってもらうきっかけをつくります。</li>
-</ul>
-<div class="current-actions">
-<a class="primary-button" href="picturebook-reading.html">絵本ライブラリーを見る →</a>
-</div>
-</div>
-<div aria-label="絵本ドラマリーディングで紹介する絵本" class="picturebook-bookshelf">
-<article class="open-book-card">
-<div class="open-book-title">
-<span class="book-label">BOOKSHELF</span>
-<h4>上演した絵本たち</h4>
-</div>
-<div class="open-book-text">
-<p>『どしゃぶり』『がいとうのひっこし』『ともだちや』『ひとのなみだ』など、これまで上演した9冊を本棚風に紹介します。</p>
-</div>
-</article>
-<article class="open-book-card">
-<div class="open-book-title">
-<span class="book-label">DESIGN</span>
-<h4>本を手に取るように</h4>
-</div>
-<div class="open-book-text">
-<p>表紙を使えるものは公式条件に従って掲載し、確認中のものは本棚デザインで統一します。</p>
-</div>
-</article>
-</div>
 </div>
 </section>
 <section class="section nanatsumori-section" id="nanatsumori">
