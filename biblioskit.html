@@ -21,8 +21,13 @@
 .former-name{padding:20px 22px;background:#f2f7ef;border-left:6px solid #6d9468;border-radius:6px 14px 14px 6px}
 .coming-soon{padding:30px;text-align:center;background:linear-gradient(135deg,#fff8e8,#edf7ed);border:1px dashed #b18a3f;border-radius:18px}
 .coming-soon h2{margin-bottom:12px}
+.saito-works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px;text-align:left}
+.saito-work{padding:24px;background:#fff;border:1px solid rgba(177,138,63,.38);border-radius:16px;box-shadow:0 10px 24px rgba(77,54,29,.08)}
+.saito-work-label{margin:0 0 6px;color:#6d9468;font-size:.82rem;font-weight:800;letter-spacing:.12em}
+.saito-work h3{margin:0 0 12px;font-size:1.25rem;color:#31513a}.saito-work ol{margin:0 0 20px;padding-left:1.5em}.saito-work li{margin:5px 0}
+.saito-work li a{color:#31513a;font-weight:700;text-decoration-color:#b18a3f;text-underline-offset:3px}.saito-work li a:hover{color:#6d4a1f}
 .page-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
-@media(max-width:700px){.skit-hero{padding-top:46px;padding-bottom:44px}.skit-panel{padding:24px 20px}}
+@media(max-width:700px){.skit-hero{padding-top:46px;padding-bottom:44px}.skit-panel{padding:24px 20px}.saito-works{grid-template-columns:1fr}.saito-work{padding:21px 18px}}
 </style>
 </head>
 <body class="skit-page">
@@ -59,7 +64,22 @@
 <p class="section-label">WORKS</p>
 <div class="coming-soon">
 <h2>サイトウトシオの作品</h2>
-<p>サイトウトシオが制作したビブリオスキットを、これから順次紹介します。</p>
+<p>サイトウトシオが制作した二つの作品、六つのビブリオスキットを紹介します。</p>
+<p>一つ一つのスキットを独立した劇として上演することが出来ます。</p>
+<div class="saito-works">
+<article class="saito-work">
+<p class="saito-work-label">WORK 01</p>
+<h3>図書館長・獅子沢輝梨編</h3>
+<ol><li><a href="biblioskit-shishizawa.html#ビブリオスキット第１話-祭り広場の化けくらべ-">祭り広場の化けくらべ</a></li><li><a href="biblioskit-shishizawa.html#ビブリオスキット第２話-マインドリーダー山父">マインドリーダー・山父</a></li><li><a href="biblioskit-shishizawa.html#ビブリオスキット第３話-じんだら沼のセイレーン">じんだら沼のセイレーン</a></li></ol>
+<a class="detail-button" href="biblioskit-shishizawa.html">この作品を読む →</a>
+</article>
+<article class="saito-work">
+<p class="saito-work-label">WORK 02</p>
+<h3>ゲキを止めるな！編</h3>
+<ol><li><a href="biblioskit-geki.html#ビブリオスキット第１話-本の虫のクイズショー">本の虫のクイズショー</a></li><li><a href="biblioskit-geki.html#ビブリオスキット第２話サタン酸性とアンパンマンの親戚">サタン酸性とアンパンマンの親戚</a></li><li><a href="biblioskit-geki.html#ビブリオスキット第３話-本のない世界は怖いでショー">本のない世界は怖いでショー</a></li></ol>
+<a class="detail-button" href="biblioskit-geki.html">この作品を読む →</a>
+</article>
+</div>
 </div>
 <div class="page-actions">
 <a class="detail-button" href="index.html">トップページへ戻る →</a>
