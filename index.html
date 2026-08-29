@@ -612,6 +612,110 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 .intro-section .about-mission p{
 	color:#1f3f2c;
 }
+.about-faq{
+	margin-top:48px;
+	padding-top:38px;
+	border-top:1px solid #8aa394;
+}
+.about-faq-heading{
+	margin:0 0 10px;
+	font-size:clamp(1.75rem,3.5vw,2.45rem);
+	color:#1f3f2c;
+}
+.about-faq-lead{
+	margin:0 0 24px;
+	line-height:1.85;
+	color:#37463d;
+}
+.faq-list{
+	display:grid;
+	gap:14px;
+}
+.faq-item{
+	background:#fff;
+	border:1px solid #b8c9be;
+	border-radius:14px;
+	box-shadow:0 7px 18px rgba(40,73,51,.07);
+	overflow:hidden;
+}
+.faq-item summary{
+	position:relative;
+	padding:19px 58px 19px 22px;
+	font-weight:700;
+	font-size:clamp(1.02rem,2vw,1.16rem);
+	line-height:1.65;
+	color:#183b29;
+	cursor:pointer;
+	list-style:none;
+}
+.faq-item summary::-webkit-details-marker{
+	display:none;
+}
+.faq-item summary::after{
+	content:"＋";
+	position:absolute;
+	top:50%;
+	right:22px;
+	transform:translateY(-50%);
+	font-size:1.55rem;
+	font-weight:400;
+	color:#4f8060;
+}
+.faq-item[open] summary{
+	background:#edf5ef;
+	border-bottom:1px solid #cbd8cf;
+}
+.faq-item[open] summary::after{
+	content:"−";
+}
+.faq-item summary:hover{
+	background:#f3f8f4;
+}
+.faq-item summary:focus-visible{
+	outline:3px solid #d49a35;
+	outline-offset:-3px;
+}
+.faq-answer{
+	padding:22px 24px 25px;
+	color:#26352c;
+}
+.faq-answer p{
+	margin:0 0 1em;
+	line-height:1.9;
+}
+.faq-answer p:last-child{
+	margin-bottom:0;
+}
+.faq-note{
+	font-size:.92rem;
+	color:#56645b;
+}
+.faq-reference{
+	font-size:.94rem;
+}
+.faq-reference a{
+	color:#075985;
+	font-weight:700;
+	text-underline-offset:.2em;
+}
+.faq-chart-link{
+	display:block;
+	margin:22px auto 12px;
+	max-width:1000px;
+}
+.faq-chart{
+	display:block;
+	width:100%;
+	height:auto;
+	border:1px solid #c6d3ca;
+	border-radius:10px;
+}
+@media(max-width:600px){
+	.about-faq{margin-top:38px;padding-top:30px;}
+	.faq-item summary{padding:16px 48px 16px 17px;}
+	.faq-item summary::after{right:16px;}
+	.faq-answer{padding:18px 17px 21px;}
+}
 #news,
 .creation-link-section,
 .contact-section{
@@ -697,6 +801,62 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <a class="detail-button" href="taito-gekibu.html">ゲキ部の紹介を見る →</a>
 </article>
 </div>
+<section class="about-faq" aria-labelledby="about-faq-title">
+<h2 class="about-faq-heading" id="about-faq-title">ビブリオ劇場 Q＆A</h2>
+<p class="about-faq-lead">「ビブリオ劇場」について理解を深めていただくため、Q＆Aの形で解説します。質問をクリックすると回答が開きます。</p>
+<div class="faq-list">
+<details class="faq-item">
+<summary>Q1．ビブリオ劇場は、どこでも取り入れられますか？</summary>
+<div class="faq-answer">
+<p>はい。基本的な流れを理解すれば、学校、図書館、書店、公民館など、さまざまな場所で取り入れることができます。</p>
+<p>2023年から2025年までの3年間、毎年8月に神奈川県立青少年センターで2日間開催される「神奈川県中学校演劇講習会」において、各日1回、計6回、「脚本創作」の講座を担当しました。そこで「ビブリオドラマ創作」に取り組んでもらいました。</p>
+<p class="faq-note">※「ビブリオドラマ創作」は講習当時の名称です。現在の「ビブリオスキット創作」に当たります。</p>
+<p>講座では、現在の「ビブリオスキット」に当たる短い劇について説明した後、参加者が本を出発点に劇を創作しました。最後に2、3組が作品を劇の形にし、ステージで発表しました。参加した先生からは、「1日でここまでできるんですね」「この後、まず図書委員で取り組んでみます」という声も上がりました。</p>
+<p>大がかりな舞台設備がなくても、本と人が集まる場所があれば始められます。演劇部であれば、「ビブリオ劇場」の上演を実現することは、それほど難しくありません。</p>
+<p class="faq-reference">参考：<a href="https://www.pref.kanagawa.jp/docs/yi4/2025/school/ichiran.html">神奈川県「令和7年度 学校演劇・ダンス講習会・発表会実施一覧」</a></p>
+</div>
+</details>
+<details class="faq-item">
+<summary>Q2．ビブリオ劇場には、どのような教育的効果が期待できますか？</summary>
+<div class="faq-answer">
+<p>読書への関心を高めるとともに、考える力、伝える力、他者と協力する力を育てることが期待できます。</p>
+<p>ビブリオ劇場では、本を読み、その魅力やテーマについて考え、仲間と話し合いながら短い劇を創り、観客に伝えます。その過程で、生徒が本と向き合う時間は自然に増えていきます。</p>
+<p>全国学力・学習状況調査では、「読書が好き」と回答した児童生徒ほど、教科の平均正答率が高い傾向が示されています。「ビブリオ劇場」に取り組むことは、読書習慣や学びに向かう姿勢を育て、学力の土台づくりにつながると考えられます。</p>
+<p class="faq-reference">参考：<a href="https://www.mext.go.jp/b_menu/shingi/chousa/shougai/050/gijiroku/mext_00007.html">文部科学省「図書館・学校図書館の運営の充実に関する有識者会議」</a></p>
+</div>
+</details>
+<details class="faq-item">
+<summary>Q3．ビブリオ劇場は、STEAM教育とどのような関わりがありますか？</summary>
+<div class="faq-answer">
+<p>「ビブリオ劇場」は、ARTを中心に、探究、Design、Engineeringを結び付ける活動でもあります。</p>
+<p>生徒たちは、表現したいテーマに合う本を探索し、そこから問いを見つけます。そして、「何を、誰に、どのように伝えるか」を考え、脚本、演技、音楽、舞台空間などをデザインします。</p>
+<p>さらに、練習を通して課題を見つけ、話し合い、修正を重ねる過程は、Engineeringの考え方ともつながります。</p>
+<p>演劇というARTを中心に、問いを探究し、作品をデザインし、試行錯誤しながら実現する――「ビブリオ劇場」は、STEAM教育と親和性の高い取組です。</p>
+</div>
+</details>
+<details class="faq-item">
+<summary>Q4．ビブリオ劇場は、これからの学校教育とどのようにつながりますか？</summary>
+<div class="faq-answer">
+<p>教科横断的な学び、探究、協働、共創、そして社会に開かれた学びを、実際の活動として経験できます。</p>
+<p>ビブリオ劇場では、生徒が自分で本を選び、そこから問いやテーマを見つけます。そして、仲間と考えを出し合い、それぞれの得意なことや異なる視点を生かしながら、一つの作品を創ります。</p>
+<p>完成した劇は、学校の中だけで終わりません。図書館や書店など、本のある場所で上演し、地域の人々に届けます。</p>
+<p>ビブリオ劇場は、次期学習指導要領に向けて検討されている、これからの学びの方向性と響き合う活動です。</p>
+<p class="faq-reference">参考：<a href="https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo0/gijiroku/1422289_00028.htm">文部科学省「中央教育審議会における検討」</a></p>
+</div>
+</details>
+<details class="faq-item">
+<summary>Q5．ビブリオ劇場の上演から、地域や図書館にどのような化学反応が生まれると考えますか？</summary>
+<div class="faq-answer">
+<p>本と演劇を通して、子どもから高齢者まで、異なる世代が出会う場をつくります。</p>
+<p>太東中ゲキ部が行った3回のイベントには、幼児・小学生から70代以上まで、幅広い世代から参加申込みがありました。各回40人、合計120人から参加申込みがあり、中学生の表現が幅広い世代の関心を集めていることが分かります。</p>
+<p>そこでは、普段は接する機会の少ない中学生と高齢者も、演劇と本を通して同じ時間を共有します。上演後に感想を交わしたり、紹介された本を手に取ったりすることから、新しい対話も生まれます。</p>
+<p>図書館が、本を借りるだけの場所ではなく、人と人が出会い、同じ物語を分かち合う場所になる――それも、ビブリオ劇場が生み出す化学反応の一つだと考えています。</p>
+<a class="faq-chart-link" href="assets/generation-applicants.png" target="_blank" rel="noopener"><img class="faq-chart" src="assets/generation-applicants.png" alt="太東中ゲキ部イベント参加申込者の世代別人数。3回の各イベントに幼児・小学生から70代以上まで幅広い世代から申込みがあったことを示す表と比較グラフ。"/></a>
+<p class="faq-note">※各回の参加申込者40人を世代別に集計しています。保護者・家族は人数に含みません。画像をクリックすると拡大表示できます。</p>
+</div>
+</details>
+</div>
+</section>
 </section>
 <section class="section" id="news">
 <p class="section-label">NEWS</p>
