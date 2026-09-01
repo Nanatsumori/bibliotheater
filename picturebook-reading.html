@@ -92,6 +92,7 @@
   @media (max-width:900px){ .concept-grid{ grid-template-columns:1fr; } .history-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .history-card:last-child{ grid-column:1 / -1; width:calc(50% - 11px); justify-self:center; } .history-expansion{ grid-template-columns:1fr; } .book-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .permission-list{ grid-template-columns:1fr; } }
   @media (max-width:560px){ .section{ padding:48px 18px; } .history-section{ padding-top:24px; } .history-grid{ grid-template-columns:1fr; gap:18px; } .history-card:last-child{ grid-column:auto; width:100%; } .history-flyer-link{ min-height:auto; padding:13px; } .history-flyer-link img{ height:auto; max-height:520px; } .history-expansion{ margin-top:30px; padding:18px; gap:20px; } .shelf-stage{ padding:30px 16px 38px; border-radius:22px; } .book-grid{ grid-template-columns:1fr; gap:18px; } .book-card{ min-height:auto; } .book-cover-placeholder{ min-height:140px; } .book-cover-image{ min-height:220px; } .book-cover-image img{ height:220px; } .global-nav a{ padding:12px 11px; font-size:.9rem; } }
 </style>
+<link rel="stylesheet" href="next-action.css">
 </head>
 <body>
   <nav class="global-nav" aria-label="メインメニュー">
@@ -289,14 +290,18 @@
           <p>『どしゃぶり』『ぼくは ふね』は、現在、オリジナルデザインで紹介しています。出版社の利用条件を確認できたものから、順に公式書影へ差し替えます。</p>
         </article>
       </div>
-      <div class="back-actions">
-        <a class="primary-button" href="index.html">トップページへ戻る</a>
-        <a class="secondary-button" href="#bookshelf">本棚を見る</a>
-      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <section class="next-action" aria-label="次の行動">
+  <p class="next-action-label">NEXT STEP</p>
+  <h2>ビブリオスキットを見る</h2>
+  <p>本の魅力を短い劇で伝える、もう一つの上演スタイルをご覧ください。</p>
+  <div class="next-action-links">
+    <a href="biblioskit.html">ビブリオスキットへ →</a>
+  </div>
+</section>
+<footer class="site-footer">
     <p>© BIBLIO THEATER</p>
   </footer>
 </body>
