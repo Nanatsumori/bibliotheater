@@ -641,6 +641,44 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	outline:3px solid #d49a35;
 	outline-offset:-3px;
 }
+.faq-item-link{
+	display:block;
+	position:relative;
+	padding:19px 58px 19px 22px;
+	font-weight:700;
+	font-size:clamp(1.02rem,2vw,1.16rem);
+	line-height:1.65;
+	color:#183b29;
+	text-decoration:none;
+}
+.faq-link-title{
+	display:block;
+}
+.faq-link-topics{
+	display:block;
+	margin-top:5px;
+	color:#557060;
+	font-size:clamp(.82rem,1.45vw,.94rem);
+	font-weight:600;
+	line-height:1.55;
+}
+.faq-item-link::after{
+	content:"→";
+	position:absolute;
+	top:50%;
+	right:22px;
+	transform:translateY(-50%);
+	font-size:1.45rem;
+	font-weight:400;
+	color:#4f8060;
+}
+.faq-item-link:hover{
+	background:#f3f8f4;
+}
+.faq-item-link:focus-visible{
+	outline:3px solid #d49a35;
+	outline-offset:-3px;
+}
 .faq-answer{
 	padding:22px 24px 25px;
 	color:#26352c;
@@ -707,6 +745,8 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	.about-faq{margin-top:38px;padding-top:30px;}
 	.faq-item summary{padding:16px 48px 16px 17px;}
 	.faq-item summary::after{right:16px;}
+	.faq-item-link{padding:16px 48px 16px 17px;}
+	.faq-item-link::after{right:16px;}
 	.faq-answer{padding:18px 17px 21px;}
 }
 #news,
@@ -783,7 +823,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 </div>
 <section class="about-faq" aria-labelledby="about-faq-title">
 <h2 class="about-faq-heading" id="about-faq-title">ビブリオ劇場 Q＆A</h2>
-<p class="about-faq-lead">「ビブリオ劇場」について理解を深めていただくため、Q＆Aの形で解説します。質問をクリックすると回答が開きます。</p>
+<p class="about-faq-lead">「ビブリオ劇場」について理解を深めていただくため、Q＆Aの形で解説します。質問をクリックすると、回答または詳しいページが開きます。</p>
 <div class="faq-list">
 <details class="faq-item">
 <summary>Q1．ビブリオ劇場は、どこでも取り入れられますか？</summary>
@@ -807,15 +847,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p class="faq-note">※各回の参加申込者40人を世代別に集計しています。保護者・家族は人数に含みません。画像をクリックすると拡大表示できます。</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Q3．ビブリオ劇場には、どのような教育的な可能性がありますか？</summary>
-<div class="faq-answer">
-<p>読書への関心を高めるとともに、考える力、伝える力、表現する力、他者と協力する力を育てることが期待できます。</p>
-<p>生徒は、本を読み、その魅力やテーマについて話し合い、脚本・演技・音楽・舞台などを組み合わせて、一つの作品を創ります。さらに、完成した作品を図書館や書店で地域の人々に届けます。</p>
-<p>こうした活動は、読書活動、探究的な学び、教科横断的な学び、協働・共創、STEAM教育など、これからの教育とも深くつながっています。</p>
-<p><a class="detail-button" href="education.html">教育とのつながりを詳しく見る →</a></p>
-</div>
-</details>
+<a class="faq-item faq-item-link" href="education.html"><span class="faq-link-title">Q3．ビブリオ劇場には、どのような教育的可能性がありますか？</span><span class="faq-link-topics">読書 ｜ 次期学習指導要領 ｜ STEAM教育 ｜ 創造的思考 ｜ AI時代での役割</span></a>
 </div>
 </section>
 <div class="about-people-links">
