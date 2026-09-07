@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>教育とのつながり｜ビブリオ劇場</title>
-<meta name="description" content="ビブリオ劇場と、読書習慣、探究・協働、STEAM教育、創造的思考とのつながりを紹介します。">
+<meta name="description" content="ビブリオ劇場と、読書習慣、探究・協働、STEAM教育、創造的思考、AI時代の共創とのつながりを紹介します。">
 <link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/education.html">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="next-action.css">
@@ -26,10 +26,10 @@
 .education-answer{padding:0 clamp(24px,4vw,42px) clamp(26px,4vw,42px);border-top:1px solid #e5e7ef}
 .education-answer p{line-height:1.95}
 .education-answer h3{margin:1.7em 0 .55em;color:#3f356c;font-size:clamp(1.25rem,2.5vw,1.55rem);line-height:1.5}
-.faq-table-wrap{overflow-x:auto;margin:1.4em 0}
-.faq-data-table{width:100%;min-width:760px;border-collapse:collapse;background:#fff}
+.faq-table-wrap{max-width:760px;overflow-x:auto;margin:1.4em auto}
+.faq-data-table{width:100%;min-width:680px;table-layout:fixed;border-collapse:collapse;background:#fff}
 .faq-data-table th,.faq-data-table td{padding:12px 10px;border:1px solid #d8dce6;text-align:center;vertical-align:middle}
-.faq-data-table th{background:#eef2fb;font-weight:700}
+.faq-data-table th{background:#eef2fb;font-size:.92rem;font-weight:700;line-height:1.45}
 .faq-data-table td:first-child{text-align:left;font-weight:700}
 .faq-reference,.faq-note{font-size:.92rem;color:#50586b}
 .faq-reference a{font-weight:700}
@@ -49,7 +49,7 @@
 <section class="section education-hero">
   <p class="section-label">EDUCATION</p>
   <h1>教育とのつながり</h1>
-  <p class="education-lead">ビブリオ劇場は、本と演劇を通して、読書への関心、探究する力、仲間との共創を育む取組です。ここでは、これからの教育とのつながりを四つの視点から紹介します。</p>
+  <p class="education-lead">ビブリオ劇場は、本と演劇を通して、読書への関心、探究する力、仲間との共創を育む取組です。ここでは、これからの教育とのつながりを五つの視点から紹介します。</p>
 </section>
 
 <section class="section">
@@ -63,18 +63,19 @@
   <p>読書時間と各教科の成績を比べると、次のような傾向が見られます。</p>
   <div class="faq-table-wrap">
     <table class="faq-data-table">
-      <thead><tr><th>中学生の1日当たりの読書時間</th><th>生徒の割合</th><th>国語・平均正答率</th><th>数学・平均IRTスコア</th><th>英語・平均正答率</th></tr></thead>
+      <colgroup><col style="width:30%"><col style="width:14%"><col style="width:18.66%"><col style="width:18.67%"><col style="width:18.67%"></colgroup>
+      <thead><tr><th>中学生の1日当たりの<br>読書時間</th><th>生徒の<br>割合</th><th>国語<br>平均正答率</th><th>数学<br>平均正答率</th><th>英語3技能<br>平均IRTスコア</th></tr></thead>
       <tbody>
-        <tr><td>2時間以上</td><td>3.0％</td><td>67.0％</td><td>503</td><td>58.2％</td></tr>
-        <tr><td>1時間以上2時間未満</td><td>4.9％</td><td>68.9％</td><td>513</td><td>61.0％</td></tr>
-        <tr><td>30分以上1時間未満</td><td>10.2％</td><td>69.3％</td><td>522</td><td>62.5％</td></tr>
-        <tr><td>10分以上30分未満</td><td>15.7％</td><td>69.1％</td><td>522</td><td>63.4％</td></tr>
-        <tr><td>10分未満</td><td>12.9％</td><td>65.9％</td><td>509</td><td>60.1％</td></tr>
-        <tr><td>全く読まない</td><td>40.5％</td><td>61.2％</td><td>485</td><td>54.3％</td></tr>
+        <tr><td>2時間以上</td><td>3.0％</td><td>67.0％</td><td>58.2％</td><td>502</td></tr>
+        <tr><td>1時間以上2時間未満</td><td>4.9％</td><td>68.9％</td><td>61.0％</td><td>517</td></tr>
+        <tr><td>30分以上1時間未満</td><td>10.2％</td><td>69.3％</td><td>62.5％</td><td>524</td></tr>
+        <tr><td>10分以上30分未満</td><td>15.7％</td><td>69.1％</td><td>63.4％</td><td>526</td></tr>
+        <tr><td>10分未満</td><td>12.9％</td><td>65.9％</td><td>60.1％</td><td>511</td></tr>
+        <tr><td>全く読まない</td><td>40.5％</td><td>61.2％</td><td>54.3％</td><td>486</td></tr>
       </tbody>
     </table>
   </div>
-  <p>「全く読まない」生徒と「10分以上30分未満」読む生徒を比べると、国語では7.9ポイント、英語では9.1ポイントの差があります。数学のIRTスコアにも37ポイントの差が見られます。長時間でなくても、日常的に読書をする生徒の方が、全く読まない生徒より各教科の成績が高い傾向にあります。</p>
+  <p>「全く読まない」生徒と「10分以上30分未満」読む生徒を比べると、国語では7.9ポイント、数学では9.1ポイントの差があります。英語3技能のIRTスコアにも40ポイントの差が見られます。長時間でなくても、日常的に読書をする生徒の方が、全く読まない生徒より各教科の成績が高い傾向にあります。</p>
   <p>ただし、読書時間が長いほど、成績が一貫して高くなるわけではありません。各教科の成績が最も高いのは、おおむね1日10分以上1時間未満の生徒で、1時間を超えると成績はやや低くなっています。その理由は、この調査だけから判断することはできません。一方、1時間以上読書をする生徒は全体の7.9％と少なく、その成績は「全く読まない」生徒より、いずれの教科でも高くなっています。</p>
   <p>この調査から、読書時間を長くすればするほど成績が上がるとは言えません。また、読書と成績の間に見られる関係が、直接的な因果関係を示すものでもありません。ただ、長時間でなくても、日常的に本を読む生徒は、全く読まない生徒より成績が高い傾向にあります。</p>
   <p>大切なのは、読書に費やす時間をただ増やすことではなく、読書をさまざまな経験へと広げていくことではないでしょうか。本を読むだけで完結するのではなく、読んだことを仲間と話し合い、身体を使って表現し、音楽や舞台空間と結び付け、地域の人々に届ける。「ビブリオ劇場」が目指しているのは、そのような多様な学びです。</p>
@@ -82,7 +83,7 @@
   <p><strong>読書時間を増やすのではなく、読書から生まれる経験を豊かにする。</strong></p>
   <p>演劇を通して本を身近に感じ、本を手に取るようになり、それが少しずつ読書習慣や学びにつながっていく――そのような変化を生み出すことも、「ビブリオ劇場」に期待される教育的効果の一つです。</p>
   <p class="faq-reference">出典：<a href="https://www.nier.go.jp/26chousakekkahoukoku/">国立教育政策研究所「令和8年度 全国学力・学習状況調査」</a></p>
-  <p class="faq-note">※読書時間には電子書籍を含み、教科書・参考書・漫画・雑誌は含みません。表では「その他・無回答」の12.8％を除いています。数学は平均正答率ではなく、問題の難易度などを考慮して学力を示す「IRTスコア」で公表されています。</p>
+  <p class="faq-note">※読書時間には電子書籍を含み、教科書・参考書・漫画・雑誌は含みません。表では「その他・無回答」の12.8％を除いています。英語は平均正答率ではなく、問題の難易度などを考慮して学力を示す「IRTスコア」で公表されています。</p>
 </div>
 </details>
 
@@ -118,6 +119,18 @@
   <p>実際の工学分野でエンジニアリング教育を行うには、機材や材料などに費用がかかる場合があります。一方、「ビブリオ劇場」では、特別な機材や高価な材料をほとんど必要とせず、エンジニアリングに通じる思考のプロセスを体験できます。</p>
   <p>「意図したことをどのように観客に伝えたらよいか」という課題に対して、アイデアを出し、試し、結果を確かめ、問題点を見つけて改善する。この試行錯誤は、設計・実践・検証・改善を繰り返すエンジニアリングの考え方と重なります。</p>
   <p>演劇は一般に文系の活動と見られがちですが、「ビブリオ劇場」の創作は、文系・理系という旧態依然とした垣根を越えて、エンジニアリング的な思考を育てることができる活動だと考えています。</p>
+</div>
+</details>
+
+<details class="education-chapter" id="ai-era">
+  <summary><span class="chapter-number">05</span><span class="chapter-question">なぜ、AI時代に「ビブリオ劇場」の価値が高まるのでしょうか？</span><span class="chapter-subtitle">～AI時代だからこそ輝く「ビブリオ劇場」～</span></summary>
+  <div class="education-answer">
+  <p>AIは急速に進化し、文章や物語を書き、絵を描き、音楽や映像を生み出せるようになってきました。演劇の分野でも、脚本づくりや舞台演出などへのAIの活用は、広がっていくと考えられます。</p>
+  <p>しかし、生身の人間が同じ場所に集まり、表情、身体、声を使って物語を表現する舞台には、AIだけでは置き換えることのできないものがあります。</p>
+  <p>演じる子どもたちは、相手の声や表情、動きを感じ取り、それに応じて自分の表現を変えます。観客の笑いや息づかい、会場の空気も舞台に影響を与えます。そこでは、演じる側と観る側が時間と空間を共有し、その日、その場所にしか存在しない、一回限りの舞台が生まれます。</p>
+  <p>「ビブリオ劇場」は、本を読む先に、物語を身体、声、音楽、空間と結び付け、仲間とともに立ち上げるという新たな体験を生み出します。その過程では、相手の考えを聞き、自分の思いを伝え、違いを受け入れながら、一つの表現を創っていかなければなりません。</p>
+  <p>AIが多くのものを短時間で生み出せる時代だからこそ、人と人とが向き合い、試行錯誤し、身体を通して表現する経験の価値は、むしろ高まっていくのではないでしょうか。</p>
+  <p>本と人、人と人、そして演じる人と観客を、同じ時間と空間の中でつなぐ。「ビブリオ劇場」は、AI時代だからこそ必要とされる、人間による共創の場なのです。</p>
 </div>
 </details>
 </div>
