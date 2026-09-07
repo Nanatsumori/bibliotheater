@@ -13,6 +13,10 @@
 .education-hero h1{margin:.2em 0 .35em;font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.25}
 .education-lead{max-width:820px;margin:0 auto;font-size:clamp(1.05rem,2.2vw,1.25rem);line-height:1.9}
 .education-content{max-width:1000px;margin:0 auto}
+.education-overview{margin:0 0 34px;padding:clamp(26px,4vw,42px);background:#fff;border:1px solid rgba(78,101,139,.16);border-radius:22px;box-shadow:0 12px 30px rgba(55,70,100,.08)}
+.education-overview h2{margin:0 0 .7em;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.5}
+.education-overview p{margin:0;font-size:clamp(1.05rem,2vw,1.2rem);line-height:1.9}
+.education-more{margin:0 0 1.2em;color:#3f356c;font-size:clamp(1.3rem,2.5vw,1.65rem);font-weight:700;text-align:center}
 .education-chapter{margin:0 0 28px;background:#fff;border:1px solid rgba(78,101,139,.16);border-radius:22px;box-shadow:0 12px 30px rgba(55,70,100,.08);overflow:hidden}
 .education-chapter>summary{position:relative;display:block;padding:clamp(24px,4vw,36px) clamp(58px,7vw,78px) clamp(24px,4vw,36px) clamp(24px,4vw,42px);cursor:pointer;list-style:none}
 .education-chapter>summary::-webkit-details-marker{display:none}
@@ -21,8 +25,8 @@
 .education-chapter>summary:hover{background:#f7f8ff}
 .education-chapter>summary:focus-visible{outline:3px solid #6552a4;outline-offset:-4px}
 .chapter-number{display:block;margin:0 0 .55em;color:#6552a4;font-size:.82rem;font-weight:800;letter-spacing:.12em}
-.chapter-question{display:block;font-size:clamp(1.45rem,3vw,2.05rem);font-weight:700;line-height:1.45}
-.chapter-subtitle{display:block;margin-top:.65em;color:#6552a4;font-size:clamp(1.45rem,3vw,2.05rem);font-weight:700;line-height:1.6}
+.chapter-question{display:block;margin-top:.55em;font-size:clamp(1.45rem,3vw,2.05rem);font-weight:700;line-height:1.45}
+.chapter-subtitle{display:block;color:#6552a4;font-size:clamp(1.45rem,3vw,2.05rem);font-weight:700;line-height:1.6}
 .education-answer{padding:0 clamp(24px,4vw,42px) clamp(26px,4vw,42px);border-top:1px solid #e5e7ef}
 .education-answer p{line-height:1.95}
 .education-answer h3{margin:1.7em 0 .55em;color:#3f356c;font-size:clamp(1.25rem,2.5vw,1.55rem);line-height:1.5}
@@ -54,10 +58,14 @@
 
 <section class="section">
 <div class="education-content">
-<details class="education-chapter" id="reading-and-learning">
-  <summary><span class="chapter-number">01</span><span class="chapter-question">ビブリオ劇場には、どのような教育的効果が期待できますか？</span><span class="chapter-subtitle">～ビブリオ劇場と読書～</span></summary>
-  <div class="education-answer">
+<div class="education-overview">
+  <h2>ビブリオ劇場には、どのような教育的効果が期待できますか？</h2>
   <p>読書への関心を高めるとともに、考える力、伝える力、表現する力、他者と協力する力を育てることが期待できます。</p>
+</div>
+<p class="education-more">教育とのつながりを、さらに詳しく見る</p>
+<details class="education-chapter" id="reading-and-learning">
+  <summary><span class="chapter-number">01</span><span class="chapter-subtitle">ビブリオ劇場と読書</span><span class="chapter-question">ビブリオ劇場は、読書や学力とどのようにつながりますか？</span></summary>
+  <div class="education-answer">
   <p>「ビブリオ劇場」では、本を題材にした劇を演じたり、絵本の世界をドラマリーディングで表現したりします。ビブリオスキットを創作する場合には、本の魅力やテーマについて仲間と話し合い、それを短い劇にして観客へ伝えます。こうした活動を通して、普段あまり本を読まない生徒にも、本に興味をもち、本を手に取るきっかけが生まれます。</p>
   <p>2026年度の全国学力・学習状況調査では、中学3年生の40.5％が、学校の授業時間以外には本を「全く読まない」と回答しています。一方、1日に「10分以上30分未満」読む生徒は15.7％、「30分以上1時間未満」読む生徒は10.2％でした。1時間以上読む生徒は、合わせて7.9％です。</p>
   <p>読書時間と各教科の成績を比べると、次のような傾向が見られます。</p>
@@ -86,7 +94,7 @@
 </details>
 
 <details class="education-chapter" id="inquiry-and-collaboration">
-  <summary><span class="chapter-number">02</span><span class="chapter-question">ビブリオ劇場は、これからの学校教育とどのようにつながりますか？</span><span class="chapter-subtitle">～ビブリオ劇場と次期学習指導要領～</span></summary>
+  <summary><span class="chapter-number">02</span><span class="chapter-subtitle">ビブリオ劇場と次期学習指導要領</span><span class="chapter-question">ビブリオ劇場は、これからの学校教育とどのようにつながりますか？</span></summary>
   <div class="education-answer">
   <p>教科横断的な学び、探究、協働、共創、そして社会に開かれた学びを、実際の活動として経験できます。</p>
   <p>ビブリオ劇場では、生徒が自分で本を選び、そこから問いやテーマを見つけます。そして、仲間と考えを出し合い、それぞれの得意なことや異なる視点を生かしながら、一つの作品を創ります。</p>
@@ -97,7 +105,7 @@
 </details>
 
 <details class="education-chapter" id="steam">
-  <summary><span class="chapter-number">03</span><span class="chapter-question">なぜ、ビブリオ劇場はSTEAM教育と親和性が高いのでしょうか？</span><span class="chapter-subtitle">～ビブリオ劇場とSTEAM教育～</span></summary>
+  <summary><span class="chapter-number">03</span><span class="chapter-subtitle">ビブリオ劇場とSTEAM教育</span><span class="chapter-question">なぜ、ビブリオ劇場はSTEAM教育と親和性が高いのでしょうか？</span></summary>
   <div class="education-answer">
   <p>STEAM教育とは、科学（Science）、技術（Technology）、工学（Engineering）、芸術・教養（Arts）、数学（Mathematics）などを横断しながら、身近な課題を発見し、仲間と協力して新しい答えや表現を生み出していく学びです。</p>
   <p>「ビブリオ劇場」は、<strong>「競争より共創」</strong>という考え方を大切にした取組です。勝敗を競うのではなく、一冊の本を出発点に、仲間や本のある場所に集う人々と力を合わせて、劇を創り上げます。</p>
@@ -107,7 +115,7 @@
 </details>
 
 <details class="education-chapter" id="creative-thinking">
-  <summary><span class="chapter-number">04</span><span class="chapter-question">なぜ、「ビブリオ劇場」の創作は、子どもたちの思考を深めるのでしょうか？</span><span class="chapter-subtitle">～ビブリオ劇場と創造的思考～</span></summary>
+  <summary><span class="chapter-number">04</span><span class="chapter-subtitle">ビブリオ劇場と創造的思考</span><span class="chapter-question">なぜ、「ビブリオ劇場」の創作は、子どもたちの思考を深めるのでしょうか？</span></summary>
   <div class="education-answer">
   <h3>四次元をデザインする</h3>
   <p>「ビブリオ劇場」の創作は、「四次元をデザインする」活動です。</p>
@@ -121,7 +129,7 @@
 </details>
 
 <details class="education-chapter" id="ai-era">
-  <summary><span class="chapter-number">05</span><span class="chapter-question">なぜ、AI時代に「ビブリオ劇場」の価値が高まるのでしょうか？</span><span class="chapter-subtitle">～AI時代だからこそ輝く「ビブリオ劇場」～</span></summary>
+  <summary><span class="chapter-number">05</span><span class="chapter-subtitle">AI時代だからこそ輝く「ビブリオ劇場」</span><span class="chapter-question">なぜ、AI時代に「ビブリオ劇場」の価値が高まるのでしょうか？</span></summary>
   <div class="education-answer">
   <p>AIは急速に進化し、文章や物語を書き、絵を描き、音楽や映像を生み出せるようになってきました。演劇の分野でも、脚本づくりや舞台演出などへのAIの活用は、広がっていくと考えられます。</p>
   <p>しかし、生身の人間が同じ場所に集まり、表情、身体、声を使って物語を表現する舞台には、AIだけでは置き換えることのできないものがあります。</p>
