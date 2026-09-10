@@ -9,27 +9,44 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .skit-page{background:linear-gradient(180deg,#f8f2e5 0%,#fffaf0 100%)}
-.skit-hero{padding-top:64px;padding-bottom:58px;text-align:center;background:linear-gradient(135deg,#eaf4e8 0%,#fff4dc 100%)}
+.skit-hero{padding-top:46px;padding-bottom:40px;text-align:center;background:linear-gradient(135deg,#eaf4e8 0%,#fff4dc 100%)}
 .skit-hero .section-label{margin-left:auto;margin-right:auto}
 .skit-hero h1{margin-bottom:18px}
-.skit-hero-catch{margin:0 auto 18px;color:#6d4a1f;font-size:clamp(1.35rem,3vw,2rem);font-weight:700}
-.skit-hero-lead{max-width:780px;margin:0 auto;font-size:18px}
-.skit-content{display:grid;gap:28px}
-.skit-panel{padding:clamp(24px,4vw,40px);background:#fff;border:1px solid rgba(177,138,63,.3);border-radius:20px;box-shadow:0 14px 34px rgba(77,54,29,.1)}
-.skit-panel h2{font-size:clamp(1.65rem,3.4vw,2.5rem);margin-bottom:18px}
+.skit-hero-catch{margin:0 auto 14px;color:#6d4a1f;font-size:clamp(1.2rem,2.5vw,1.75rem);font-weight:700}
+.skit-hero-lead{max-width:780px;margin:0 auto;font-size:16.5px}
+.skit-content{display:grid;gap:20px}
+.skit-panel{padding:clamp(22px,3vw,32px);background:#fff;border:1px solid rgba(177,138,63,.3);border-radius:20px;box-shadow:0 14px 34px rgba(77,54,29,.1)}
+.skit-panel h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:14px}
 .skit-panel p:last-child{margin-bottom:0}
-.former-name{padding:20px 22px;background:#f2f7ef;border-left:6px solid #6d9468;border-radius:6px 14px 14px 6px}
-.coming-soon{padding:30px;text-align:center;background:linear-gradient(135deg,#fff8e8,#edf7ed);border:1px dashed #b18a3f;border-radius:18px}
+.former-name{padding:16px 20px;background:#f2f7ef;border-left:6px solid #6d9468;border-radius:6px 14px 14px 6px}
+.coming-soon{padding:24px;text-align:center;background:linear-gradient(135deg,#fff8e8,#edf7ed);border:1px dashed #b18a3f;border-radius:18px}
 .coming-soon h2{margin-bottom:12px}
-.saito-works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px;text-align:left}
+.saito-works-heading{display:flex;align-items:baseline;justify-content:center;gap:.45em;flex-wrap:wrap}
+.saito-works-heading span{font-size:.62em;font-weight:700;letter-spacing:.06em;color:#6d4a1f}
+.saito-works-heading strong{font-size:1em;color:#31513a}
+.saito-works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px;text-align:left}
 .saito-work{padding:24px;background:#fff;border:1px solid rgba(177,138,63,.38);border-radius:16px;box-shadow:0 10px 24px rgba(77,54,29,.08)}
 .saito-work-label{margin:0 0 6px;color:#6d9468;font-size:.82rem;font-weight:800;letter-spacing:.12em}
 .saito-work h3{margin:0 0 12px;font-size:1.25rem;color:#31513a}.saito-work ol{margin:0 0 20px;padding-left:1.5em}.saito-work li{margin:5px 0}
+.saito-work-image{display:block;width:100%;aspect-ratio:3 / 2;margin:0 0 18px;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(49,81,58,.16)}
 .saito-work li a{color:#31513a;font-weight:700;text-decoration-color:#b18a3f;text-underline-offset:3px}.saito-work li a:hover{color:#6d4a1f}
 .page-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
-@media(max-width:700px){.skit-hero{padding-top:46px;padding-bottom:44px}.skit-panel{padding:24px 20px}.saito-works{grid-template-columns:1fr}.saito-work{padding:21px 18px}}
+@media(max-width:700px){.skit-hero{padding-top:36px;padding-bottom:32px}.skit-panel{padding:20px 18px}.saito-works{grid-template-columns:1fr}.saito-work{padding:21px 18px}}
 </style>
 <link rel="stylesheet" href="next-action.css">
+<style>
+.creation-next-action{padding:42px 24px;background:linear-gradient(135deg,#173e2b 0%,#2f6544 58%,#214d35 100%)}
+.creation-next-card{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);max-width:1080px;margin:0 auto;overflow:hidden;background:#fffaf0;border:2px solid #d9b968;border-radius:22px;box-shadow:0 18px 42px rgba(12,35,23,.34)}
+.creation-next-image{min-height:320px}
+.creation-next-image img{display:block;width:100%;height:100%;object-fit:cover}
+.creation-next-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(28px,4vw,48px);text-align:left}
+.creation-next-copy .next-action-label{margin:0 0 10px;color:#8a6428;font-size:.82rem;font-weight:800;letter-spacing:.16em}
+.creation-next-copy h2{margin:0 0 16px;color:#234d35;font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.35}
+.creation-next-copy p:not(.next-action-label){margin:0 0 24px;color:#3e382f;font-size:16px;line-height:1.9}
+.creation-next-button{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:13px 24px;color:#2f2718;background:#f2ca57;border:2px solid #c69b29;border-radius:999px;font-size:1.05rem;font-weight:800;letter-spacing:.04em;text-decoration:none;box-shadow:0 9px 20px rgba(92,63,16,.2);transition:transform .2s ease,background .2s ease}
+.creation-next-button:hover{color:#211b11;background:#ffdb70;transform:translateY(-2px)}
+@media(max-width:780px){.creation-next-action{padding:28px 16px}.creation-next-card{grid-template-columns:1fr}.creation-next-image{min-height:0;aspect-ratio:3 / 2}.creation-next-copy{align-items:center;padding:26px 22px 30px;text-align:center}}
+</style>
 </head>
 <body class="skit-page">
 <nav class="global-nav" aria-label="メインメニュー">
@@ -64,19 +81,21 @@
 <article class="skit-panel">
 <p class="section-label">WORKS</p>
 <div class="coming-soon">
-<h2>サイトウトシオの作品</h2>
+<h2 class="saito-works-heading"><span>サイトウトシオ作</span><strong>ビブリオスキット</strong></h2>
 <p>サイトウトシオが制作した二つの作品、六つのビブリオスキットを紹介します。</p>
 <p>一つ一つのスキットを独立した劇として上演することができます。</p>
 <div class="saito-works">
 <article class="saito-work">
 <p class="saito-work-label">WORK 01</p>
 <h3>図書館長・獅子沢輝梨編</h3>
+<img class="saito-work-image" src="images/biblioskit/shishizawa-illustration.png" alt="森の中の図書館で、中学生司書と妖怪たちが本の物語を案内するイメージ画">
 <ol><li><a href="biblioskit-shishizawa.html#ビブリオスキット第１話-祭り広場の化けくらべ-">祭り広場の化けくらべ</a></li><li><a href="biblioskit-shishizawa.html#ビブリオスキット第２話-マインドリーダー山父">マインドリーダー・山父</a></li><li><a href="biblioskit-shishizawa.html#ビブリオスキット第３話-じんだら沼のセイレーン">じんだら沼のセイレーン</a></li></ol>
 <a class="detail-button" href="biblioskit-shishizawa.html">この作品を読む →</a>
 </article>
 <article class="saito-work">
 <p class="saito-work-label">WORK 02</p>
 <h3>ゲキを止めるな！編</h3>
+<img class="saito-work-image" src="images/biblioskit/geki-illustration.png" alt="赤・青・緑の衣装を着た三人が、本を手にビブリオスキットを演じるイメージ画">
 <ol><li><a href="biblioskit-geki.html#ビブリオスキット第１話-本の虫のクイズショー">本の虫のクイズショー</a></li><li><a href="biblioskit-geki.html#ビブリオスキット第２話サタン酸性とアンパンマンの親戚">サタン酸性とアンパンマンの親戚</a></li><li><a href="biblioskit-geki.html#ビブリオスキット第３話-本のない世界は怖いでショー">本のない世界は怖いでショー</a></li></ol>
 <a class="detail-button" href="biblioskit-geki.html">この作品を読む →</a>
 </article>
@@ -86,12 +105,15 @@
 </div>
 </section>
 </main>
-<section class="next-action" aria-label="次の行動">
-  <p class="next-action-label">NEXT STEP</p>
-  <h2>中学生による創作へ</h2>
-  <p>ビブリオスキットがどのように生まれ、舞台になったのかをご覧ください。</p>
-  <div class="next-action-links">
-    <a href="creation.html">創作活動を見る →</a>
+<section class="next-action creation-next-action" aria-label="次の行動">
+  <div class="creation-next-card">
+    <div class="creation-next-image"><img src="images/biblioskit/creation-illustration.png" alt="中学生が本を囲んで話し合い、脚本をつくり、舞台へつなげていく創作活動のイメージ画"></div>
+    <div class="creation-next-copy">
+      <p class="next-action-label">NEXT STEP</p>
+      <h2>次は、中学生による創作へ</h2>
+      <p>本を選び、話し合い、脚本をつくり、舞台で表現する。中学生のビブリオスキットが生まれるまでの取組を紹介します。</p>
+      <a class="creation-next-button" href="creation.html">中学生の創作活動を見る →</a>
+    </div>
   </div>
 </section>
 <footer class="site-footer"><p>© BIBLIO THEATER</p></footer>
