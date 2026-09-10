@@ -476,41 +476,58 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	height:100%;
 }
 .skit-visual{
-	background:linear-gradient(145deg,#e6f3e6 0%,#f7f0d9 100%);
+	background:linear-gradient(145deg,#eee2c7 0%,#d9c39b 100%);
 }
-.skit-stage{
+.skit-book{
 	position:relative;
 	display:flex;
 	align-items:center;
 	justify-content:center;
-	width:min(100%,190px);
-	height:100%;
-	padding:34px 20px 28px;
-	color:#fffdf4;
-	text-align:center;
-	background:linear-gradient(135deg,#5a3826,#2f1d16);
-	border:8px solid #c8a96c;
-	border-radius:14px 14px 6px 6px;
-	box-shadow:0 12px 26px rgba(45,27,17,.24);
+	width:min(82%,220px);
+	height:82%;
+	padding:30px 24px 26px 32px;
+	color:#fff9df;
+	background:linear-gradient(135deg,#416f57 0%,#244d3a 100%);
+	border:2px solid #183b2b;
+	border-radius:5px 14px 14px 5px;
+	box-shadow:8px 8px 0 #f3ead5,11px 11px 0 #b99d70,0 17px 28px rgba(65,43,22,.28);
+	transform:none;
 }
-.skit-stage::before,
-.skit-stage::after{
+.skit-book::before{
 	content:"";
 	position:absolute;
 	top:0;
 	bottom:0;
-	width:34px;
-	background:linear-gradient(90deg,#7f2026,#a83a40);
+	left:15px;
+	width:3px;
+	background:rgba(255,236,184,.55);
+	box-shadow:4px 0 0 rgba(15,49,35,.38);
 }
-.skit-stage::before{left:0;}
-.skit-stage::after{right:0;transform:scaleX(-1);}
-.skit-stage span{
+.skit-book::after{
+	content:"";
+	position:absolute;
+	inset:10px;
+	border:1px solid rgba(255,236,184,.5);
+	border-radius:2px 9px 9px 2px;
+}
+.skit-book-title{
 	position:relative;
 	z-index:1;
-	font-size:clamp(1.3rem,2.2vw,1.8rem);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	font-size:clamp(1.25rem,2vw,1.7rem);
 	font-weight:800;
-	line-height:1.55;
-	letter-spacing:.07em;
+	line-height:1.42;
+	letter-spacing:.06em;
+	text-align:center;
+	text-shadow:0 2px 3px rgba(0,0,0,.32);
+	white-space:nowrap;
+}
+.pillar-guide{
+	color:#5f513f;
+	font-size:.94rem;
+	font-weight:600;
 }
 .pillar-body{
 	display:flex;
@@ -538,8 +555,16 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	font-weight:700;
 }
 .pillar-body .detail-button{
-	align-self:flex-start;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	align-self:center;
+	box-sizing:border-box;
+	width:100%;
+	max-width:280px;
+	min-height:72px;
 	margin-top:auto;
+	text-align:center;
 }
 @media(max-width:980px){
 	.three-pillars-grid{grid-template-columns:1fr 1fr;}
@@ -555,7 +580,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	.pillar-visual{height:250px;padding:15px;}
 	.pillar-book-covers{gap:9px;}
 	.pillar-body{padding:23px 21px 25px;}
-	.skit-stage{height:100%;}
+	.skit-book{height:86%;}
 }
 .intro-section .about-origin{
 	color:#222;
@@ -790,7 +815,8 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <div class="pillar-body">
 <p class="pillar-catch">本のある場所から、物語が始まる。</p>
 <p>図書館など、本のある場所そのものを舞台に、その空間を生かした劇を上演します。</p>
-<a class="detail-button" href="works.html">詳しく見る →</a>
+<p class="pillar-guide">『怪談の多い図書館』『COLORS』などの作品を紹介しています。</p>
+<a class="detail-button" href="works.html">図書館・図書室を舞台にした<br/>作品を見る →</a>
 </div>
 </article>
 <article class="pillar-card">
@@ -799,16 +825,18 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <div class="pillar-body">
 <p class="pillar-catch">絵本が、声と身体で動き出す。</p>
 <p>絵本の言葉と絵を大切にしながら、一冊の絵本を声と身体を使って表現します。</p>
-<a class="detail-button" href="picturebook-reading.html">詳しく見る →</a>
+<p class="pillar-guide">これまでの歩みと、上演した絵本を紹介しています。</p>
+<a class="detail-button" href="picturebook-reading.html">上演した絵本と<br/>活動を見る →</a>
 </div>
 </article>
 <article class="pillar-card">
 <div class="pillar-title"><h3>ビブリオスキット</h3></div>
-<div class="pillar-visual skit-visual" aria-hidden="true"><div class="skit-stage"><span>本を紹介する<br/>スキット（寸劇）</span></div></div>
+<div class="pillar-visual skit-visual" aria-hidden="true"><div class="skit-book"><div class="skit-book-title"><span>本を紹介する</span><span>スキット（寸劇）</span></div></div></div>
 <div class="pillar-body">
 <p class="pillar-catch">本の魅力を演劇で伝える。</p>
-<p>本を紹介する短い劇を上演します。</p>
-<a class="detail-button" href="biblioskit.html">詳しく見る →</a>
+<p>本を紹介する短い劇を創作し、上演します。</p>
+<p class="pillar-guide">サイトウトシオ作の脚本と、中学生による創作の取組を紹介しています。</p>
+<a class="detail-button" href="biblioskit.html">サイトウトシオ作の脚本と<br/>生徒による創作活動を見る →</a>
 </div>
 </article>
 </div>
