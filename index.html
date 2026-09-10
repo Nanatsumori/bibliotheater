@@ -271,6 +271,7 @@
     /* 日本図書館協会『図書館雑誌』掲載 */
     .journal-section{
       background: #faf8f2;
+      padding-top: 38px;
     }
     .journal-card{
       display: grid;
@@ -326,7 +327,7 @@
 
 
     .media-entry-heading{
-      margin-top: 56px;
+      margin-top: 30px;
     }
 
     /* 国立国会図書館「カレントアウェアネス-E」掲載 */
@@ -368,17 +369,22 @@
   -->
 .activity-link-section{width:100%;max-width:none;padding-left:max(7%,calc((100% - 1080px)/2 + 4%));padding-right:max(7%,calc((100% - 1080px)/2 + 4%))}
 .performance-link-section{background:linear-gradient(135deg,#eef8ff 0%,#f7f3ff 100%)}
-.creation-link-section{background:linear-gradient(135deg,#fffaf2 0%,#f7fbf3 100%)}
+.creation-link-section{padding-top:38px;background:linear-gradient(135deg,#fffaf2 0%,#f7fbf3 100%)}
 .activity-link-section>h2,.activity-link-section>.section-label,.activity-link-section>.activity-link-lead,.activity-link-section>.activity-link-grid{max-width:1080px;margin-left:auto;margin-right:auto}
 .activity-link-lead{margin-bottom:28px;color:#6e4d20}
 .activity-link-grid{display:grid;gap:22px}
 .activity-link-grid.performance-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-.activity-link-grid.creation-grid{grid-template-columns:minmax(0,720px);justify-content:center}
+.activity-link-grid.creation-grid{grid-template-columns:minmax(0,920px);justify-content:center}
 .activity-link-card{display:flex;flex-direction:column;min-height:280px;padding:28px;background:rgba(255,255,255,.94);border:1px solid rgba(177,138,63,.25);border-top:7px solid var(--gold);border-radius:18px;box-shadow:0 14px 32px rgba(77,54,29,.09)}
+.creation-activity-card{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(280px,.88fr);min-height:0;padding:0;overflow:hidden}
+.creation-activity-image{min-height:310px}
+.creation-activity-image img{display:block;width:100%;height:100%;object-fit:cover}
+.creation-activity-copy{display:flex;flex-direction:column;padding:30px 28px}
+.creation-activity-copy .detail-button{margin-top:auto;align-self:flex-start}
 .activity-link-card:nth-child(2){border-top-color:#5f8fc9}.activity-link-card:nth-child(3){border-top-color:#78a56f}
 .activity-link-card h3{font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.35}.activity-link-card p{font-size:16px}.activity-link-card .detail-button{margin-top:auto;align-self:flex-start}
 @media(max-width:900px){.activity-link-grid.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.activity-link-grid.performance-grid .activity-link-card:last-child{grid-column:1 / -1;width:calc(50% - 11px);justify-self:center}}
-@media(max-width:700px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-grid.performance-grid .activity-link-card:last-child{grid-column:auto;width:100%}.activity-link-card{min-height:0}}
+@media(max-width:700px){.activity-link-grid.performance-grid,.activity-link-grid.creation-grid{grid-template-columns:1fr}.activity-link-grid.performance-grid .activity-link-card:last-child{grid-column:auto;width:100%}.activity-link-card{min-height:0}.creation-activity-card{grid-template-columns:1fr}.creation-activity-image{min-height:0;aspect-ratio:3/2}.creation-activity-copy{padding:24px 21px 26px}}
 .global-nav .external-site-link{
 	background:#e8f4e9;
 	color:#245c35;
@@ -404,10 +410,24 @@
 main > .section{
 	width:100%;
 	max-width:none;
+	padding-top:52px;
+	padding-bottom:52px;
 	padding-left:max(7%,calc((100% - 1080px)/2 + 4%));
 	padding-right:max(7%,calc((100% - 1080px)/2 + 4%));
 	border-top:0;
 	border-bottom:0;
+}
+main > #news{
+	padding-top:42px;
+	padding-bottom:42px;
+}
+main > .journal-section{
+	padding-top:38px;
+	padding-bottom:42px;
+}
+main > .creation-link-section{
+	padding-top:38px;
+	padding-bottom:48px;
 }
 main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.contact-form-wrap){
 	max-width:1080px;
@@ -781,6 +801,10 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	.faq-item-link{padding:16px 48px 16px 17px;}
 	.faq-item-link::after{right:16px;}
 	.faq-answer{padding:18px 17px 21px;}
+	main > .section{padding-top:40px;padding-bottom:40px;}
+	main > #news{padding-top:34px;padding-bottom:34px;}
+	main > .journal-section{padding-top:32px;padding-bottom:36px;}
+	main > .creation-link-section{padding-top:32px;padding-bottom:38px;}
 }
 #news,
 .creation-link-section,
@@ -999,11 +1023,14 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <h2>創作活動</h2>
 <p class="activity-link-lead">中学生が好きな本を出発点に、自分たちの表現でビブリオスキットを創作します。</p>
 <div class="activity-link-grid creation-grid">
-<article class="activity-link-card">
+<article class="activity-link-card creation-activity-card">
+<div class="creation-activity-image"><img src="biblioskit top.png" alt="図書館で話し合い、脚本や絵コンテを書きながら舞台を創る中学生たちのイメージ画"></div>
+<div class="creation-activity-copy">
 <p class="work-number">CREATION</p>
 <h3>ビブリオスキット創作</h3>
 <p>ビブリオスキットは、本を紹介する短い劇で、ビブリオ劇場を形づくる作品です。中学生が好きな本を出発点に、自分たちの表現で創作します。</p>
 <a class="detail-button" href="creation.html">創作活動を見る →</a>
+</div>
 </article>
 </div>
 </section>
