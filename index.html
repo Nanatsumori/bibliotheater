@@ -650,6 +650,17 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	display:grid;
 	gap:14px;
 }
+.faq-category{
+	margin-top:28px;
+}
+.faq-category:first-of-type{
+	margin-top:0;
+}
+.faq-category-heading{
+	margin:0 0 12px;
+	font-size:clamp(1.12rem,2.2vw,1.35rem);
+	color:#2f6547;
+}
 .faq-item{
 	background:#fff;
 	border:1px solid #b8c9be;
@@ -881,35 +892,6 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <div class="about-mission">
 <p>ビブリオ劇場は、演劇を通して、本のある場所とYA（ヤングアダルト）をつなぐことを目指しています。</p>
 </div>
-<section class="about-faq" aria-labelledby="about-faq-title">
-<h2 class="about-faq-heading" id="about-faq-title">ビブリオ劇場 Q＆A</h2>
-<p class="about-faq-lead">「ビブリオ劇場」について理解を深めていただくため、Q＆Aの形で解説します。質問をクリックすると、回答または詳しいページが開きます。</p>
-<div class="faq-list">
-<details class="faq-item">
-<summary>Q1．ビブリオ劇場は、どこでも取り入れられますか？</summary>
-<div class="faq-answer">
-<p>はい。基本的な流れを理解すれば、学校、図書館、書店、公民館など、さまざまな場所で取り入れることができます。</p>
-<p>2023年から2025年までの3年間、毎年8月に神奈川県立青少年センターで2日間開催される「神奈川県中学校演劇講習会」において、各日1回、計6回、「脚本創作」の講座を担当しました。そこで「ビブリオドラマ創作」に取り組んでもらいました。</p>
-<p class="faq-note">※「ビブリオドラマ創作」は講習当時の名称です。現在の「ビブリオスキット創作」に当たります。</p>
-<p>講座では、現在の「ビブリオスキット」に当たる短い劇について説明した後、参加者が本を出発点に劇を創作しました。最後に2、3組が作品を劇の形にし、ステージで発表しました。参加した先生からは、「1日でここまでできるんですね」「この後、まず図書委員で取り組んでみます」という声も上がりました。</p>
-<p>大がかりな舞台設備がなくても、本と人が集まる場所があれば始められます。演劇部であれば、「ビブリオ劇場」の上演を実現することは、それほど難しくありません。</p>
-<p class="faq-reference">参考：<a href="https://www.pref.kanagawa.jp/docs/yi4/2025/school/ichiran.html">神奈川県「令和7年度 学校演劇・ダンス講習会・発表会実施一覧」</a></p>
-</div>
-</details>
-<details class="faq-item">
-<summary>Q2．ビブリオ劇場の上演から、地域や図書館にどのような化学反応が生まれると考えますか？</summary>
-<div class="faq-answer">
-<p>本と演劇を通して、子どもから高齢者まで、異なる世代が出会う場をつくります。</p>
-<p>太東中ゲキ部が行った3回のイベントには、幼児・小学生から70代以上まで、幅広い世代から参加申込みがありました。各回40人、合計120人から参加申込みがあり、中学生の表現が幅広い世代の関心を集めていることが分かります。</p>
-<p>そこでは、普段は接する機会の少ない中学生と高齢者も、演劇と本を通して同じ時間を共有します。上演後に感想を交わしたり、紹介された本を手に取ったりすることから、新しい対話も生まれます。</p>
-<p>図書館が、本を借りるだけの場所ではなく、人と人が出会い、同じ物語を分かち合う場所になる――それも、ビブリオ劇場が生み出す化学反応の一つだと考えています。</p>
-<a class="faq-chart-link" href="assets/generation-applicants.png" target="_blank" rel="noopener"><img class="faq-chart" src="assets/generation-applicants.png" alt="太東中ゲキ部イベント参加申込者の世代別人数。3回の各イベントに幼児・小学生から70代以上まで幅広い世代から申込みがあったことを示す表と比較グラフ。"/></a>
-<p class="faq-note">※各回の参加申込者40人を世代別に集計しています。保護者・家族は人数に含みません。画像をクリックすると拡大表示できます。</p>
-</div>
-</details>
-<a class="faq-item faq-item-link" href="education.html"><span class="faq-link-title">Q3．ビブリオ劇場には、どのような教育的可能性がありますか？</span><span class="faq-link-topics">読書 ｜ 次期学習指導要領 ｜ STEAM教育 ｜ 創造的思考 ｜ AI時代での役割</span></a>
-</div>
-</section>
 <div class="about-people-links">
 <article class="about-person-link">
 <h2>サイトウトシオ</h2>
@@ -1034,21 +1016,44 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 </article>
 </div>
 </section>
-<section class="section beginner-faq-section" id="beginner-guide" aria-labelledby="beginner-guide-title">
-<p class="section-label">BEGINNER'S GUIDE</p>
-<h2 id="beginner-guide-title">初心者のためのQ＆A</h2>
-<p class="about-faq-lead">「ビブリオ劇場を始めてみたい」と思った方へ。よくある二つの疑問にお答えします。質問をクリックすると回答が開きます。</p>
+<section class="section beginner-faq-section" id="faq" aria-labelledby="faq-title">
+<p class="section-label">Q＆A</p>
+<h2 id="faq-title">ビブリオ劇場 Q＆A</h2>
+<p class="about-faq-lead">「ビブリオ劇場」について知りたい方、始めてみたい方、教育とのつながりに関心のある方へ。質問をクリックすると、回答または詳しいページが開きます。</p>
+<div class="faq-category">
+<h3 class="faq-category-heading">ビブリオ劇場を知る</h3>
 <div class="faq-list">
 <details class="faq-item">
-<summary>Q1．小さな図書館や書店でもできますか？</summary>
+<summary>Q1．ビブリオ劇場の上演から、地域や図書館にどのような化学反応が生まれると考えますか？</summary>
+<div class="faq-answer">
+<p>本と演劇を通して、子どもから高齢者まで、異なる世代が出会う場をつくります。</p>
+<p>太東中ゲキ部が行った3回のイベントには、幼児・小学生から70代以上まで、幅広い世代から参加申込みがありました。各回40人、合計120人から参加申込みがあり、中学生の表現が幅広い世代の関心を集めていることが分かります。</p>
+<p>そこでは、普段は接する機会の少ない中学生と高齢者も、演劇と本を通して同じ時間を共有します。上演後に感想を交わしたり、紹介された本を手に取ったりすることから、新しい対話も生まれます。</p>
+<p>図書館が、本を借りるだけの場所ではなく、人と人が出会い、同じ物語を分かち合う場所になる――それも、ビブリオ劇場が生み出す化学反応の一つだと考えています。</p>
+<a class="faq-chart-link" href="assets/generation-applicants.png" target="_blank" rel="noopener"><img class="faq-chart" src="assets/generation-applicants.png" alt="太東中ゲキ部イベント参加申込者の世代別人数。3回の各イベントに幼児・小学生から70代以上まで幅広い世代から申込みがあったことを示す表と比較グラフ。"/></a>
+<p class="faq-note">※各回の参加申込者40人を世代別に集計しています。保護者・家族は人数に含みません。画像をクリックすると拡大表示できます。</p>
+</div>
+</details>
+</div>
+</div>
+<div class="faq-category">
+<h3 class="faq-category-heading">ビブリオ劇場を始める</h3>
+<div class="faq-list">
+<details class="faq-item">
+<summary>Q2．小さな図書館や書店でもできますか？</summary>
 <div class="faq-answer">
 <p>はい、できます。</p>
 <p>「ビブリオ劇場」には、大きな舞台や特別な照明設備は必要ありません。本棚の前や、普段は閲覧や催しに使っている場所を、そのまま舞台にすることができます。</p>
 <p>図書館、学校図書館、書店、まちライブラリー、ブックカフェ、公民館など、本と人が集まる場所であれば始められます。会場の広さや設備に合わせて、上演時間や出演人数を調整できることも「ビブリオ劇場」の特徴です。</p>
+<p>2023年から2025年までの3年間、毎年8月に神奈川県立青少年センターで2日間開催される「神奈川県中学校演劇講習会」において、各日1回、計6回、「脚本創作」の講座を担当しました。そこで「ビブリオドラマ創作」に取り組んでもらいました。</p>
+<p class="faq-note">※「ビブリオドラマ創作」は講習当時の名称です。現在の「ビブリオスキット創作」に当たります。</p>
+<p>講座では、現在の「ビブリオスキット」に当たる短い劇について説明した後、参加者が本を出発点に劇を創作しました。最後に2、3組が作品を劇の形にし、ステージで発表しました。参加した先生からは、「1日でここまでできるんですね」「この後、まず図書委員で取り組んでみます」という声も上がりました。</p>
+<p>大がかりな舞台設備がなくても、本と人が集まる場所があれば始められます。演劇部であれば、「ビブリオ劇場」の上演を実現することは、それほど難しくありません。</p>
+<p class="faq-reference">参考：<a href="https://www.pref.kanagawa.jp/docs/yi4/2025/school/ichiran.html">神奈川県「令和7年度 学校演劇・ダンス講習会・発表会実施一覧」</a></p>
 </div>
 </details>
 <details class="faq-item">
-<summary>Q2．「ビブリオ劇場」を始めるには、まず脚本作りに取り組む必要がありますか？</summary>
+<summary>Q3．「ビブリオ劇場」を始めるには、まず脚本作りに取り組む必要がありますか？</summary>
 <div class="faq-answer">
 <p>いいえ、最初から脚本を作る必要はありません。</p>
 <p>音楽を始めるときに、まず既に作曲されている曲を演奏するように、演劇も既存の脚本を上演することから始めてよいのです。</p>
@@ -1056,6 +1061,13 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p>慣れてきたら、好きな本をもとに、自分たちのビブリオスキットを作ることにも挑戦できます。</p>
 </div>
 </details>
+</div>
+</div>
+<div class="faq-category">
+<h3 class="faq-category-heading">教育とのつながり</h3>
+<div class="faq-list">
+<a class="faq-item faq-item-link" href="education.html"><span class="faq-link-title">Q4．ビブリオ劇場には、どのような教育的可能性がありますか？</span><span class="faq-link-topics">読書 ｜ 次期学習指導要領 ｜ STEAM教育 ｜ 創造的思考 ｜ AI時代での役割</span></a>
+</div>
 </div>
 </section>
 <section class="section contact-section" id="contact">
