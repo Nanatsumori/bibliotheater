@@ -516,7 +516,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	display:flex;
 	flex-direction:column;
 	align-items:center;
-	font-size:clamp(1.25rem,2vw,1.7rem);
+	font-size:clamp(1rem,1.25vw,1.1rem);
 	font-weight:800;
 	line-height:1.42;
 	letter-spacing:.06em;
@@ -556,6 +556,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 }
 .pillar-body .detail-button{
 	display:flex;
+	flex-direction:column;
 	align-items:center;
 	justify-content:center;
 	align-self:center;
@@ -563,8 +564,15 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	width:100%;
 	max-width:280px;
 	min-height:72px;
+	padding:10px 12px;
 	margin-top:auto;
+	font-size:.9rem;
+	letter-spacing:.035em;
 	text-align:center;
+}
+.pillar-body .detail-button span{
+	display:block;
+	white-space:nowrap;
 }
 @media(max-width:980px){
 	.three-pillars-grid{grid-template-columns:1fr 1fr;}
@@ -816,7 +824,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p class="pillar-catch">本のある場所から、物語が始まる。</p>
 <p>図書館など、本のある場所そのものを舞台に、その空間を生かした劇を上演します。</p>
 <p class="pillar-guide">『怪談の多い図書館』『COLORS』などの作品を紹介しています。</p>
-<a class="detail-button" href="works.html">図書館・図書室を舞台にした<br/>作品を見る →</a>
+<a class="detail-button" href="works.html"><span>図書館・図書室を舞台にした</span><span>作品を見る →</span></a>
 </div>
 </article>
 <article class="pillar-card">
@@ -826,17 +834,17 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <p class="pillar-catch">絵本が、声と身体で動き出す。</p>
 <p>絵本の言葉と絵を大切にしながら、一冊の絵本を声と身体を使って表現します。</p>
 <p class="pillar-guide">これまでの歩みと、上演した絵本を紹介しています。</p>
-<a class="detail-button" href="picturebook-reading.html">上演した絵本と<br/>活動を見る →</a>
+<a class="detail-button" href="picturebook-reading.html"><span>上演した絵本と</span><span>活動を見る →</span></a>
 </div>
 </article>
 <article class="pillar-card">
 <div class="pillar-title"><h3>ビブリオスキット</h3></div>
 <div class="pillar-visual skit-visual" aria-hidden="true"><div class="skit-book"><div class="skit-book-title"><span>本を紹介する</span><span>スキット（寸劇）</span></div></div></div>
 <div class="pillar-body">
-<p class="pillar-catch">本の魅力を演劇で伝える。</p>
+<p class="pillar-catch">本の魅力をスキット（寸劇）で伝える。</p>
 <p>本を紹介する短い劇を創作し、上演します。</p>
 <p class="pillar-guide">サイトウトシオ作の脚本と、中学生による創作の取組を紹介しています。</p>
-<a class="detail-button" href="biblioskit.html">サイトウトシオ作の脚本と<br/>生徒による創作活動を見る →</a>
+<a class="detail-button" href="biblioskit.html"><span>サイトウトシオ作の脚本と</span><span>生徒による創作活動を見る →</span></a>
 </div>
 </article>
 </div>
