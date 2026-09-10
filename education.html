@@ -12,8 +12,36 @@
 .education-hero{padding-top:clamp(22px,3vw,38px);padding-bottom:clamp(20px,3vw,34px);background:linear-gradient(135deg,#f5f0ff 0%,#eef8ff 52%,#fff9e9 100%);text-align:center}
 .education-hero h1{margin:.08em 0 .25em;font-size:clamp(1.75rem,3.6vw,2.75rem);line-height:1.25}
 .education-lead{max-width:880px;margin:0 auto;font-size:clamp(.94rem,1.7vw,1.08rem);line-height:1.7}
-.education-main{padding-top:clamp(16px,2vw,24px)}
+.education-main{padding-top:clamp(16px,2vw,24px);padding-bottom:clamp(14px,2vw,22px)}
+.education-main+.next-action{margin-top:0;padding-top:clamp(18px,3vw,30px)}
 .education-content{max-width:1000px;margin:0 auto}
+.learning-map{max-width:760px;margin:0 auto 26px;text-align:center}
+.learning-map-title{margin:0 0 14px;color:#3f356c;font-size:clamp(1.45rem,3vw,2rem);line-height:1.4}
+.learning-map-stage{position:relative;width:min(100%,720px);aspect-ratio:1/1;margin:0 auto}
+.learning-map-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.learning-map-lines line{stroke:#c7c0dc;stroke-width:1.3}
+.learning-map-core,.learning-map-node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}
+.learning-map-core{left:50%;top:50%;width:32%;aspect-ratio:1/1;padding:16px;border:2px solid #6552a4;border-radius:24px;background:linear-gradient(145deg,#eee8ff,#fff9e9);box-shadow:0 10px 26px rgba(74,57,126,.12)}
+.learning-map-handshake{display:flex;align-items:center;justify-content:center;margin-bottom:6px;font-size:clamp(1.65rem,3.8vw,2.4rem);line-height:1}
+.learning-map-arm{position:relative;z-index:2;width:clamp(27px,4.4vw,46px);height:17px;box-shadow:inset 0 -3px 0 rgba(63,53,108,.14)}
+.learning-map-arm::after{content:"";position:absolute;top:-2px;width:8px;height:21px;border-radius:3px;background:#fff;border:1px solid rgba(63,53,108,.22)}
+.learning-map-arm-left{border-radius:11px 3px 3px 11px;transform:translateY(-5px) rotate(20deg);margin-right:-12px;background:linear-gradient(90deg,#51428f,#8b79c0)}
+.learning-map-arm-left::after{right:-2px}
+.learning-map-arm-right{border-radius:3px 11px 11px 3px;transform:translateY(-5px) rotate(-20deg);margin-left:-12px;background:linear-gradient(90deg,#d39b3b,#f1c56f)}
+.learning-map-arm-right::after{left:-2px}
+.learning-map-hands{position:relative;z-index:1}
+.learning-map-core-main{font-size:clamp(1.15rem,2.5vw,1.55rem);font-weight:800;color:#3f356c}
+.learning-map-equals{margin:1px 0;color:#6552a4;font-size:1.25rem;font-weight:800}
+.learning-map-name{color:#3f356c;font-size:clamp(1.15rem,2.6vw,1.55rem);font-weight:800}
+.learning-map-node{width:24%;aspect-ratio:1/1;padding:11px;border:1px solid rgba(78,101,139,.2);border-radius:50%;background:#fff;box-shadow:0 5px 14px rgba(55,70,100,.07)}
+.learning-map-node .node-icon{margin-bottom:3px;font-size:1.32rem;line-height:1}
+.learning-map-node strong{color:#3f356c;font-size:clamp(.96rem,1.72vw,1.14rem);line-height:1.35}
+.learning-map-node span{display:block;margin-top:3px;color:#596174;font-size:clamp(.78rem,1.32vw,.94rem);line-height:1.42}
+.learning-map-node strong .node-nowrap{display:inline;margin:0;color:inherit;font-size:clamp(.84rem,1.4vw,.98rem);line-height:inherit;white-space:nowrap}
+.learning-map-node.n1{left:50%;top:12%}.learning-map-node.n2{left:77%;top:23%}.learning-map-node.n3{left:88%;top:50%}.learning-map-node.n4{left:77%;top:77%}
+.learning-map-node.n5{left:50%;top:88%}.learning-map-node.n6{left:23%;top:77%}.learning-map-node.n7{left:12%;top:50%}.learning-map-node.n8{left:23%;top:23%}
+.learning-map-foundation{display:flex;justify-content:center;gap:clamp(18px,5vw,52px);flex-wrap:wrap;max-width:700px;margin:5px auto 0;padding:13px 18px;border-top:4px solid #6552a4;border-radius:10px;background:#f1edfb;color:#3f356c;font-size:clamp(1rem,2vw,1.24rem);font-weight:800}
+.education-map-bridge{max-width:760px;margin:0 auto 20px;text-align:center;color:#3f356c;font-size:clamp(.98rem,1.7vw,1.1rem);font-weight:700;line-height:1.7}
 .education-chapter{margin:0 0 9px;background:#fff;border:1px solid rgba(78,101,139,.16);border-radius:12px;box-shadow:0 5px 14px rgba(55,70,100,.06);overflow:hidden}
 .education-chapter>summary{position:relative;display:grid;grid-template-columns:34px minmax(220px,.8fr) minmax(300px,1.2fr);gap:10px;align-items:center;padding:10px 52px 10px 16px;cursor:pointer;list-style:none}
 .education-chapter>summary::-webkit-details-marker{display:none}
@@ -34,7 +62,13 @@
 .faq-data-table td:first-child{text-align:left;font-weight:700}
 .faq-reference,.faq-note{font-size:.92rem;color:#50586b}
 .faq-reference a{font-weight:700}
-@media(max-width:700px){.education-chapter>summary{grid-template-columns:28px 1fr;gap:3px 8px;padding:9px 45px 9px 13px}.chapter-question{grid-column:2}.education-chapter>summary::after{right:17px}}
+@media(max-width:700px){
+.learning-map-stage{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.learning-map-lines{display:none}
+.learning-map-core,.learning-map-node{position:static;transform:none;width:auto;aspect-ratio:auto;min-height:132px;border-radius:16px;padding:12px 9px}
+.learning-map-core{grid-column:1/-1;min-height:178px}
+.learning-map-node strong{font-size:1.02rem}.learning-map-node span{font-size:.85rem}.learning-map-node strong .node-nowrap{font-size:.88rem}
+.education-chapter>summary{grid-template-columns:28px 1fr;gap:3px 8px;padding:9px 45px 9px 13px}.chapter-question{grid-column:2}.education-chapter>summary::after{right:17px}}
 </style>
 </head>
 <body>
@@ -56,6 +90,29 @@
 
 <section class="section education-main">
 <div class="education-content">
+<figure class="learning-map" aria-labelledby="learning-map-title">
+  <h2 class="learning-map-title" id="learning-map-title">本と演劇が手を結び、ひらく学び</h2>
+  <div class="learning-map-stage">
+    <svg class="learning-map-lines" viewBox="0 0 100 100" aria-hidden="true">
+      <line x1="50" y1="50" x2="50" y2="12"/><line x1="50" y1="50" x2="77" y2="23"/><line x1="50" y1="50" x2="88" y2="50"/><line x1="50" y1="50" x2="77" y2="77"/>
+      <line x1="50" y1="50" x2="50" y2="88"/><line x1="50" y1="50" x2="23" y2="77"/><line x1="50" y1="50" x2="12" y2="50"/><line x1="50" y1="50" x2="23" y2="23"/>
+    </svg>
+    <div class="learning-map-core">
+      <div class="learning-map-handshake" aria-label="本と演劇が手を結ぶ"><span aria-hidden="true">📖</span><span class="learning-map-arm learning-map-arm-left" aria-hidden="true"></span><span class="learning-map-hands" aria-hidden="true">🤝</span><span class="learning-map-arm learning-map-arm-right" aria-hidden="true"></span><span aria-hidden="true">🎭</span></div>
+      <div class="learning-map-core-main">本 × 演劇</div><div class="learning-map-equals">＝</div><div class="learning-map-name">ビブリオ劇場</div>
+    </div>
+    <div class="learning-map-node n1"><span class="node-icon" aria-hidden="true">📚</span><strong>読書の魅力に<br>触れる</strong><span>本との出会いから世界を広げる</span></div>
+    <div class="learning-map-node n2"><span class="node-icon" aria-hidden="true">🔎</span><strong>探究する力</strong><span>本から問いとテーマを見つけ、深める</span></div>
+    <div class="learning-map-node n3"><span class="node-icon" aria-hidden="true">🧩</span><strong>共創と試行錯誤</strong><span>脚本や表現を創り、話し合い、改善する</span></div>
+    <div class="learning-map-node n4"><span class="node-icon" aria-hidden="true">🌐</span><strong>横断的学習</strong><span>文学・音楽・デザインを横断し、STEAMへ</span></div>
+    <div class="learning-map-node n5"><span class="node-icon" aria-hidden="true">🎨</span><strong>四次元のデザイン</strong><span>空間と時間を設計する</span></div>
+    <div class="learning-map-node n6"><span class="node-icon" aria-hidden="true">🎭</span><strong>表現する力</strong><span>声・身体・表情・音楽で伝える</span></div>
+    <div class="learning-map-node n7"><span class="node-icon" aria-hidden="true">💬</span><strong>対話・<br><span class="node-nowrap">コミュニケーション</span></strong><span>違いを受け止め、互いを高める</span></div>
+    <div class="learning-map-node n8"><span class="node-icon" aria-hidden="true">🏘️</span><strong>社会にひらく</strong><span>本のある場所から、地域や人とつながる</span></div>
+  </div>
+  <figcaption class="learning-map-foundation"><span>競争より共創</span><span>バトルよりシャトル</span></figcaption>
+</figure>
+<p class="education-map-bridge">「本 × 演劇」からひらく八つの学びを、以下の五つの視点から紹介します。</p>
 <details class="education-chapter" id="reading-and-learning">
   <summary><span class="chapter-number">01</span><span class="chapter-subtitle">ビブリオ劇場と読書</span><span class="chapter-question">ビブリオ劇場は、読書や学力とどのようにつながりますか？</span></summary>
   <div class="education-answer">
