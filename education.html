@@ -31,14 +31,17 @@
 .learning-map-arm-right::after{left:-2px}
 .learning-map-hands{position:relative;z-index:1}
 .learning-map-core-main{font-size:clamp(1.15rem,2.5vw,1.55rem);font-weight:800;color:#3f356c}
-.learning-map-equals{margin:1px 0;color:#6552a4;font-size:1.25rem;font-weight:800}
+.learning-map-times{display:inline-block;margin:0 .08em;font-size:1.45em;line-height:.75;vertical-align:-.08em}
+.learning-map-equals{margin:0;color:#6552a4;font-size:clamp(1.8rem,3.8vw,2.45rem);font-weight:900;line-height:1}
 .learning-map-name{color:#3f356c;font-size:clamp(1.15rem,2.6vw,1.55rem);font-weight:800}
 .learning-map-node{width:24%;aspect-ratio:1/1;padding:11px;border:1px solid rgba(78,101,139,.2);border-radius:50%;background:#fff;box-shadow:0 5px 14px rgba(55,70,100,.07)}
+.learning-map-node .node-number{position:absolute;top:10%;left:13%;display:flex;width:1.55em;height:1.55em;margin:0;align-items:center;justify-content:center;border-radius:50%;background:#6552a4;color:#fff;font-size:clamp(.76rem,1.3vw,.94rem);font-weight:800;line-height:1}
 .learning-map-node .node-icon{margin-bottom:3px;font-size:1.32rem;line-height:1}
 .learning-map-node strong{color:#3f356c;font-size:clamp(.96rem,1.72vw,1.14rem);line-height:1.35}
 .learning-map-node span{display:block;margin-top:3px;color:#596174;font-size:clamp(.78rem,1.32vw,.94rem);line-height:1.42}
+.learning-map-node .node-detail-compact{font-size:clamp(.62rem,1.08vw,.78rem);line-height:1.35}
 .learning-map-node strong .node-nowrap{display:inline;margin:0;color:inherit;font-size:clamp(.84rem,1.4vw,.98rem);line-height:inherit;white-space:nowrap}
-.learning-map-node.n1{left:50%;top:12%}.learning-map-node.n2{left:77%;top:23%}.learning-map-node.n3{left:88%;top:50%}.learning-map-node.n4{left:77%;top:77%}
+.learning-map-node.n1{left:50%;top:12%}.learning-map-node.n2{left:77%;top:23%}.learning-map-node.n3{left:88%;top:50%;width:30%}.learning-map-node.n4{left:77%;top:77%}
 .learning-map-node.n5{left:50%;top:88%}.learning-map-node.n6{left:23%;top:77%}.learning-map-node.n7{left:12%;top:50%}.learning-map-node.n8{left:23%;top:23%}
 .learning-map-foundation{display:flex;justify-content:center;gap:clamp(18px,5vw,52px);flex-wrap:wrap;max-width:700px;margin:5px auto 0;padding:13px 18px;border-top:4px solid #6552a4;border-radius:10px;background:#f1edfb;color:#3f356c;font-size:clamp(1rem,2vw,1.24rem);font-weight:800}
 .education-map-bridge{max-width:760px;margin:0 auto 20px;text-align:center;color:#3f356c;font-size:clamp(.98rem,1.7vw,1.1rem);font-weight:700;line-height:1.7}
@@ -65,9 +68,9 @@
 @media(max-width:700px){
 .learning-map-stage{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .learning-map-lines{display:none}
-.learning-map-core,.learning-map-node{position:static;transform:none;width:auto;aspect-ratio:auto;min-height:132px;border-radius:16px;padding:12px 9px}
+.learning-map-core,.learning-map-node{position:static;transform:none;width:auto;aspect-ratio:auto;min-height:132px;border-radius:16px;padding:12px 9px}.learning-map-node.n3{width:auto}
 .learning-map-core{grid-column:1/-1;min-height:178px}
-.learning-map-node strong{font-size:1.02rem}.learning-map-node span{font-size:.85rem}.learning-map-node strong .node-nowrap{font-size:.88rem}
+.learning-map-node strong{font-size:1.02rem}.learning-map-node span{font-size:.85rem}.learning-map-node .node-detail-compact{font-size:.74rem}.learning-map-node strong .node-nowrap{font-size:.88rem}
 .education-chapter>summary{grid-template-columns:28px 1fr;gap:3px 8px;padding:9px 45px 9px 13px}.chapter-question{grid-column:2}.education-chapter>summary::after{right:17px}}
 </style>
 </head>
@@ -99,16 +102,16 @@
     </svg>
     <div class="learning-map-core">
       <div class="learning-map-handshake" aria-label="本と演劇が手を結ぶ"><span aria-hidden="true">📖</span><span class="learning-map-arm learning-map-arm-left" aria-hidden="true"></span><span class="learning-map-hands" aria-hidden="true">🤝</span><span class="learning-map-arm learning-map-arm-right" aria-hidden="true"></span><span aria-hidden="true">🎭</span></div>
-      <div class="learning-map-core-main">本 × 演劇</div><div class="learning-map-equals">＝</div><div class="learning-map-name">ビブリオ劇場</div>
+      <div class="learning-map-core-main">本 <span class="learning-map-times">×</span> 演劇</div><div class="learning-map-equals">＝</div><div class="learning-map-name">ビブリオ劇場</div>
     </div>
-    <div class="learning-map-node n1"><span class="node-icon" aria-hidden="true">📚</span><strong>読書の魅力に<br>触れる</strong><span>本との出会いから世界を広げる</span></div>
-    <div class="learning-map-node n2"><span class="node-icon" aria-hidden="true">🔎</span><strong>探究する力</strong><span>本から問いとテーマを見つけ、深める</span></div>
-    <div class="learning-map-node n3"><span class="node-icon" aria-hidden="true">🧩</span><strong>共創と試行錯誤</strong><span>脚本や表現を創り、話し合い、改善する</span></div>
-    <div class="learning-map-node n4"><span class="node-icon" aria-hidden="true">🌐</span><strong>横断的学習</strong><span>文学・音楽・デザインを横断し、STEAMへ</span></div>
-    <div class="learning-map-node n5"><span class="node-icon" aria-hidden="true">🎨</span><strong>四次元のデザイン</strong><span>空間と時間を設計する</span></div>
-    <div class="learning-map-node n6"><span class="node-icon" aria-hidden="true">🎭</span><strong>表現する力</strong><span>声・身体・表情・音楽で伝える</span></div>
-    <div class="learning-map-node n7"><span class="node-icon" aria-hidden="true">💬</span><strong>対話・<br><span class="node-nowrap">コミュニケーション</span></strong><span>違いを受け止め、互いを高める</span></div>
-    <div class="learning-map-node n8"><span class="node-icon" aria-hidden="true">🏘️</span><strong>社会にひらく</strong><span>本のある場所から、地域や人とつながる</span></div>
+    <div class="learning-map-node n1"><span class="node-number">1</span><span class="node-icon" aria-hidden="true">📚</span><strong>読書の魅力に<br>触れる</strong><span>本との出会いから世界を広げる</span></div>
+    <div class="learning-map-node n2"><span class="node-number">2</span><span class="node-icon" aria-hidden="true">🔎</span><strong>探究する力</strong><span>本から問いとテーマを見つけ、深める</span></div>
+    <div class="learning-map-node n3"><span class="node-number">3</span><span class="node-icon" aria-hidden="true">🌐</span><strong>横断的学習</strong><span class="node-detail-compact">文学（国語）・体育（ダンス）<br>音楽（合唱）・美術（デザイン）<br>を横断し、STEAMへ</span></div>
+    <div class="learning-map-node n4"><span class="node-number">4</span><span class="node-icon" aria-hidden="true">🎭</span><strong>表現する力</strong><span>声・身体・表情・音楽で伝える</span></div>
+    <div class="learning-map-node n5"><span class="node-number">5</span><span class="node-icon" aria-hidden="true">🎨</span><strong>四次元のデザイン</strong><span>空間と時間を設計する</span></div>
+    <div class="learning-map-node n6"><span class="node-number">6</span><span class="node-icon" aria-hidden="true">🧩</span><strong>共創と試行錯誤</strong><span>協働して劇を創り、話し合い、改善する。</span></div>
+    <div class="learning-map-node n7"><span class="node-number">7</span><span class="node-icon" aria-hidden="true">💬</span><strong>対話・<br><span class="node-nowrap">コミュニケーション</span></strong><span>違いを受け止め、互いを高める</span></div>
+    <div class="learning-map-node n8"><span class="node-number">8</span><span class="node-icon" aria-hidden="true">🏘️</span><strong>社会にひらく</strong><span>本のある場所から、地域や人とつながる</span></div>
   </div>
   <figcaption class="learning-map-foundation"><span>競争より共創</span><span>バトルよりシャトル</span></figcaption>
 </figure>
