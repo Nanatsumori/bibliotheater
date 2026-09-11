@@ -6,6 +6,7 @@
   <title>アトム｜ビブリオ劇場</title>
   <meta name="description" content="ビブリオ劇場の「図書館を舞台にした劇」『アトム』紹介ページ。もしアトムが生まれたら、どこにいくかな。">
 <link rel="canonical" href="https://nanatsumori.github.io/bibliotheater/atom.html">
+  <link rel="stylesheet" href="style.css">
   <style>
     :root{
       --ink:#1e1b18;
@@ -21,7 +22,7 @@
     body{margin:0;background:linear-gradient(180deg,#fffaf1 0%,#fffdf8 45%,#f7efe7 100%);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;line-height:1.9;letter-spacing:.04em}
     a{color:inherit}
     .wrap{width:min(1080px,92vw);margin:auto}
-    header{padding:18px 0;border-bottom:1px solid var(--line);background:rgba(255,253,248,.9);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+    .atom-header{padding:18px 0;border-bottom:1px solid var(--line);background:rgba(255,253,248,.9);backdrop-filter:blur(8px)}
     .brand{display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-weight:700;letter-spacing:.08em}
     .brand a{text-decoration:none}
     .back{font-size:.9rem;color:var(--muted)}
@@ -58,7 +59,17 @@
 <link rel="stylesheet" href="next-action.css">
 </head>
 <body>
-<header>
+<nav class="global-nav" aria-label="メインメニュー">
+  <a href="index.html">トップ</a>
+  <a href="index.html#about">ビブリオ劇場とは</a>
+  <a href="index.html#news">最新情報</a>
+  <a href="index.html#performances">上演作品</a>
+  <a href="index.html#creative-activity">創作活動</a>
+  <a href="index.html#faq">Q＆A</a>
+  <a href="index.html#contact">相談・依頼</a>
+  <a href="https://www.nanatsumori.art/">脚本・上演記録｜七つ森</a>
+</nav>
+<header class="atom-header">
   <div class="wrap brand">
     <a href="index.html">ビブリオ劇場</a>
     <a class="back" href="works.html">図書館を舞台にした劇の一覧へ</a>
