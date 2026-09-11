@@ -74,6 +74,7 @@
   .book-grid{ position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
   .book-card{ display:flex; flex-direction:column; min-height:360px; text-decoration:none; color:var(--ink); background:linear-gradient(180deg,#fffef8,#f4f9e5); border:1px solid rgba(255,255,255,.8); border-radius:18px 18px 12px 12px; overflow:hidden; box-shadow:0 16px 28px rgba(42,84,49,.2); transform:translateY(0); transition:transform .22s ease, box-shadow .22s ease; }
   .book-card:hover,.book-card:focus{ transform:translateY(-8px); box-shadow:0 24px 34px rgba(38,17,6,.34); outline:none; }
+  .book-card-static:hover{ transform:none; box-shadow:0 16px 28px rgba(42,84,49,.2); }
   .book-cover-placeholder{ min-height:168px; display:flex; align-items:center; justify-content:center; padding:22px; color:#fff; text-align:center; background:linear-gradient(135deg,var(--c1),var(--c2)); border-bottom:8px solid rgba(255,255,255,.32); }
   .book-cover-placeholder span{ display:block; font-size:clamp(1.35rem,2.4vw,2rem); line-height:1.25; font-weight:900; letter-spacing:.02em; text-shadow:0 3px 8px rgba(0,0,0,.22); }
   .book-cover-image{ min-height:250px; padding:14px; display:flex; align-items:center; justify-content:center; background:#eaf5db; border-bottom:8px solid rgba(255,255,255,.48); }
@@ -256,23 +257,23 @@
             </div>
           </a>
 
-          <a class="book-card" href="#fune" style="--c1:#1f6a79;--c2:#80c7d4;">
+          <article class="book-card book-card-static" style="--c1:#1f6a79;--c2:#80c7d4;">
             <div class="book-cover-placeholder"><span>ぼくは<br>ふね</span></div>
             <div class="book-info">
               <h3>ぼくは ふね</h3>
               <p class="book-meta">五味太郎／作・絵<br>福音館書店</p>
               <p class="book-comment">小さな船の旅を、身体の方向や距離で表現できる一冊。</p>
             </div>
-          </a>
+          </article>
 
-          <a class="book-card" href="#dosyaburi" style="--c1:#385f88;--c2:#86a9c7;">
+          <article class="book-card book-card-static" style="--c1:#385f88;--c2:#86a9c7;">
             <div class="book-cover-placeholder"><span>どしゃぶり</span></div>
             <div class="book-info">
               <h3>どしゃぶり</h3>
               <p class="book-meta">おーなり由子／文<br>はたこうしろう／絵<br>講談社</p>
               <p class="book-comment">雨の音や空気の変化を、声と身体で立ち上げる一冊。</p>
             </div>
-          </a>
+          </article>
         </div>
       </div>
     </section>
