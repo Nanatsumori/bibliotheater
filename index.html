@@ -58,6 +58,12 @@
     .news-stage-grid{
 	display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 0 0 32px;
 }
+    .news-section-title{margin: 0 0 24px; font-size: clamp(1.7rem, 3.2vw, 2.4rem);}
+    #news{background:#fff8e9;}
+    #past-performances{background:#f2f6f1;}
+    #past-performances .news-panel{margin-top:36px;}
+    .news-media-title{margin:0 0 16px;font-size:clamp(1.3rem,2.4vw,1.7rem);}
+    .news-upcoming-grid{grid-template-columns: minmax(0, 620px);}
     .news-stage-card{
 	display: flex; flex-direction: column; overflow: hidden; background: #fff; border-radius: 20px; box-shadow: 0 14px 34px rgba(0,0,0,.12);
 }
@@ -73,10 +79,10 @@
     .news-stage-date{
 	margin: 0 0 8px; color: #765522; font-size: .94rem; font-weight: 700;
 }
-    .news-stage-card h2{
+    .news-stage-card h3{
 	margin: 0 0 12px; font-size: clamp(1.35rem, 2.5vw, 1.85rem); line-height: 1.35;
 }
-    .news-stage-card h2 a{
+    .news-stage-card h3 a{
 	color: inherit; text-decoration: none;
 }
     .news-stage-report{
@@ -817,7 +823,6 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 	main > .journal-section{padding-top:32px;padding-bottom:36px;}
 	main > .creation-link-section{padding-top:32px;padding-bottom:38px;}
 }
-#news,
 .creation-link-section,
 .contact-section{
 	background:#f2f6f1;
@@ -906,15 +911,30 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 </article>
 </div>
 </section>
-<section class="section" id="news">
-<p class="section-label">NEWS</p>
-<h1>ビブリオ劇場 News</h1>
+<section class="section" id="news" aria-labelledby="upcoming-performances-title">
+<p class="section-label">UPCOMING</p>
+<h1 class="news-section-title" id="upcoming-performances-title">これからの上演</h1>
+<div class="news-stage-grid news-upcoming-grid">
+<article class="news-stage-card">
+<a href="satoba_flyer_2026.jpg"><img alt="2026年10月25日、Book &amp; Garden カフェ里葉でのビブリオ劇場上演案内" src="satoba_flyer_2026.jpg"/></a>
+<div class="news-stage-body">
+<p class="news-stage-date">2026年10月25日（日）14:00～15:00／Book &amp; Garden カフェ里葉</p>
+<h3>カフェ里葉で「ビブリオ劇場」上演</h3>
+<p class="news-stage-report">久喜市立太東中学校ゲキ部が、本と人、物語と人、人と人をつなぐ「ビブリオ劇場」を上演します。会場は東京都豊島区北大塚のBook &amp; Garden カフェ里葉。入場無料、先着20名です。10月1日（木）午前10時から受付を開始します（開場13:30）。</p>
+<a class="detail-button" href="satoba_flyer_2026.jpg">チラシ・申込案内を見る →</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="past-performances" aria-labelledby="past-performances-title">
+<p class="section-label">PAST PERFORMANCES</p>
+<h2 class="news-section-title" id="past-performances-title">これまでの上演</h2>
 <div class="news-stage-grid">
 <article class="news-stage-card">
 <a href="chuo_library.html"><img alt="怪談の多い図書館 久喜市立中央図書館公演 フライヤー" src="chuo_library_flyer.jpg"/></a>
 <div class="news-stage-body">
 <p class="news-stage-date">2026年8月18日（火）／久喜市立中央図書館</p>
-<h2><a href="chuo_library.html">『怪談の多い図書館』</a></h2>
+<h3><a href="chuo_library.html">『怪談の多い図書館』</a></h3>
 <p class="news-stage-report">久喜市立中央図書館の休館日に、図書館全体を舞台として上演しました。</p>
 <a class="detail-button" href="chuo_library.html">詳しく見る →</a>
 </div>
@@ -923,7 +943,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <a href="colors.html"><img alt="COLORS カラーズ フライヤー" src="colors_flyer.jpg"/></a>
 <div class="news-stage-body">
 <p class="news-stage-date">2026年7月31日（金）／ブックハウスカフェ</p>
-<h2><a href="colors.html">『COLORS（カラーズ）』</a></h2>
+<h3><a href="colors.html">『COLORS（カラーズ）』</a></h3>
 <p class="news-stage-report">自由でにぎやかな図書館「カラーズ」を舞台に、演劇とマジックによる公演を行いました。</p>
 <a class="detail-button" href="colors.html">詳しく見る →</a>
 </div>
@@ -932,7 +952,7 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <a href="monogatari_magic.html"><img alt="ビブリオ劇場＆モノガタリマジック フライヤー" src="monogatari_magic_flyer.jpg"/></a>
 <div class="news-stage-body">
 <p class="news-stage-date">2026年7月30日（木）／ブックハウスカフェ</p>
-<h2><a href="monogatari_magic.html">ビブリオ劇場<br/>＆モノガタリマジック</a></h2>
+<h3><a href="monogatari_magic.html">ビブリオ劇場<br/>＆モノガタリマジック</a></h3>
 <p class="news-stage-report">絵本ドラマリーディングと、プロマジシャン・ザッキーによるモノガタリマジックを上演しました。</p>
 <a class="detail-button" href="monogatari_magic.html">詳しく見る →</a>
 </div>
@@ -941,12 +961,13 @@ main > .section > :not(.contact-invitation):not(.contact-service-grid):not(.cont
 <a href="kaidan.html"><img alt="怪談の多い図書館 栗橋文化会館イリス公演 フライヤー" src="kaidan_flyer_front.jpg"/></a>
 <div class="news-stage-body">
 <p class="news-stage-date">2026年7月26日（日）／栗橋文化会館イリス</p>
-<h2><a href="kaidan.html">『怪談の多い図書館』</a></h2>
+<h3><a href="kaidan.html">『怪談の多い図書館』</a></h3>
 <p class="news-stage-report">久喜市立太東中学校ゲキ部の自主公演として上演しました。</p>
 <a class="detail-button" href="kaidan.html">詳しく見る →</a>
 </div>
 </article>
 </div>
+<h3 class="news-media-title">メディア掲載</h3>
 <div class="news-panel">
 <ul class="news-list">
     <li><strong>2026年7月23日</strong>　国立国会図書館「カレントアウェアネス-E」に<a href="https://current.ndl.go.jp/e2899" target="_blank" rel="noopener">ビブリオ劇場の記事</a>が掲載されました。</li>
